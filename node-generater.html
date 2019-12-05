@@ -107,7 +107,6 @@ d3.json("cpsc.json", function(data) {
   var linkForce = d3
     .forceLink()
     .id(function (link) { return link.id })
-    // .strength(function (link) { return link.strength })
 
   var simulation = d3
     .forceSimulation()
@@ -116,23 +115,6 @@ d3.json("cpsc.json", function(data) {
     .force('center', d3.forceCenter(width / 2, height / 2))
     .force("x", d3.forceX())
     .force("y", d3.forceY())
-
-  console.log(data.nodes)
-
-  // var dragDrop = d3.drag().on('start', function (node) {
-  //   node.fx = node.x
-  //   node.fy = node.y
-  // }).on('drag', function (node) {
-  //   simulation.alphaTarget(0.7).restart()
-  //   node.fx = d3.event.x
-  //   node.fy = d3.event.y
-  // }).on('end', function (node) {
-  //   if (!d3.event.active) {
-  //     simulation.alphaTarget(0)
-  //   }
-  //   node.fx = null
-  //   node.fy = null
-  // })
 
   function getNeighbors(node) {
     return data.links.reduce(function (neighbors, link) {
@@ -175,8 +157,6 @@ d3.json("cpsc.json", function(data) {
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", node => node.course ? "gray" : "transparent")
-      // Disable the drag and drop function
-      // .call(dragDrop)
       // .on('click', selectNode)
       // Mouseover for labels
       .on("mouseover", function(node) {
