@@ -1,0 +1,31 @@
+{
+  "nodes": [ 
+    { "id": "mammal", "group": 0, "label": "Mammals", "course": 1 },
+    { "id": "dog"   , "group": 0, "label": "Dogs"   , "course": 2 },
+    { "id": "cat"   , "group": 0, "label": "Cats"   , "course": 2 },
+    { "id": "fox"   , "group": 0, "label": "Foxes"  , "course": 2 }, 
+    { "id": "elk"   , "group": 0, "label": "Elk"    , "course": 2 },
+    { "id": "insect", "group": 1, "label": "Insects", "course": 1 },
+    { "id": "ant"   , "group": 1, "label": "Ants"   , "course": 2 },
+    { "id": "bee"   , "group": 1, "label": "Bees"   , "course": 2 },  
+    { "id": "fish"  , "group": 2, "label": "Fish"   , "course": 1 },
+    { "id": "carp"  , "group": 2, "label": "Carp"   , "course": 2 },
+    { "id": "pike"  , "group": 2, "label": "Pikes"  , "course": 2 } 
+  ],
+  "links": [
+    { "target": "mammal", "source": "dog" },
+    { "target": "mammal", "source": "cat" },
+    { "target": "mammal", "source": "fox" },
+    { "target": "mammal", "source": "elk" },
+    { "target": "insect", "source": "ant" },
+    { "target": "insect", "source": "bee" },
+    { "target": "fish"  , "source": "carp"},
+    { "target": "fish"  , "source": "pike"},
+    { "target": "cat"   , "source": "elk" },
+    { "target": "carp"  , "source": "ant" },
+    { "target": "elk"   , "source": "bee" },
+    { "target": "dog"   , "source": "cat" },
+    { "target": "fox"   , "source": "ant" },
+    { "target": "pike"  , "source": "dog" }
+  ]
+}
