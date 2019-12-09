@@ -69,11 +69,11 @@ function getTextColor(node, neighbors) {
 }
 
 function getXCoord(node) {
-  return width - (node.fx * 32 + 200)
+  return width - (node.fx * 28 + 200)
 }
 
 function getYCoord(node) {
-  return height - (node.fy * 100 + 200)
+  return height - (node.fy * 80 + 200)
 }
 
 var width = window.innerWidth
@@ -101,7 +101,7 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")       
     .style("opacity", 0)
 
-d3.json("all.json", function(data) {
+d3.json("cpsc.json", function(data) {
 
   // Simulation setup with all forces
   var linkForce = d3
@@ -178,29 +178,6 @@ d3.json("all.json", function(data) {
         }
       })
 
-  var nonCSNode = svg.append("g")
-    .attr("class", "nodes")
-    .selectAll("circle")
-    .data(data.noncs)
-    .enter().append("ellipse")
-      .attr("rx", 25)
-      .attr("ry", 10)
-      .attr("fill", "lightgray")
-      .style("stroke", node => node.course ? "gray" : "transparent")
-      // .on('click', selectNode)
-      // Mouseover for labels
-
-  var nonCSText = svg.append("g")
-    .attr("class", "texts")
-    .selectAll("text")
-    .data(data.noncs)
-    .enter().append("text")
-      .text(function (node) { return node.name })
-      .attr("font-size", 10)
-      .attr("dx", -18) 
-      .attr("dy", 3)
-
-
   var textElements = svg.append("g")
     .attr("class", "texts")
     .selectAll("text")
@@ -215,13 +192,7 @@ d3.json("all.json", function(data) {
     nodeElements
       .attr('cx', function (node) { return getXCoord(node) })
       .attr('cy', function (node) { return getYCoord(node) })
-    nonCSNode
-      .attr('cx', function (node) { return getXCoord(node) })
-      .attr('cy', function (node) { return getYCoord(node) })
     textElements
-      .attr('x', function (node) { return getXCoord(node) })
-      .attr('y', function (node) { return getYCoord(node) })
-    nonCSText
       .attr('x', function (node) { return getXCoord(node) })
       .attr('y', function (node) { return getYCoord(node) })
     linkElements

@@ -43,7 +43,7 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 21
+      "fx": 22
     },
     {
       "id": 310,
@@ -60,7 +60,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 3,
+      "fy": 3.5,
       "fx": 19
     },
     {
@@ -69,7 +69,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 3,
+      "fy": 3.5,
       "fx": 16
     },
     {
@@ -100,22 +100,13 @@
       "fx": 10
     },
     {
-      "id": 160,
-      "name": "APSC160",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": 1,
-      "fx": 30
-    },
-    {
       "id": 203,
       "name": "203",
       "core": 0,
       "cs": 1,
       "course": 1,
       "fy": 1,
-      "fx": 5,
+      "fx": 3,
       "prereq": "Or one of EOSC 211, MATH 210, PHYS 210, COMM 337"
     },
     {
@@ -134,7 +125,7 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 31,
+      "fx": 19,
       "prereq": "CPEN 211 and CPEN 221"
     },
     {
@@ -161,8 +152,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3,
-      "fx": 27
+      "fy": 3.5,
+      "fx": 22
     },
     {
       "id": 311,
@@ -197,7 +188,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3,
+      "fy": 3.5,
       "fx": 14
     },
     {
@@ -216,7 +207,7 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 22
+      "fx": 27
     },
     {
       "id": 330,
@@ -251,7 +242,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 2
     },
     {
@@ -260,8 +251,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
-      "fx": 27
+      "fy": 4.5,
+      "fx": 22
     },
     {
       "id": 406,
@@ -269,7 +260,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 1
     },
     {
@@ -278,7 +269,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 9
     },
     {
@@ -287,7 +278,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 12
     },
     {
@@ -296,7 +287,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 16
     },
     {
@@ -305,7 +296,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 15
     },
     {
@@ -314,7 +305,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 14
     },
     {
@@ -323,7 +314,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 17
     },
     {
@@ -332,7 +323,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 20
     },
     {
@@ -341,7 +332,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 21
     },
     {
@@ -350,8 +341,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
-      "fx": 22
+      "fy": 4.5,
+      "fx": 27
     },
     {
       "id": 424,
@@ -359,7 +350,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 18
     },
     {
@@ -368,7 +359,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 25
     },
     {
@@ -377,7 +368,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 26
     },
     {
@@ -386,7 +377,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 24
     },
     {
@@ -395,7 +386,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 30,
       "prereq": "3rd year standing with any 3-credit CPSC course"
     },
@@ -405,7 +396,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 10
     },
     {
@@ -414,7 +405,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 4,
+      "fy": 4.5,
       "fx": 19
     },
     {
@@ -441,8 +432,8 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 1,
-      "fx": 3
+      "fy": 0.5,
+      "fx": 5
     },
     {
       "id": 4,
@@ -504,7 +495,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
+      "fy": 4,
       "fx": 21
     },
     {
@@ -513,7 +504,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
+      "fy": 4,
       "fx": 17
     },
     {
@@ -522,7 +513,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
+      "fy": 4,
       "fx": 15
     },
     {
@@ -535,8 +526,226 @@
       "fx": 12
     },
     {
+      "id": 14,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 22
+    },
+    {
+      "id": 15,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3,
+      "fx": 19
+    }
+  ],
+  "noncs": [
+    {
+      "id": 160,
+      "name": "APSC160",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 1,
+      "fx": 30
+    },
+    {
       "id": 307,
       "name": "MATH307",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 0
+    },
+    {
+      "id": 1210,
+      "name": "MATH210",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 0.5,
+      "fx": 10
+    },
+    {
+      "id": 337,
+      "name": "COMM337",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 0.5,
+      "fx": 11
+    },
+    {
+      "id": 1221,
+      "name": "EOSC221",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 0.5,
+      "fx": 12
+    },
+    {
+      "id": 2210,
+      "name": "PHYS210",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 0.5,
+      "fx": 13
+    },
+    {
+      "id": 211,
+      "name": "EOSC211",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 0.5,
+      "fx": 14
+    },
+    {
+      "id": 2221,
+      "name": "CPEN221",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 1,
+      "fx": 15
+    },
+    {
+      "id": 1211,
+      "name": "CPEN211",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 1,
+      "fx": 16
+    },
+    {
+      "id": 321,
+      "name": "CPEN321",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 20
+    },
+    {
+      "id": 200,
+      "name": "STAT200",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 21
+    },
+    {
+      "id": 331,
+      "name": "CPEN331",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 22
+    },
+    {
+      "id": 241,
+      "name": "STAT241",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 23
+    },
+    {
+      "id": 3221,
+      "name": "ELEC221",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 24
+    },
+    {
+      "id": 1411,
+      "name": "CPEN411",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 25
+    },
+    {
+      "id": 1200,
+      "name": "MATH200",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 26
+    },
+    {
+      "id": 4221,
+      "name": "MATH221",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 27
+    },
+    {
+      "id": 251,
+      "name": "STAT251",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 28
+    },
+    {
+      "id": 152,
+      "name": "MATH152",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 29
+    },
+    {
+      "id": 217,
+      "name": "MATH217",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 30
+    },
+    {
+      "id": 253,
+      "name": "MATH253",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 31
+    },
+    {
+      "id": 263,
+      "name": "MATH263",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 3,
+      "fx": 32
+    },
+    {
+      "id": 16,
+      "name": "AND",
       "core": 0,
       "cs": 0,
       "course": 1,
@@ -586,7 +795,7 @@
     },
     {
       "source": 210,
-      "target": 2
+      "target": 3
     },
     {
       "source": 406,
@@ -742,6 +951,10 @@
     },
     {
       "source": 404,
+      "target": 14
+    },
+    {
+      "source": 14,
       "target": 304
     },
     {
@@ -814,12 +1027,16 @@
       "target": 221
     },
     {
-      "source": 259,
-      "target": 160
+      "source": 14,
+      "target": 15
     },
     {
-      "source": 261,
-      "target": 259
+      "source": 15,
+      "target": 213
+    },
+    {
+      "source": 15,
+      "target": 261
     }
   ]
 }
