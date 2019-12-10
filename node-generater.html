@@ -39,7 +39,7 @@ function getNodeColor(node, neighbors) {
   if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
     return node.course === 0 ? 'white' : '#fabdad'
   }
-  return node.course === 0 ? 'white' : node.core === 0 ? 'lightsteelblue' : 'yellow'
+  return node.course === 0 ? 'white' : node.cs === 0? 'lightgray' : node.core === 0 ? 'lightsteelblue' : 'yellow'
 }
 
 function getNodeSize(node, neighbors) {
@@ -69,7 +69,7 @@ function getTextColor(node, neighbors) {
 }
 
 function getXCoord(node) {
-  return width - (node.fx * 32 + 200)
+  return width - (node.fx * 35 + 150)
 }
 
 function getYCoord(node) {
@@ -116,27 +116,6 @@ d3.json("all.json", function(data) {
     .force("x", d3.forceX())
     .force("y", d3.forceY())
 
-  function getNeighbors(node) {
-    return data.links.reduce(function (neighbors, link) {
-      if (link.target.id === node.id) {
-        neighbors.push(link.source.id)
-      } else if (link.source.id === node.id) {
-        neighbors.push(link.target.id)
-      }
-      return neighbors
-    },
-    [node.id]
-    )
-  }
-
-  function selectNode(selectedNode) {
-    var neighbors = getNeighbors(selectedNode)
-    // Modify the styles to highlight selected nodes
-    nodeElements.attr('fill', function (node) { return getNodeColor(node, neighbors) })
-    nodeElements.style('stroke', function (node) { return getStrokeColor(node, neighbors) })
-    textElements.attr('fill', function (node) { return getTextColor(node, neighbors) })
-    linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
-  }
 
   var linkElements = svg.append("g")
     .selectAll("line.link")
@@ -149,11 +128,17 @@ d3.json("all.json", function(data) {
       .attr("stroke", "black")
       .attr("marker-end", "url(#end)")
 
+
   var nodeElements = svg.append("g")
-    .attr("class", "nodes")
+    // .attr("class", "nodes")
     .selectAll("circle")
     .data(data.nodes)
-    .enter().append("circle")
+    .enter()
+
+  nodeElements.append("circle")
+    .filter(function(d){ return d.cs > 0; })
+      .attr('cx', function (node) { return getXCoord(node) })
+      .attr('cy', function (node) { return getYCoord(node) })
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", node => node.course ? "gray" : "transparent")
@@ -178,58 +163,47 @@ d3.json("all.json", function(data) {
         }
       })
 
-  var nonCSNode = svg.append("g")
-    .attr("class", "nodes")
-    .selectAll("circle")
-    .data(data.noncs)
-    .enter().append("ellipse")
+
+  nodeElements.append("ellipse")
+      .filter(function(d){ return d.cs < 1; })
+      .attr('cx', function (node) { return getXCoord(node) })
+      .attr('cy', function (node) { return getYCoord(node) })
       .attr("rx", 25)
       .attr("ry", 10)
       .attr("fill", "lightgray")
       .style("stroke", node => node.course ? "gray" : "transparent")
-      // .on('click', selectNode)
-      // Mouseover for labels
-
-  var nonCSText = svg.append("g")
-    .attr("class", "texts")
-    .selectAll("text")
-    .data(data.noncs)
-    .enter().append("text")
-      .text(function (node) { return node.name })
-      .attr("font-size", 10)
-      .attr("dx", -18) 
-      .attr("dy", 3)
 
 
   var textElements = svg.append("g")
-    .attr("class", "texts")
+    // .attr("class", "texts")
     .selectAll("text")
     .data(data.nodes)
-    .enter().append("text")
+    .enter()
+
+  textElements.append("text").filter(function(d){ return d.cs > 0; })
       .text(function (node) { return node.name })
+      .attr('x', function (node) { return getXCoord(node) })
+      .attr('y', function (node) { return getYCoord(node) })
       .attr("font-size", 10)
       .attr("dx", -8) 
       .attr("dy", 3)
 
+  textElements.append("text").filter(function(d){ return d.cs < 1; })
+      .text(function (node) { return node.name })
+      .attr('x', function (node) { return getXCoord(node) })
+      .attr('y', function (node) { return getYCoord(node) })
+      .attr("font-size", 10)
+      .attr("dx", -20) 
+      .attr("dy", 3)
+
   simulation.nodes(data.nodes).on('tick', () => {
-    nodeElements
-      .attr('cx', function (node) { return getXCoord(node) })
-      .attr('cy', function (node) { return getYCoord(node) })
-    nonCSNode
-      .attr('cx', function (node) { return getXCoord(node) })
-      .attr('cy', function (node) { return getYCoord(node) })
-    textElements
-      .attr('x', function (node) { return getXCoord(node) })
-      .attr('y', function (node) { return getYCoord(node) })
-    nonCSText
-      .attr('x', function (node) { return getXCoord(node) })
-      .attr('y', function (node) { return getYCoord(node) })
     linkElements
       .attr('x1', function (link) { return getXCoord(link.source) })
       .attr('y1', function (link) { return getYCoord(link.source) })
       .attr('x2', function (link) { return getXCoord(link.target) })
       .attr('y2', function (link) { return getYCoord(link.target) })
   })
+
 
   simulation.force("link").links(data.links)
 

@@ -7,7 +7,8 @@
       "cs": 1,
       "course": 1,
       "fy": -0.5,
-      "fx": 3
+      "fx": 3,
+      "shape": "circle"
     },
     {
       "id": 121,
@@ -15,8 +16,9 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 0.5,
-      "fx": 10
+      "fy": 0.4,
+      "fx": 15,
+      "shape": "circle"
     },
     {
       "id": 210,
@@ -24,8 +26,9 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 1,
-      "fx": 10
+      "fy": 1.15,
+      "fx": 10,
+      "shape": "circle"
     },
     {
       "id": 213,
@@ -34,7 +37,8 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 15
+      "fx": 15,
+      "shape": "circle"
     },
     {
       "id": 221,
@@ -43,7 +47,8 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 22
+      "fx": 22,
+      "shape": "circle"
     },
     {
       "id": 310,
@@ -51,8 +56,9 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 3,
-      "fx": 9
+      "fy": 2.7,
+      "fx": 9,
+      "shape": "circle"
     },
     {
       "id": 320,
@@ -61,7 +67,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 19
+      "fx": 19,
+      "shape": "circle"
     },
     {
       "id": 313,
@@ -70,7 +77,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 16
+      "fx": 16,
+      "shape": "circle"
     },
     {
       "id": 100,
@@ -79,7 +87,8 @@
       "cs": 1,
       "course": 1,
       "fy": -1,
-      "fx": 0.5
+      "fx": 0.5,
+      "shape": "circle"
     },
     {
       "id": 103,
@@ -88,7 +97,8 @@
       "cs": 1,
       "course": 1,
       "fy": -1,
-      "fx": 1.5
+      "fx": 1.5,
+      "shape": "circle"
     },
     {
       "id": 107,
@@ -97,7 +107,8 @@
       "cs": 1,
       "course": 1,
       "fy": -0.5,
-      "fx": 10
+      "fx": 10,
+      "shape": "circle"
     },
     {
       "id": 203,
@@ -107,7 +118,8 @@
       "course": 1,
       "fy": 1,
       "fx": 3,
-      "prereq": "Or one of EOSC 211, MATH 210, PHYS 210, COMM 337"
+      "prereq": "Or one of EOSC 211, MATH 210, PHYS 210, COMM 337",
+      "shape": "circle"
     },
     {
       "id": 259,
@@ -116,7 +128,8 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 29
+      "fx": 29,
+      "shape": "circle"
     },
     {
       "id": 261,
@@ -126,7 +139,8 @@
       "course": 1,
       "fy": 2,
       "fx": 19,
-      "prereq": "CPEN 211 and CPEN 221"
+      "prereq": "CPEN 211 and CPEN 221",
+      "shape": "circle"
     },
     {
       "id": 302,
@@ -135,7 +149,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 2
+      "fx": 2,
+      "shape": "circle"
     },
     {
       "id": 303,
@@ -144,7 +159,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 1
+      "fx": 1,
+      "shape": "circle"
     },
     {
       "id": 304,
@@ -152,8 +168,9 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.5,
-      "fx": 22
+      "fy": 3,
+      "fx": 22,
+      "shape": "circle"
     },
     {
       "id": 311,
@@ -161,8 +178,9 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3,
-      "fx": 12
+      "fy": 2.7,
+      "fx": 12,
+      "shape": "circle"
     },
     {
       "id": 312,
@@ -170,8 +188,9 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3,
-      "fx": 11
+      "fy": 2.7,
+      "fx": 11,
+      "shape": "circle"
     },
     {
       "id": 314,
@@ -180,7 +199,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 26
+      "fx": 26,
+      "shape": "circle"
     },
     {
       "id": 317,
@@ -189,7 +209,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 14
+      "fx": 14,
+      "shape": "circle"
     },
     {
       "id": 319,
@@ -197,8 +218,9 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.5,
-      "fx": 8
+      "fy": 2.8,
+      "fx": 8,
+      "shape": "circle"
     },
     {
       "id": 322,
@@ -207,7 +229,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 27
+      "fx": 25,
+      "shape": "circle"
     },
     {
       "id": 330,
@@ -216,7 +239,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 3
+      "fx": 3,
+      "shape": "circle"
     },
     {
       "id": 340,
@@ -225,7 +249,8 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 25
+      "fx": 28,
+      "shape": "circle"
     },
     {
       "id": 344,
@@ -233,8 +258,9 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3,
-      "fx": 10
+      "fy": 2.7,
+      "fx": 10,
+      "shape": "circle"
     },
     {
       "id": 402,
@@ -243,7 +269,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 2
+      "fx": 2,
+      "shape": "circle"
     },
     {
       "id": 404,
@@ -252,7 +279,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 22
+      "fx": 22,
+      "shape": "circle"
     },
     {
       "id": 406,
@@ -261,7 +289,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 1
+      "fx": 1,
+      "shape": "circle"
     },
     {
       "id": 410,
@@ -270,7 +299,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 9
+      "fx": 9,
+      "shape": "circle"
     },
     {
       "id": 411,
@@ -279,7 +309,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 12
+      "fx": 12,
+      "shape": "circle"
     },
     {
       "id": 415,
@@ -288,7 +319,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 16
+      "fx": 16,
+      "shape": "circle"
     },
     {
       "id": 416,
@@ -297,7 +329,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 15
+      "fx": 15,
+      "shape": "circle"
     },
     {
       "id": 417,
@@ -306,7 +339,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 14
+      "fx": 14,
+      "shape": "circle"
     },
     {
       "id": 418,
@@ -315,7 +349,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 17
+      "fx": 17,
+      "shape": "circle"
     },
     {
       "id": 420,
@@ -324,7 +359,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 20
+      "fx": 18,
+      "shape": "circle"
     },
     {
       "id": 421,
@@ -333,7 +369,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 21
+      "fx": 21,
+      "shape": "circle"
     },
     {
       "id": 422,
@@ -342,7 +379,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 27
+      "fx": 25,
+      "shape": "circle"
     },
     {
       "id": 424,
@@ -351,7 +389,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 18
+      "fx": 20,
+      "shape": "circle"
     },
     {
       "id": 425,
@@ -360,7 +399,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 25
+      "fx": 24,
+      "shape": "circle"
     },
     {
       "id": 426,
@@ -369,7 +409,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 26
+      "fx": 26,
+      "shape": "circle"
     },
     {
       "id": 427,
@@ -378,7 +419,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 24
+      "fx": 23,
+      "shape": "circle"
     },
     {
       "id": 430,
@@ -387,8 +429,9 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 30,
-      "prereq": "3rd year standing with any 3-credit CPSC course"
+      "fx": 27,
+      "prereq": "3rd year standing with any 3-credit CPSC course",
+      "shape": "circle"
     },
     {
       "id": 444,
@@ -397,7 +440,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 10
+      "fx": 10,
+      "shape": "circle"
     },
     {
       "id": 445,
@@ -406,7 +450,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 19
+      "fx": 19,
+      "shape": "circle"
     },
     {
       "id": 1,
@@ -415,7 +460,8 @@
       "cs": 1,
       "course": 0,
       "fy": 0,
-      "fx": 10
+      "fx": 10,
+      "shape": "circle"
     },
     {
       "id": 2,
@@ -424,7 +470,8 @@
       "cs": 1,
       "course": 0,
       "fy": 0.5,
-      "fx": 1.5
+      "fx": 1.5,
+      "shape": "circle"
     },
     {
       "id": 3,
@@ -433,7 +480,8 @@
       "cs": 1,
       "course": 0,
       "fy": 0.5,
-      "fx": 5
+      "fx": 7,
+      "shape": "circle"
     },
     {
       "id": 4,
@@ -442,7 +490,8 @@
       "cs": 1,
       "course": 0,
       "fy": 2.5,
-      "fx": 3
+      "fx": 3,
+      "shape": "circle"
     },
     {
       "id": 5,
@@ -451,7 +500,8 @@
       "cs": 1,
       "course": 0,
       "fy": 2,
-      "fx": 5
+      "fx": 5,
+      "shape": "circle"
     },
     {
       "id": 6,
@@ -460,7 +510,8 @@
       "cs": 1,
       "course": 0,
       "fy": 3.5,
-      "fx": 1.5
+      "fx": 1.5,
+      "shape": "circle"
     },
     {
       "id": 7,
@@ -469,7 +520,8 @@
       "cs": 1,
       "course": 0,
       "fy": 1.5,
-      "fx": 17
+      "fx": 17,
+      "shape": "circle"
     },
     {
       "id": 8,
@@ -477,8 +529,9 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
-      "fx": 10
+      "fy": 4,
+      "fx": 10,
+      "shape": "circle"
     },
     {
       "id": 9,
@@ -487,7 +540,8 @@
       "cs": 1,
       "course": 0,
       "fy": 2.5,
-      "fx": 15
+      "fx": 15,
+      "shape": "circle"
     },
     {
       "id": 10,
@@ -496,16 +550,18 @@
       "cs": 1,
       "course": 0,
       "fy": 4,
-      "fx": 21
+      "fx": 21,
+      "shape": "circle"
     },
     {
       "id": 11,
-      "name": "AND",
+      "name": "OR",
       "core": 0,
       "cs": 1,
       "course": 0,
       "fy": 4,
-      "fx": 17
+      "fx": 17,
+      "shape": "circle"
     },
     {
       "id": 12,
@@ -513,8 +569,9 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 4,
-      "fx": 15
+      "fy": 4.15,
+      "fx": 15,
+      "shape": "circle"
     },
     {
       "id": 13,
@@ -522,8 +579,9 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
-      "fx": 12
+      "fy": 3.2,
+      "fx": 12,
+      "shape": "circle"
     },
     {
       "id": 14,
@@ -532,7 +590,8 @@
       "cs": 1,
       "course": 0,
       "fy": 4,
-      "fx": 22
+      "fx": 22,
+      "shape": "circle"
     },
     {
       "id": 15,
@@ -541,18 +600,158 @@
       "cs": 1,
       "course": 0,
       "fy": 3,
-      "fx": 19
-    }
-  ],
-  "noncs": [
+      "fx": 19,
+      "shape": "circle"
+    },
+    {
+      "id": 16,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 1.3,
+      "fx": 13,
+      "shape": "circle"
+    },
+    {
+      "id": 17,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 0.7,
+      "fx": 16,
+      "shape": "circle"
+    },
+    {
+      "id": 18,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 1.4,
+      "fx": 19,
+      "shape": "circle"
+    },
+    {
+      "id": 19,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2,
+      "fx": 10,
+      "shape": "circle"
+    },
+    {
+      "id": 20,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2.5,
+      "fx": 25,
+      "shape": "circle"
+    },
+    {
+      "id": 21,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2.5,
+      "fx": 26.7,
+      "shape": "circle"
+    },
+    {
+      "id": 22,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 19.7,
+      "shape": "circle"
+    },
+    {
+      "id": 23,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 0.5,
+      "fx": 5,
+      "shape": "circle"
+    },
+    {
+      "id": 24,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 9,
+      "shape": "circle"
+    },
+    {
+      "id": 25,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.8,
+      "fx": 8,
+      "shape": "circle"
+    },
+    {
+      "id": 26,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 16,
+      "shape": "circle"
+    },
+    {
+      "id": 27,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4.15,
+      "fx": 14,
+      "shape": "circle"
+    },
+    {
+      "id": 28,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 1.4,
+      "fx": 6.5,
+      "shape": "circle"
+    },
+    {
+      "id": 29,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2.8,
+      "fx": 22.9,
+      "shape": "circle"
+    },
     {
       "id": 160,
       "name": "APSC160",
       "core": 0,
-      "cs": 1,
+      "cs": 0,
       "course": 1,
       "fy": 1,
-      "fx": 30
+      "fx": 30,
+      "shape": "ellipse"
     },
     {
       "id": 307,
@@ -561,7 +760,8 @@
       "cs": 0,
       "course": 1,
       "fy": 3,
-      "fx": 0
+      "fx": -0.5,
+      "shape": "ellipse"
     },
     {
       "id": 1210,
@@ -569,8 +769,19 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 0.5,
-      "fx": 10
+      "fy": 0.1,
+      "fx": -0.5,
+      "shape": "ellipse"
+    },
+    {
+      "id": 1220,
+      "name": "MATH220",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 0.4,
+      "fx": 17,
+      "shape": "ellipse"
     },
     {
       "id": 337,
@@ -578,8 +789,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 0.5,
-      "fx": 11
+      "fy": -0.5,
+      "fx": -0.5,
+      "shape": "ellipse"
     },
     {
       "id": 1221,
@@ -587,8 +799,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 0.5,
-      "fx": 12
+      "fy": 0.4,
+      "fx": -0.5,
+      "shape": "ellipse"
     },
     {
       "id": 2210,
@@ -596,8 +809,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 0.5,
-      "fx": 13
+      "fy": -0.2,
+      "fx": -0.5,
+      "shape": "ellipse"
     },
     {
       "id": 211,
@@ -606,7 +820,8 @@
       "cs": 0,
       "course": 1,
       "fy": 0.5,
-      "fx": 14
+      "fx": 23,
+      "shape": "ellipse"
     },
     {
       "id": 2221,
@@ -614,8 +829,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 1,
-      "fx": 15
+      "fy": 0.5,
+      "fx": 12,
+      "shape": "ellipse"
     },
     {
       "id": 1211,
@@ -624,7 +840,8 @@
       "cs": 0,
       "course": 1,
       "fy": 1,
-      "fx": 16
+      "fx": 19,
+      "shape": "ellipse"
     },
     {
       "id": 321,
@@ -632,8 +849,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 20
+      "fy": 3.2,
+      "fx": 6.5,
+      "shape": "ellipse"
     },
     {
       "id": 200,
@@ -641,8 +859,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 21
+      "fy": 3.8,
+      "fx": 11,
+      "shape": "ellipse"
     },
     {
       "id": 331,
@@ -650,8 +869,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 22
+      "fy": 3.2,
+      "fx": 8,
+      "shape": "ellipse"
     },
     {
       "id": 241,
@@ -659,8 +879,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 23
+      "fy": 2,
+      "fx": 27,
+      "shape": "ellipse"
     },
     {
       "id": 3221,
@@ -668,8 +889,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 24
+      "fy": 0,
+      "fx": 28,
+      "shape": "ellipse"
     },
     {
       "id": 1411,
@@ -678,7 +900,8 @@
       "cs": 0,
       "course": 1,
       "fy": 3,
-      "fx": 25
+      "fx": 17,
+      "shape": "ellipse"
     },
     {
       "id": 1200,
@@ -686,8 +909,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 26
+      "fy": 2,
+      "fx": 25.5,
+      "shape": "ellipse"
     },
     {
       "id": 4221,
@@ -695,8 +919,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 27
+      "fy": 2,
+      "fx": 24,
+      "shape": "ellipse"
     },
     {
       "id": 251,
@@ -704,8 +929,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 28
+      "fy": 0,
+      "fx": 36,
+      "shape": "ellipse"
     },
     {
       "id": 152,
@@ -713,8 +939,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 29
+      "fy": 0,
+      "fx": 38,
+      "shape": "ellipse"
     },
     {
       "id": 217,
@@ -722,8 +949,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 30
+      "fy": 0,
+      "fx": 44,
+      "shape": "ellipse"
     },
     {
       "id": 253,
@@ -731,8 +959,9 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 31
+      "fy": 0,
+      "fx": 42,
+      "shape": "ellipse"
     },
     {
       "id": 263,
@@ -740,17 +969,19 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 32
+      "fy": 0,
+      "fx": 40,
+      "shape": "ellipse"
     },
     {
-      "id": 16,
-      "name": "AND",
+      "id": 3210,
+      "name": "ELEC210",
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 3,
-      "fx": 0
+      "fy": 0.5,
+      "fx": 10,
+      "shape": "ellipse"
     }
   ],
   "links": [
@@ -794,6 +1025,22 @@
       "target": 110
     },
     {
+      "source": 2,
+      "target": 337
+    },
+    {
+      "source": 2,
+      "target": 1221
+    },
+    {
+      "source": 2,
+      "target": 1210
+    },
+    {
+      "source": 2,
+      "target": 2210
+    },
+    {
       "source": 210,
       "target": 3
     },
@@ -815,7 +1062,19 @@
     },
     {
       "source": 4,
-      "target": 3
+      "target": 23
+    },
+    {
+      "source": 23,
+      "target": 110
+    },
+    {
+      "source": 23,
+      "target": 107
+    },
+    {
+      "source": 23,
+      "target": 1210
     },
     {
       "source": 3,
@@ -842,12 +1101,24 @@
       "target": 210
     },
     {
+      "source": 5,
+      "target": 2221
+    },
+    {
       "source": 312,
+      "target": 19
+    },
+    {
+      "source": 19,
       "target": 210
     },
     {
+      "source": 19,
+      "target": 2221
+    },
+    {
       "source": 344,
-      "target": 210
+      "target": 19
     },
     {
       "source": 310,
@@ -870,8 +1141,28 @@
       "target": 310
     },
     {
+      "source": 8,
+      "target": 200
+    },
+    {
       "source": 410,
+      "target": 24
+    },
+    {
+      "source": 24,
       "target": 310
+    },
+    {
+      "source": 24,
+      "target": 25
+    },
+    {
+      "source": 25,
+      "target": 331
+    },
+    {
+      "source": 25,
+      "target": 321
     },
     {
       "source": 319,
@@ -883,11 +1174,31 @@
     },
     {
       "source": 7,
+      "target": 17
+    },
+    {
+      "source": 17,
       "target": 121
     },
     {
+      "source": 17,
+      "target": 1220
+    },
+    {
       "source": 7,
+      "target": 16
+    },
+    {
+      "source": 16,
       "target": 210
+    },
+    {
+      "source": 16,
+      "target": 3210
+    },
+    {
+      "source": 16,
+      "target": 2221
     },
     {
       "source": 221,
@@ -927,10 +1238,18 @@
     },
     {
       "source": 425,
+      "target": 29
+    },
+    {
+      "source": 29,
       "target": 221
     },
     {
       "source": 314,
+      "target": 20
+    },
+    {
+      "source": 20,
       "target": 221
     },
     {
@@ -939,6 +1258,10 @@
     },
     {
       "source": 340,
+      "target": 21
+    },
+    {
+      "source": 21,
       "target": 221
     },
     {
@@ -980,7 +1303,43 @@
     },
     {
       "source": 424,
+      "target": 22
+    },
+    {
+      "source": 22,
       "target": 320
+    },
+    {
+      "source": 22,
+      "target": 20
+    },
+    {
+      "source": 29,
+      "target": 1200
+    },
+    {
+      "source": 29,
+      "target": 4221
+    },
+    {
+      "source": 20,
+      "target": 1200
+    },
+    {
+      "source": 20,
+      "target": 4221
+    },
+    {
+      "source": 21,
+      "target": 1200
+    },
+    {
+      "source": 21,
+      "target": 4221
+    },
+    {
+      "source": 21,
+      "target": 241
     },
     {
       "source": 420,
@@ -999,16 +1358,32 @@
       "target": 313
     },
     {
+      "source": 11,
+      "target": 261
+    },
+    {
+      "source": 11,
+      "target": 1411
+    },
+    {
       "source": 418,
       "target": 11
     },
     {
       "source": 415,
+      "target": 26
+    },
+    {
+      "source": 26,
       "target": 313
     },
     {
+      "source": 26,
+      "target": 331
+    },
+    {
       "source": 12,
-      "target": 313
+      "target": 26
     },
     {
       "source": 12,
@@ -1016,7 +1391,19 @@
     },
     {
       "source": 417,
-      "target": 12
+      "target": 27
+    },
+    {
+      "source": 27,
+      "target": 313
+    },
+    {
+      "source": 27,
+      "target": 317
+    },
+    {
+      "source": 27,
+      "target": 200
     },
     {
       "source": 416,
@@ -1037,6 +1424,38 @@
     {
       "source": 15,
       "target": 261
+    },
+    {
+      "source": 6,
+      "target": 307
+    },
+    {
+      "source": 259,
+      "target": 160
+    },
+    {
+      "source": 261,
+      "target": 18
+    },
+    {
+      "source": 18,
+      "target": 2221
+    },
+    {
+      "source": 18,
+      "target": 1211
+    },
+    {
+      "source": 321,
+      "target": 28
+    },
+    {
+      "source": 28,
+      "target": 210
+    },
+    {
+      "source": 28,
+      "target": 2221
     }
   ]
 }
