@@ -96,6 +96,7 @@ svg.append("svg:defs").selectAll("marker")
   .append("svg:path")
     .attr("d", "M0,-5L10,0L0,5")
 
+
 // Define the div for the tooltip
 var div = d3.select("body").append("div") 
     .attr("class", "tooltip")       
@@ -124,7 +125,6 @@ d3.json("all.json", function(data) {
       // .attr("class", "link")
       .attr("class", getLinkType)
       .attr("stroke-width", 1)
-      // .attr("stroke", "rgba(50, 50, 50, 0.2)")
       .attr("stroke", "black")
       .attr("marker-end", "url(#end)")
 
@@ -136,7 +136,7 @@ d3.json("all.json", function(data) {
     .enter()
 
   nodeElements.append("circle")
-    .filter(function(d){ return d.cs > 0; })
+    .filter(function(d){ return d.shape === "circle" })
       .attr('cx', function (node) { return getXCoord(node) })
       .attr('cy', function (node) { return getYCoord(node) })
       .attr("r", getNodeSize)
@@ -165,7 +165,7 @@ d3.json("all.json", function(data) {
 
 
   nodeElements.append("ellipse")
-      .filter(function(d){ return d.cs < 1; })
+      .filter(function(d){ return d.shape === "ellipse" })
       .attr('cx', function (node) { return getXCoord(node) })
       .attr('cy', function (node) { return getYCoord(node) })
       .attr("rx", 25)
@@ -174,13 +174,22 @@ d3.json("all.json", function(data) {
       .style("stroke", node => node.course ? "gray" : "transparent")
 
 
+  nodeElements.append("circle")
+      .filter(function(d){ return d.shape === "rect" })
+      .attr('cx', function (node) { return getXCoord(node) })
+      .attr('cy', function (node) { return getYCoord(node) })
+      .attr("r", 12)
+      .attr("fill", "white")
+      .style("stroke", "transparent")
+
+
   var textElements = svg.append("g")
     // .attr("class", "texts")
     .selectAll("text")
     .data(data.nodes)
     .enter()
 
-  textElements.append("text").filter(function(d){ return d.cs > 0; })
+  textElements.append("text").filter(function(d){ return d.shape === "circle" })
       .text(function (node) { return node.name })
       .attr('x', function (node) { return getXCoord(node) })
       .attr('y', function (node) { return getYCoord(node) })
@@ -188,13 +197,31 @@ d3.json("all.json", function(data) {
       .attr("dx", -8) 
       .attr("dy", 3)
 
-  textElements.append("text").filter(function(d){ return d.cs < 1; })
-      .text(function (node) { return node.name })
+  textElements.append("text").filter(function(d){ return d.shape === "ellipse" })
+      .html(function (node) {
+        return node.name
+      })
       .attr('x', function (node) { return getXCoord(node) })
       .attr('y', function (node) { return getYCoord(node) })
       .attr("font-size", 10)
       .attr("dx", -20) 
       .attr("dy", 3)
+
+  textElements.append("text").filter(function(d){ return d.shape === "rect" })
+      .html(function (node) {
+        var arr = node.name.split('|')
+        var xCoord = getXCoord(node) - 30
+        var yCoord = getYCoord(node) + 30
+        if (arr.length > 1) {
+          return "<tspan x = " + xCoord.toString() + " dy='1em'>" + arr.join("</tspan>" + "<tspan x = " + xCoord.toString() + " dy='1em'>") + "</tspan>"
+        }
+        return arr.join('')
+      })
+      .attr('x', function (node) { return getXCoord(node) })
+      .attr('y', function (node) { return getYCoord(node) })
+      .attr("font-size", 10)
+      .attr("dx", 2) 
+      .attr("dy", 0)
 
   simulation.nodes(data.nodes).on('tick', () => {
     linkElements
@@ -204,8 +231,7 @@ d3.json("all.json", function(data) {
       .attr('y2', function (link) { return getYCoord(link.target) })
   })
 
-
   simulation.force("link").links(data.links)
 
-});
+})
 </script>
