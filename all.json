@@ -26,7 +26,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 1.15,
+      "fy": 1.1,
       "fx": 10,
       "shape": "circle"
     },
@@ -36,7 +36,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2,
+      "fy": 2.1,
       "fx": 15,
       "shape": "circle"
     },
@@ -56,7 +56,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2.5,
+      "fy": 2.35,
       "fx": 9,
       "shape": "circle"
     },
@@ -177,7 +177,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.5,
+      "fy": 2.35,
       "fx": 12,
       "shape": "circle"
     },
@@ -187,7 +187,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.5,
+      "fy": 2.35,
       "fx": 11,
       "shape": "circle"
     },
@@ -217,7 +217,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.6,
+      "fy": 2.5,
       "fx": 8,
       "shape": "circle"
     },
@@ -257,7 +257,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.5,
+      "fy": 2.35,
       "fx": 10,
       "shape": "circle"
     },
@@ -608,7 +608,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 1.3,
+      "fy": 1.2,
       "fx": 12,
       "shape": "circle"
     },
@@ -638,7 +638,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 2,
+      "fy": 1.95,
       "fx": 10,
       "shape": "circle"
     },
@@ -729,7 +729,7 @@
       "cs": 1,
       "course": 0,
       "fy": 1.4,
-      "fx": 6.5,
+      "fx": 6,
       "shape": "circle"
     },
     {
@@ -843,6 +843,26 @@
       "shape": "circle"
     },
     {
+      "id": 40,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 1.7,
+      "fx": 15,
+      "shape": "circle"
+    },
+    {
+      "id": 41,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2.5,
+      "fx": 13.3,
+      "shape": "circle"
+    },
+    {
       "id": 160,
       "name": "APSC160",
       "core": 0,
@@ -938,8 +958,8 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 2.9,
-      "fx": 6.5,
+      "fy": 2.8,
+      "fx": 6,
       "shape": "ellipse"
     },
     {
@@ -958,8 +978,8 @@
       "core": 0,
       "cs": 0,
       "course": 1,
-      "fy": 2.9,
-      "fx": 8,
+      "fy": 2.8,
+      "fx": 7.5,
       "shape": "ellipse"
     },
     {
@@ -1073,6 +1093,16 @@
       "shape": "ellipse"
     },
     {
+      "id": 5221,
+      "name": "ELEC221",
+      "core": 0,
+      "cs": 0,
+      "course": 1,
+      "fy": 2.8,
+      "fx": 17,
+      "shape": "ellipse"
+    },
+    {
       "id": 1291,
       "name": "One of COMM 291,| BIOL 300, MATH |or STAT at 200| level or above",
       "core": 0,
@@ -1114,7 +1144,7 @@
     },
     {
       "id": 1300,
-      "name": "Three credits| of cs and at| least third-year| standing",
+      "name": "Three credits| of CPSC and at| least third-year| standing",
       "core": 0,
       "cs": 0,
       "course": 1,
@@ -1315,7 +1345,15 @@
     },
     {
       "source": 213,
-      "target": 7
+      "target": 40
+    },
+    {
+      "source": 40,
+      "target": 210
+    },
+    {
+      "source": 40,
+      "target": 121
     },
     {
       "source": 7,
@@ -1359,11 +1397,7 @@
     },
     {
       "source": 13,
-      "target": 213
-    },
-    {
-      "source": 13,
-      "target": 221
+      "target": 9
     },
     {
       "source": 9,
@@ -1708,7 +1742,23 @@
     },
     {
       "source": 39,
+      "target": 5221
+    },
+    {
+      "source": 39,
       "target": 261
+    },
+    {
+      "source": 41,
+      "target": 261
+    },
+    {
+      "source": 41,
+      "target": 2221
+    },
+    {
+      "source": 331,
+      "target": 41
     }
   ]
 }
