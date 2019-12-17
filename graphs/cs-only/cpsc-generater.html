@@ -26,7 +26,7 @@ div.tooltip {
 
 </style>
 
-<svg width="960" height="600"></svg>
+<svg id="graph" width="960" height="600"></svg>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -37,9 +37,9 @@ function isNeighborLink(node, link) {
 
 function getNodeColor(node, neighbors) {
   if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
-    return node.course === 0 ? 'white' : '#fabdad'
+    return node.course === 0 ? logicNodeColour : highlightColour
   }
-  return node.course === 0 ? 'white' : node.core === 0 ? 'lightsteelblue' : 'yellow'
+  return node.course === 0 ? logicNodeColour : node.core === 0 ? noncoreNodeColour : coreNodeColour
 }
 
 function getNodeSize(node, neighbors) {
@@ -48,13 +48,13 @@ function getNodeSize(node, neighbors) {
 
 function getStrokeColor(node, neighbors) {
   if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
-    return node.course ? 'gray' : '#fabdad'
+    return node.course ? courseStrokeColour : highlightColour
   }
-  return node.course ? 'gray' : 'transparent'
+  return node.course ? courseStrokeColour : logicStrokeColour
 }
 
 function getLinkColor(node, link) {
-  return isNeighborLink(node, link) ? '#fabdad' : '#E5E5E5'
+  return isNeighborLink(node, link) ? highlightColour : '#E5E5E5'
 }
 
 function getLinkType(link) {
@@ -65,7 +65,7 @@ function getLinkType(link) {
 }
 
 function getTextColor(node, neighbors) {
-  return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? 'black' : 'black'
+  return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? textColour : textColour
 }
 
 function getXCoord(node) {
@@ -76,10 +76,23 @@ function getYCoord(node) {
   return height - (node.fy * 80 + 200)
 }
 
+// Set node colours
+var noncoreNodeColour = 'lightsteelblue'
+var coreNodeColour = 'yellow'
+var logicNodeColour = 'white'
+
+// Set stroke colours
+var logicStrokeColour = 'transparent'
+var courseStrokeColour = 'gray'
+var linkColour = 'black'
+var textColour = 'black'
+var highlightColour = '#fabdad'
+
 var width = window.innerWidth
 var height = window.innerHeight
-var svg = d3.select('svg')
 
+// Select the graph area
+var svg = d3.select('#graph')
 svg.attr('width', width).attr('height', height)
 
 // Build the arrow.
@@ -138,6 +151,19 @@ d3.json("cpsc.json", function(data) {
     linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
   }
 
+  // Handmade legend
+  svg.append("circle").attr("cx",200).attr("cy",330).attr("r", 12).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
+  svg.append("circle").attr("cx",200).attr("cy",360).attr("r", 12).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
+  svg.append('line').attr("x1", 190).attr("y1", 390).attr("x2", 213).attr("y2", 390).attr("stroke-width", 1).attr("stroke", linkColour)
+  svg.append('line').attr("x1", 188).attr("y1", 420).attr("x2", 213).attr("y2", 420).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
+  svg.append('line').attr("x1", 188).attr("y1", 450).attr("x2", 213).attr("y2", 450).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
+  svg.append("text").attr("x", 220).attr("y", 330).text("Core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 220).attr("y", 360).text("Non-core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 220).attr("y", 390).text("Pre-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 220).attr("y", 420).text("Co-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 220).attr("y", 450).text("Recommend").style("font-size", "12px").attr("alignment-baseline","middle")
+
+
   var linkElements = svg.append("g")
     .selectAll("line.link")
     .data(data.links)
@@ -146,7 +172,7 @@ d3.json("cpsc.json", function(data) {
       .attr("class", getLinkType)
       .attr("stroke-width", 1)
       // .attr("stroke", "rgba(50, 50, 50, 0.2)")
-      .attr("stroke", "black")
+      .attr("stroke", linkColour)
       .attr("marker-end", "url(#end)")
 
   var nodeElements = svg.append("g")
@@ -156,7 +182,7 @@ d3.json("cpsc.json", function(data) {
     .enter().append("circle")
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
-      .style("stroke", node => node.course ? "gray" : "transparent")
+      .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
       // .on('click', selectNode)
       // Mouseover for labels
       .on("mouseover", function(node) {
