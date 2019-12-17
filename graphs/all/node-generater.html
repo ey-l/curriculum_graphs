@@ -80,6 +80,7 @@ function getYCoord(node) {
 var noncoreNodeColour = 'lightsteelblue'
 var coreNodeColour = 'yellow'
 var logicNodeColour = 'white'
+var noncsNodeColour = "lightgray"
 
 // Set stroke colours
 var logicStrokeColour = 'transparent'
@@ -131,6 +132,21 @@ d3.json("all.json", function(data) {
     .force('center', d3.forceCenter(width / 2, height / 2))
     .force("x", d3.forceX())
     .force("y", d3.forceY())
+
+  // Handmade legend
+  svg.append("circle").attr("cx",350).attr("cy",500).attr("r", 6).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
+  svg.append("circle").attr("cx",350).attr("cy",520).attr("r", 6).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
+  svg.append("ellipse").attr("cx",350).attr("cy",540).attr("rx", 12.5).attr("ry", 5).style("fill", noncsNodeColour).style("stroke", courseStrokeColour)
+  svg.append('line').attr("x1", 340).attr("y1", 560).attr("x2", 363).attr("y2", 560).attr("stroke-width", 1).attr("stroke", linkColour)
+  svg.append('line').attr("x1", 338).attr("y1", 580).attr("x2", 363).attr("y2", 580).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
+  svg.append('line').attr("x1", 338).attr("y1", 600).attr("x2", 363).attr("y2", 600).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
+  svg.append("rect").attr("x", 330).attr("y", 485).attr("width", 115).attr("height", 130).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
+  svg.append("text").attr("x", 370).attr("y", 500).text("Core CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 370).attr("y", 520).text("Non-core CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 370).attr("y", 540).text("Non-CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 370).attr("y", 560).text("Pre-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 370).attr("y", 580).text("Co-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 370).attr("y", 600).text("Recommend").style("font-size", "10px").attr("alignment-baseline","middle")
 
 
   var linkElements = svg.append("g")
@@ -185,8 +201,8 @@ d3.json("all.json", function(data) {
       .attr('cy', function (node) { return getYCoord(node) })
       .attr("rx", 25)
       .attr("ry", 10)
-      .attr("fill", "lightgray")
-      .style("stroke", node => node.course ? "gray" : "transparent")
+      .attr("fill", noncsNodeColour)
+      .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
 
 
   nodeElements.append("circle")
