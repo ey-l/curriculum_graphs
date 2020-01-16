@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.css" type="text/css" />
+    <script src="https://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.min.js"></script>
+
+    <style>
+        .tnt_zmenu_header {
+            background-color: steelblue;
+            color : white;
+        }
+
+        .link.recommend {
+            stroke-dasharray: 0,2 3;
+        }
+
+        .link.coreq {
+          stroke-dasharray: 0,2 0.1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="padding:30px; position:relative" ></div>
+    <script>
+
+function getNodeColor(node, neighbors) {
+  if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
+    return node.course === 0 ? logicNodeColour : highlightColour
+  }
+  return node.course === 0 ? logicNodeColour : node.core === 0 ? noncoreNodeColour : coreNodeColour
+}
+
+function getNodeSize(node, neighbors) {
+  return node.course ? 12 : 12
+}
+
+function getStrokeColor(node, neighbors) {
+  if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
+    return node.course ? courseStrokeColour : highlightColour
+  }
+  return node.course ? courseStrokeColour : logicStrokeColour
+}
+
+function getXCoord(node) {
+  return width - (node.fx * 28 + 200)
+}
+
+function getYCoord(node) {
+  return height - (node.fy * 80 + 200)
+}
+
+function getLinkType(link) {
+  if (link.type != null) {
+    return "link " + link.type
+  }
+  return "link"
+}
+
+// Set node colours
+var noncoreNodeColour = 'lightsteelblue'
+var coreNodeColour = 'yellow'
+var logicNodeColour = 'white'
+
+// Set stroke colours
+var logicStrokeColour = 'transparent'
+var courseStrokeColour = 'gray'
+var linkColour = 'black'
+var textColour = 'black'
+var highlightColour = '#fabdad'
+
+var width = window.innerWidth
+var height = window.innerHeight
+
+    var t = function (data) {
+        var obj = {};
+        obj.header = "CPSC " + data.name;
+        obj.rows = [];
+        obj.rows.push({
+            "label" : "Course Learning Outcomes",
+            "value" : ""
+        });
+
+        // clos = data.clo // A list
+        // Keep pushing till the end of the list
+        obj.rows.push({
+            "label" : data.name + "_1",
+            "value" : "Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required. "
+        });
+        obj.rows.push({
+            "label" : data.name + "_2",
+            "value" : "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested."
+        })
+        tooltip.table()
+            .width(250)
+            .id("table")
+            .call (this, obj);
+    };
+
+    var svg = d3.select("#container")
+               .append("svg")
+               .attr("width", width)
+               .attr("height", height);
+
+
+    // Build the arrow.
+svg.append("svg:defs").selectAll("marker")
+    .data(["end"])      // Different link/path types can be defined here
+  .enter().append("svg:marker")    // This section adds in the arrows
+    .attr("id", String)
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 30)
+    .attr("refY", 0)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+  .append("svg:path")
+    .attr("d", "M0,-5L10,0L0,5")
+
+
+    d3.json("cpsc.json", function(data) {
+      
+      console.log(data)
+
+
+      var linkElements = svg.selectAll("line.link")
+        .data(data.links)
+        .enter().append("line")
+        // .attr("class", "link")
+        .attr("class", getLinkType)
+        .attr("stroke-width", 1)
+        // .attr("stroke", "rgba(50, 50, 50, 0.2)")
+        .attr("stroke", linkColour)
+        .attr("marker-end", "url(#end)")
+
+      var nodeElements = svg
+               .selectAll("circle")
+               .data(data.nodes)
+               .enter()
+               .append("circle")
+               .attr("r", getNodeSize)
+               .attr("fill", getNodeColor)
+               .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
+               .on("click", t)
+
+      var textElements = svg.selectAll("text")
+        .data(data.nodes)
+        .enter().append("text")
+        .text(function (node) { return node.name })
+        .attr("font-size", 10)
+        .attr("dx", -8) 
+        .attr("dy", 3)
+
+      // Simulation setup with all forces
+  var linkForce = d3
+    .forceLink()
+    .id(function (link) { return link.id })
+
+  var simulation = d3
+    .forceSimulation()
+    .force('link', linkForce)
+    .force('charge', d3.forceManyBody().strength(-120))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY())
+
+      simulation.nodes(data.nodes).on('tick', () => {
+    nodeElements
+      .attr('cx', function (node) { return getXCoord(node) })
+      .attr('cy', function (node) { return getYCoord(node) })
+    textElements
+      .attr('x', function (node) { return getXCoord(node) })
+      .attr('y', function (node) { return getYCoord(node) })
+    linkElements
+      .attr('x1', function (link) { return getXCoord(link.source) })
+      .attr('y1', function (link) { return getYCoord(link.source) })
+      .attr('x2', function (link) { return getXCoord(link.target) })
+      .attr('y2', function (link) { return getYCoord(link.target) })
+  })
+
+  simulation.force("link").links(data.links)
+  })
+
+
+
+    </script>
+</body>

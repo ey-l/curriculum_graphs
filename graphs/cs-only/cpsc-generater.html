@@ -28,12 +28,19 @@ div.tooltip {
   stroke-dasharray: 0,2 0.1;
 }
 
+.tnt_zmenu_header {
+            background-color: steelblue;
+            color : white;
+        }
+
 </style>
 
 <svg id="graph" width="960" height="600"></svg>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="d3CloseButton.js"></script>
+<!-- TnT Tooltip-->
+<link rel="stylesheet" href="http://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.css" type="text/css" />
+<script src="http://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.min.js" charset="utf-8"></script>
 <script>
 
 function isNeighborLink(node, link) {
@@ -119,6 +126,20 @@ var div = d3.select("body").append("div")
     .attr("class", "tooltip")       
     .style("opacity", 0)
 
+var t = function(data) {
+  var obj = {}
+  obj.header = data.name
+  obj.rows = []
+  obj.rows.push({
+    "label" : "Name",
+    "value" : data.name
+  })
+  console.log(this.n)
+  tooltip.table()
+    .width(180)
+    .call(this, obj)
+}
+
 d3.json("cpsc.json", function(data) {
 
   // Simulation setup with all forces
@@ -188,7 +209,8 @@ d3.json("cpsc.json", function(data) {
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
-      .on('click', selectNode)
+      // .on('click', selectNode)
+      .on("click", t)
 
   var textElements = svg.append("g")
     .attr("class", "texts")
