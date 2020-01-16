@@ -6,14 +6,18 @@
 div.tooltip { 
     position: absolute;     
     text-align: center;     
-    width: 80px;          
-    height: 60px;         
+    width: 150px;          
+    height: 100px;         
     padding: 2px;       
     font: 12px sans-serif;    
     background: lightgray; 
     border: 0px;    
-    border-radius: 8px;     
-    pointer-events: none;     
+    border-radius: 8px;
+    overflow: scroll;     
+}
+
+.hidden {
+  display: none;
 }
 
 .link.recommend {
@@ -29,6 +33,7 @@ div.tooltip {
 <svg id="graph" width="960" height="600"></svg>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="d3CloseButton.js"></script>
 <script>
 
 function isNeighborLink(node, link) {
@@ -129,26 +134,25 @@ d3.json("cpsc.json", function(data) {
     .force("x", d3.forceX())
     .force("y", d3.forceY())
 
-  function getNeighbors(node) {
-    return data.links.reduce(function (neighbors, link) {
-      if (link.target.id === node.id) {
-        neighbors.push(link.source.id)
-      } else if (link.source.id === node.id) {
-        neighbors.push(link.target.id)
+  var toggle = 0
+  function selectNode(node) {
+    if (node.prereq != null) {
+      if (toggle == 0) {
+        div.transition()
+          .duration(200)    
+          .style("opacity", .8)    
+        div.html(node.prereq)  
+          .style("left", (d3.event.pageX) + "px")   
+          .style("top", (d3.event.pageY - 28) + "px")
+        console.log("hey")
+        toggle = 1
+      } else {
+        div.transition()
+          .duration(200)    
+          .style("opacity", 0)
+        toggle = 0
       }
-      return neighbors
-    },
-    [node.id]
-    )
-  }
-
-  function selectNode(selectedNode) {
-    var neighbors = getNeighbors(selectedNode)
-    // Modify the styles to highlight selected nodes
-    nodeElements.attr('fill', function (node) { return getNodeColor(node, neighbors) })
-    nodeElements.style('stroke', function (node) { return getStrokeColor(node, neighbors) })
-    textElements.attr('fill', function (node) { return getTextColor(node, neighbors) })
-    linkElements.attr('stroke', function (link) { return getLinkColor(selectedNode, link) })
+    }
   }
 
   // Handmade legend
@@ -157,11 +161,12 @@ d3.json("cpsc.json", function(data) {
   svg.append('line').attr("x1", 190).attr("y1", 390).attr("x2", 213).attr("y2", 390).attr("stroke-width", 1).attr("stroke", linkColour)
   svg.append('line').attr("x1", 188).attr("y1", 420).attr("x2", 213).attr("y2", 420).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
   svg.append('line').attr("x1", 188).attr("y1", 450).attr("x2", 213).attr("y2", 450).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
+  svg.append("rect").attr("x", 175).attr("y", 310).attr("width", 130).attr("height", 155).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
   svg.append("text").attr("x", 220).attr("y", 330).text("Core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
   svg.append("text").attr("x", 220).attr("y", 360).text("Non-core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
   svg.append("text").attr("x", 220).attr("y", 390).text("Pre-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
   svg.append("text").attr("x", 220).attr("y", 420).text("Co-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", 220).attr("y", 450).text("Recommend").style("font-size", "12px").attr("alignment-baseline","middle")
+  svg.append("text").attr("x", 220).attr("y", 450).text("Recommended").style("font-size", "12px").attr("alignment-baseline","middle")
 
 
   var linkElements = svg.append("g")
@@ -183,26 +188,7 @@ d3.json("cpsc.json", function(data) {
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
-      // .on('click', selectNode)
-      // Mouseover for labels
-      .on("mouseover", function(node) {
-        // Only show the tab for course nodes
-        if (node.prereq != null) {
-          div.transition()
-            .duration(200)    
-            .style("opacity", .9)    
-          div.html(node.prereq)  
-            .style("left", (d3.event.pageX) + "px")   
-            .style("top", (d3.event.pageY - 28) + "px")
-        }  
-      })          
-      .on("mouseout", function(node) {   
-        if (node.course === 1) {
-          div.transition()    
-            .duration(500)    
-            .style("opacity", 0)
-        }
-      })
+      .on('click', selectNode)
 
   var textElements = svg.append("g")
     .attr("class", "texts")
