@@ -85,6 +85,8 @@ var width = window.innerWidth
 var height = window.innerHeight
 
     var t = function (data) {
+      // Should popup for course nodes only
+      if (data.course) {
         var obj = {};
         obj.header = "CPSC " + data.name;
         obj.rows = [];
@@ -94,27 +96,30 @@ var height = window.innerHeight
         });
 
         if (data.clos != null) {
-          clos = data.clos // Get CLO list
+          var clos = data.clos // Get CLO list
+          var label = 1
           // Keep pushing till the end of the list
           for (var i in clos) {
             obj.rows.push({
-              "label" : data.name + "_" + i,
+              "label" : label + ". ",
               "value" : clos[i]
             });
+            label ++
           }
         } else {
           obj.rows.push({
-            "label" : data.name + "_0",
-            "value" : "1. "
+            "label" : data.name + "_1",
+            "value" : "CLO 1"
           });
           obj.rows.push({
-            "label" : data.name + "_1",
-            "value" : "2. "
+            "label" : data.name + "_2",
+            "value" : "CLO 2"
           })
         }
         tooltip.table()
             .width(width*0.3)
             .call(this, obj);
+      }
     };
 
     var svg = d3.select("#container")
@@ -128,6 +133,7 @@ var height = window.innerHeight
                .attr("height", height);
 
     // Handmade legend
+    // Need to refactor this code 
   legend.append("circle").attr("cx",200).attr("cy",330).attr("r", 12).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
   legend.append("circle").attr("cx",200).attr("cy",360).attr("r", 12).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
   legend.append('line').attr("x1", 190).attr("y1", 390).attr("x2", 213).attr("y2", 390).attr("stroke-width", 1).attr("stroke", linkColour)
