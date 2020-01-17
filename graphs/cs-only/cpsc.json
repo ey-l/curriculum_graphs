@@ -23,7 +23,14 @@
       "cs": 1,
       "course": 1,
       "fy": 0.5,
-      "fx": 10
+      "fx": 10,
+      "clos": ["Model computational systems (e.g., programs and circuits) and apply valid reasoning to these models, i.e. prove relevant properties or reason through functionality of computational systems using predicate logic, propositional logic and state machines.",
+        "Clearly and precisely communicate computational models to computer scientists.",
+        "Identify alternate methods to solve or simplify a variety of problems by translating between (1) English language, (2)  simple formal representations (i.e., propositional and shallowly nested predicate logic statements) and (3) closely related equivalent formal representations, and then use the different representations to solve the problem.",
+        "Write proofs for simple theorems by translating the theorem into first-order logic, decomposing the statement, and applying an appropriate proof-technique such as direct proofs, indirect proofs by contrapositive, indirect proofs by contradiction, proofs by weak and strong mathematical induction. Justify why each step of the proof is correct.",
+        "Prove features of simple algorithms (e.g.,selection sort, recursive binary search, or quicksort) correct or bound in their running time. Justify why each step of the proof is correct.",
+        "Create regular expressions and DFAs to solve problems that are important in programming."
+      ]
     },
     {
       "id": 210,
@@ -32,7 +39,16 @@
       "cs": 1,
       "course": 1,
       "fy": 1,
-      "fx": 10
+      "fx": 10,
+      "clos": ["Specify a new program, given a small problem description, by identifying relevant data abstractions, and specifying the associated behaviour of those abstractions.",
+        "Validate the program’s behaviour against its specification prior to implementation using test driven design, through writing unit tests that achieve basic code coverage.",
+        "Implement the program in Java, choosing the internal structure of its abstractions, and carry out implementation choices.",
+        "Design software using basic Object oriented design principles (coupling, cohesion, single responsibility, substitution), robustness, and design patterns where applicable.",
+        "Analyse the structure and behaviour of an existing small to medium sized codebase by making static and dynamic models and identifying design idioms, including design patterns, present in the code.",
+        "Evolve a small to medium sized codebase by changing or augmenting behaviour of the code through alteration, subtyping or composition.",
+        "Recover from common structural issues through identifying those issues, and selecting and applying  the appropriate refactorings.",
+        "Communicate (orally through code demonstration) implementation choices, and the rationale for those choices."
+      ]
     },
     {
       "id": 213,
@@ -41,7 +57,15 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 15
+      "fx": 15,
+      "clos": ["Using a hardware based model of execution, reason about the limitations, vulnerabilities and idiosyncrasies of the behaviour of a particular program, specifically concerning performance, bugs and security vulnerabilities.",
+        "Using a hardware based model of data, reason about how programs access data using different types of variables, including the implicit and explicit use of memory references.",
+        "Translate a statement from a high-level programming language into assembly language; from a large block of assembly language, identify groups of instructions that correspond to high level language features and then write an equivalent high level programming language expression.",
+        "Identify and correct memory management bugs, particularly in languages with explicit deallocation, and use best practices to write code that is less likely to incur such issues.",
+        "Compare and contrast how Java and C are translated into a language the CPU understands; identify common features that are implemented in significantly different ways in either language (for instance, memory management, and the duality of subtype polymorphism in Java and function pointers in C). In doing so, explain the tradeoffs associated with each.",
+        "Reason about the execution of concurrent programs, incl. real time interrupts, and use both asynchronous programming and threads to write concurrent and/or parallel programs. Explain the tradeoffs associated with each.",
+        "Solve problems using monitors, condition variables and semaphores."
+      ]
     },
     {
       "id": 221,
@@ -50,7 +74,16 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 22
+      "fx": 22,
+      "clos": ["Define and articulate the functionality of classic data structures such as Stacks, Queues, Dictionaries, Priority Queues, etc. by their Abstract Data Type (ADT).",
+        "Design algorithms and structures to implement novel ADTs based on properties of the data and intended use of the data.",
+        "Implement classic and novel data structures in modern C++, including arrays, linked lists, balanced binary search trees, hash tables, etc.",
+        "Analyze the efficiency (time and space) of algorithms and data structures using asymptotic notation (Big-O, Big-Omega, Big-Theta).",
+        "Prove algorithm correctness using iterative and recursive methods.",
+        "Evaluate asymptotic time and space tradeoffs between implementation options.",
+        "Identify the structures and algorithms necessary for solving complex problems.",
+        "Synthesize and apply algorithmic and analytical design choices to form complete software solutions of classic problems."
+      ]
     },
     {
       "id": 310,
@@ -59,7 +92,15 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 9
+      "fx": 9,
+      "clos": ["Evaluate software engineering processes used to build modern industrial-calibre systems by justifying their benefits and tradeoffs.",
+        "Elicit, deconstruct, and refine functional requirements and quality attributes such that they are described succinctly, completely, and precisely.",
+        "Devise and justify high- and low-level designs to support a given set of requirements and in support of future evolutionary needs.",
+        "Iteratively derive implementations of a design of reasonable complexity incorporating emergent design implications, and applying code-level restructuring for the sake of facilitating changes.",
+        "Carry out the implementation of a design incorporating ethical and security implications of code-level choices and software process and methodological approaches.",
+        "Independently acquire and apply modern and unfamiliar technology and language stacks.",
+        "Validate systems using both black-box and white-box approaches to reason about, and improve the quality of a software system."
+      ]
     },
     {
       "id": 320,
@@ -68,7 +109,14 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 19
+      "fx": 19,
+      "clos": ["Identify the algorithm technique (such as divide and conquer, prune and search, greedy strategies, or dynamic programming) used in a given algorithm.",
+        "Select, adapt, and evaluate promising algorithmic techniques and/or data structures for a given problem by analyzing the problem’s properties.",
+        "Design and prove the correctness of a solution to a problem using a specified algorithm technique, given sufficient information about the form of that problem’s solution.",
+        "Select, evaluate and apply promising mathematical techniques (such as asymptotic notations, recurrence relations, and decision trees) to prove reasonably tight upper and lower bounds on the running time of algorithms.",
+        "Decide how and when to reduce a known problem to another problem of interest, either to obtain an efficient  solution to the latter, or to prove that  such a  solution is  unlikely to exist  in the  context of NP-hardness.",
+        "Explore and apply promising mathematical techniques for modelling (such as predicate logic, graphs, or asymptotic notations) and analysis (such as asymptotic runtime analysis, recurrence relations, or decision trees) to specify and prove important properties of algorithmic problems and their solutions."
+      ]
     },
     {
       "id": 313,
@@ -77,7 +125,14 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 16
+      "fx": 16,
+      "clos": ["Explain the benefits of, and challenges associated with, instruction-level parallelism and its implementation.",
+        "Describe at least one high-level architecture for a pipelined CPU. Correctly analyze examples of the timing of instructions passing through this architecture to identify dependencies and hazards.",
+        "Explain why different types of memory need to be used in modern computers, and how the constraints on physical size, capacity and speed affect the performance of computer code. Correctly analyze examples of memory access patterns and locality to compute the steps required to retrieve the information and/or to update the memory state, while maintaining optimal performance for future accesses.",
+        "Explain the issues that must be considered while designing file systems and some common solutions for these issues. Given a file system specification, correctly analyze examples of typical file system operations to identify how to retrieve necessary information or update the file system state. Explain the role that caching, buffering, and partial failure play in the implementation and use of files systems, including differentiating between the role that mechanism and policy play in the operating system and in applications that access file data.",
+        "Explain how a modern operating system can share a computer’s processing and memory resources among multiple untrusted and competing processes. Correctly analyze examples of virtual memory accesses in individual processes to (1) compute the steps required to retrieve the information and/or update the memory state, and to (2) identify when hardware can perform an operation autonomously and when the operating system has to be invoked.",
+        "Optimize C code in order to make it run faster by refining its locality and use of processor and memory resources. Optimize at least one version of Assembly code to make it run faster by reducing the number of hazards in typical pipelined CPUs."
+      ]
     },
     {
       "id": 100,

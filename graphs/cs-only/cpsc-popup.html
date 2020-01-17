@@ -113,7 +113,7 @@ var height = window.innerHeight
           })
         }
         tooltip.table()
-            .width(350)
+            .width(width*0.3)
             .call(this, obj);
     };
 
@@ -189,6 +189,7 @@ svg.append("svg:defs").selectAll("marker")
         .attr("font-size", 10)
         .attr("dx", -8) 
         .attr("dy", 3)
+        .on("click", t)
 
       // Simulation setup with all forces
   var linkForce = d3
