@@ -8,7 +8,13 @@
       "course": 1,
       "fy": -0.5,
       "fx": 3,
-      "prereq": "hey"
+      "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
+        "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
+        "Understand the relation between information and data. This is demonstrated by being able to design the data representation for a reasonably complex problem, and to describe the information encoded in the given data.",
+        "Understand that programs have structure beyond that of the language constructs. Understand that this structure comes from data and other design patterns, and is critical to writing and reading complex programs. This is demonstrated by being able to identify correspondences between a data definition and a program that operates on that data, and by being able to identify other design patterns in a program.",
+        "Understand that one can replace repetitive code with an abstraction in a systematic way. Understand that this is at the heart of designing libraries. This is demonstrated by being able to produce examples of code before and after abstraction: before, where one can see the repeated code, and after, where one can see the abstraction and verify that it provides the solution to the original problem, as well as several other similar problems. Students should also be able to design a program that uses existing libraries or existing code to solve a new problem.",
+        "Understand that programs can be described using notations other than code, and that these models can facilitate program design. This is demonstrated by being able to identify correspondences between non-code models of a program and the program itself and by being able to use non-code models in program design."
+      ]
     },
     {
       "id": 121,
