@@ -28,12 +28,26 @@
           top:0px;
           left:0px;
         }
+
+        .svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: scroll;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
     </style>
 </head>
 
 <body>
-    <div id="legend" class="floatTL" width="960" height="600"></div>
-    <div id="container" class="floatTL" width="960" height="600"></div>
+    <div id="container" class="floatTL" width="960" height="400"></div>
     <script>
 
 function getNodeColor(node, neighbors) {
@@ -55,11 +69,11 @@ function getStrokeColor(node, neighbors) {
 }
 
 function getXCoord(node) {
-  return width - (node.fx * 28 + 200)
+  return 1269 - (node.fx * 28 + 230)
 }
 
 function getYCoord(node) {
-  return height - (node.fy * 80 + 200)
+  return 616 - (node.fy * 80 + 200)
 }
 
 function getLinkType(link) {
@@ -120,7 +134,7 @@ var width = window.innerWidth
 var height = window.innerHeight
 
     var custom_tooltip = tnt.tooltip()
-        .width(width*0.3)
+        .width(width*0.25)
         .fill (function (obj) {
         var tooltip_div = d3.select(this);
 
@@ -196,24 +210,39 @@ var height = window.innerHeight
             });
     });
 
-    var svg = d3.select("#container")
+    var legend = d3.select("#container") 
                .append("svg")
-               .attr("width", width)
-               .attr("height", height);
+               // .attr("width", width)
+               // .attr("height", height);
+               .attr("preserveAspectRatio", "xMinYMin meet")
+   .attr("viewBox", "0 0 1200 600")
+   // Class to make it responsive.
+   .classed("svg-content-responsive", true)
 
-    var legend = d3.select("#legend")
+    var svg = d3.select("#container")
+    // Container class to make it responsive.
+   .classed("svg-container", true) 
                .append("svg")
-               .attr("width", width)
-               .attr("height", height);
+               // .attr("width", width)
+               // .attr("height", height);
+               // Responsive SVG needs these 2 attributes and no width and height attr.
+   .attr("preserveAspectRatio", "xMinYMin meet")
+   .attr("viewBox", "0 0 1200 600")
+   // Class to make it responsive.
+   .classed("svg-content-responsive", true)
+
 
     // Handmade legend
     // Need to refactor this code 
+    var legend_width = 130
+    var legend_height = 155
+
   legend.append("circle").attr("cx",200).attr("cy",330).attr("r", 12).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
   legend.append("circle").attr("cx",200).attr("cy",360).attr("r", 12).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
   legend.append('line').attr("x1", 190).attr("y1", 390).attr("x2", 213).attr("y2", 390).attr("stroke-width", 1).attr("stroke", linkColour)
   legend.append('line').attr("x1", 188).attr("y1", 420).attr("x2", 213).attr("y2", 420).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
   legend.append('line').attr("x1", 188).attr("y1", 450).attr("x2", 213).attr("y2", 450).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
-  legend.append("rect").attr("x", 175).attr("y", 310).attr("width", 130).attr("height", 155).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
+  legend.append("rect").attr("x", 175).attr("y", 310).attr("width", legend_width).attr("height", legend_height).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
   legend.append("text").attr("x", 220).attr("y", 330).text("Core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", 220).attr("y", 360).text("Non-core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", 220).attr("y", 390).text("Pre-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
@@ -240,6 +269,8 @@ svg.append("svg:defs").selectAll("marker")
     d3.json("cpsc.json", function(data) {
       
       console.log(data)
+      console.log(width)
+      console.log(height)
 
 
       var linkElements = svg.selectAll("line.link")
@@ -273,8 +304,10 @@ svg.append("svg:defs").selectAll("marker")
         .attr("dx", -8) 
         .attr("dy", 3)
         .on("click", function (node) {
+          if (node.course) {
           var obj = makeObj(node)
             custom_tooltip.call(this, obj)
+          }
         })
 
       // Simulation setup with all forces

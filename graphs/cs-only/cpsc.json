@@ -460,21 +460,39 @@
     },
     {
       "id": 4301,
-      "name": "3rd year standing",
+      "name": "3rd year",
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
-      "fx": 33
+      "fy": 4,
+      "fx": 30
     },
     {
       "id": 4302,
-      "name": "3-credit CPSC course",
+      "name": "standing and",
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
-      "fx": 30
+      "fy": 3.85,
+      "fx": 30.5
+    },
+    {
+      "id": 4303,
+      "name": "and 3-credit",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.7,
+      "fx": 30.5
+    },
+    {
+      "id": 4304,
+      "name": "CPSC course",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.55,
+      "fx": 30.5
     },
     {
       "id": 444,
@@ -637,15 +655,6 @@
       "course": 0,
       "fy": 3,
       "fx": 21
-    },
-    {
-      "id": 17,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4,
-      "fx": 30
     }
   ],
   "links": [
@@ -947,15 +956,7 @@
     },
     {
       "source": 430,
-      "target": 17
-    },
-    {
-      "source": 17,
       "target": 4301
-    },
-    {
-      "source": 17,
-      "target": 4302
     }
   ]
 }
