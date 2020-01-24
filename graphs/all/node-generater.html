@@ -112,38 +112,37 @@ function getYCoord(node) {
 }
 
 function makeObj(node) {
-  if (node.course) {
-        var obj = {};
-        obj.header = "CPSC " + node.name;
-        obj.rows = [];
-        obj.rows.push({
-            "label" : "Course Learning Outcomes",
-            "value" : ""
-        });
+  var obj = {};
+  obj.header = "CPSC " + node.name;
+  obj.rows = [];
+  obj.rows.push({
+    "label" : "Course Learning Outcomes",
+    "value" : ""
+  });
 
-        if (node.clos != null) {
-          var clos = node.clos // Get CLO list
-          var label = 1
-          // Keep pushing till the end of the list
-          for (var i in clos) {
-            obj.rows.push({
-              "label" : label + ". ",
-              "value" : clos[i]
-            });
-            label ++
-          }
-        } else {
-          obj.rows.push({
-            "label" : node.name + "_1",
-            "value" : "CLO 1"
-          });
-          obj.rows.push({
-            "label" : node.name + "_2",
-            "value" : "CLO 2"
-          })
-        }
-        return obj
-      }
+  if (node.clos != null) {
+    var clos = node.clos // Get CLO list
+    var label = 1
+    // Keep pushing till the end of the list
+    for (var i in clos) {
+      obj.rows.push({
+        "label" : label + ". ",
+        "value" : clos[i]
+      });
+      label ++
+    }
+  } else {
+    obj.rows.push({
+    "label" : node.name + "_1",
+    "value" : "CLO 1"
+    });
+
+    obj.rows.push({
+      "label" : node.name + "_2",
+      "value" : "CLO 2"
+    })
+  }
+  return obj
 }
 
 // Set node colours
@@ -327,8 +326,10 @@ d3.json("all.json", function(data) {
       .attr("fill", getNodeColor)
       .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
       .on("click", function (node) {
-        var obj = makeObj(node)
-        custom_tooltip.call(this, obj)
+        if (node.course) {
+          var obj = makeObj(node)
+          custom_tooltip.call(this, obj)
+        }
       })
 
 
@@ -363,8 +364,10 @@ d3.json("all.json", function(data) {
       .attr("dx", -8) 
       .attr("dy", 3)
       .on("click", function (node) {
-        var obj = makeObj(node)
-        custom_tooltip.call(this, obj)
+        if (node.course) {
+          var obj = makeObj(node)
+          custom_tooltip.call(this, obj)
+        }
       })
 
   textElements.append("text").filter(function(d){ return d.shape === "ellipse" })
