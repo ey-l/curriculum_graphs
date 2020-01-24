@@ -141,7 +141,14 @@
       "cs": 1,
       "course": 1,
       "fy": -1,
-      "fx": 0.5
+      "fx": 0.5,
+      "clos": ["Use abstraction and decomposition to clarify and simplify the critical pieces of a problem.",
+        "Choose appropriate models and representations to aid in solving the problem.",
+        "Recognize potential shortcomings in a model or solution.",
+        "Explain at a high level how the computer works.",
+        "Explain specific algorithms that computers use to create applications of computational thinking (e.g., data mining).",
+        "Provide and explain examples of how computers impact their lives and what this means for them, both in terms of how the computer can add to their lives and in things that they have to be careful of, such as privacy and security."
+      ]
     },
     {
       "id": 103,
@@ -150,7 +157,15 @@
       "cs": 1,
       "course": 1,
       "fy": -1,
-      "fx": 1.5
+      "fx": 1.5,
+      "clos": ["Write small programs that solve a problem in an academic discipline of choice and are readable, well-organized, well-documented, and well-tested.",
+        "Write small programs for a reasonably complex task, where the ability to use the \"one task - one function\" rule can be demonstrated.",
+        "Design the data representation for a reasonably complex problem.",
+        "Describe the information encoded in given data.",
+        "Identify correspondences between a data definition and a program that operates on that data and be able to identify how potential changes to a data definition would affect a program.", 
+        "Complete an appropriately-sized course project using the systematic approach from the course.", 
+        "Effectively communicate the design of your course project using appropriate technical language via an academic poster and poster presentation."
+      ]
     },
     {
       "id": 107,
@@ -159,7 +174,14 @@
       "cs": 1,
       "course": 1,
       "fy": -0.5,
-      "fx": 10
+      "fx": 10,
+      "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
+        "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
+        "Understand the relation between information and data. This is demonstrated by being able to design the data representation for a reasonably complex problem, and to describe the information encoded in the given data.",
+        "Understand that programs have structure beyond that of the language constructs. Understand that this structure comes from data and other design patterns, and is critical to writing and reading complex programs. This is demonstrated by being able to identify correspondences between a data definition and a program that operates on that data, and by being able to identify other design patterns in a program.",
+        "Understand that one can replace repetitive code with an abstraction in a systematic way. Understand that this is at the heart of designing libraries. This is demonstrated by being able to produce examples of code before and after abstraction: before, where one can see the repeated code, and after, where one can see the abstraction and verify that it provides the solution to the original problem, as well as several other similar problems. Students should also be able to design a program that uses existing libraries or existing code to solve a new problem.",
+        "Understand that programs can be described using notations other than code, and that these models can facilitate program design. This is demonstrated by being able to identify correspondences between non-code models of a program and the program itself and by being able to use non-code models in program design."
+      ]
     },
     {
       "id": 160,
@@ -168,7 +190,12 @@
       "cs": 0,
       "course": 0,
       "fy": -0.5,
-      "fx": 12
+      "fx": 12,
+      "clos": ["Read and write code that uses basic programming constructs.",
+        "Apply decomposition to develop solutions to problems and write code that reflects that decomposition.",
+        "Apply techniques appropriate for the development of small programs.",
+        "Apply appropriate testing and debugging techniques."
+      ]
     },
     {
       "id": 203,
@@ -177,7 +204,14 @@
       "cs": 1,
       "course": 1,
       "fy": 1,
-      "fx": 3
+      "fx": 3,
+      "clos": ["Apply computation as tool for solving complex quantitative, data-centric, or analytical problems.",
+        "Show Python fluency.",
+        "Ability to formulate and answer questions in student’s own domain.",
+        "Solve multi-stage problems using data design, abstraction, and decomposition.",
+        "Be familiar with algorithm efficiency and data structures.",
+        "Use computation to express ideas—bridge the gap between ideas and implementation."
+      ]
     },
     {
       "id": 259,
@@ -186,7 +220,14 @@
       "cs": 1,
       "course": 1,
       "fy": 0,
-      "fx": 12
+      "fx": 12,
+      "clos": ["Explain, with examples, the purpose of these data structures: arrays, linked lists (including stacks and queues), hash tables, trees, graphs, and heaps.",
+        "Use the above data structures in programs, using recursion and dynamic memory allocation and deallocation (as appropriate) in their implementations.",
+        "Determine the Big-O runtime complexity of basic algorithms and manipulations on data structures, including insert, update, and delete operations in hash tables, heaps, and tree and graph data structures.",
+        "Determine and justify which data structures and algorithms are most appropriate to use in solving non-trivial problems.",
+        "Differentiate among different searching and sorting algorithms, and explain their pros and cons.",
+        "Read and write programs (of length up to 15 pages) that use data structures and dynamic memory allocation to solve non-trivial problems."
+      ]
     },
     {
       "id": 261,
@@ -195,7 +236,13 @@
       "cs": 1,
       "course": 1,
       "fy": 2,
-      "fx": 19
+      "fx": 19,
+      "clos": ["Describe the types of memory used by modern computers and explain how the hardware and the operating system cooperate to manage memory.",
+        "Utilize their knowledge of the CPU and memory systems to optimize C/C++ code and make it run faster.",
+        "Explain the importance of instruction-level parallelism, the problems that arise as a result of its use, and how these problems can be resolved.",
+        "Utilize synchronization primitives to control interaction in various situations including among processes and threads.",
+        "Explain the issues relevant to file system design, and how some existing file systems handle them."
+      ]
     },
     {
       "id": 302,
@@ -222,7 +269,18 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 22
+      "fx": 22,
+      "clos": ["Create a non-trivial E/R diagram (data model) about an enterprise (e.g., retail establishment, airport, school, library) that correctly describes the entities, attributes, and relationships among the entities—for some of that enterprise’s major business functions.",
+        "Create a logical data model from an E/R diagram to design a set of DB tables.",
+        "Normalize a set of attributes to eliminate anomalies or redundancies from a set of tables.",
+        "Implement a logical data model using a DBMS.",
+        "Write queries using formal query languages such as relational algebra and Datalog.",
+        "Write SQL statements to query (i.e., SELECT... FROM) a set of relational tables, using multiple WHERE-clause conditions; and use aggregate functions, including the GROUP BY and HAVING clauses.",
+        "Write SQL statements to INSERT, UPDATE, and DELETE rows in a set of relational tables.",
+        "Explain the purpose of a data warehouse and the operations that can be performed on it.",
+        "Design basic star schemas and snowflake schemas.",
+        "Compare and contrast data warehouses/OLAP (online analytical processing) with traditional DBMSs/OLTP (online transaction processing)."
+      ]
     },
     {
       "id": 311,
@@ -231,7 +289,13 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 12
+      "fx": 12,
+      "clos": ["Assess the semantics of a (new or existing) language as a collection of language design decisions and describe the likely impact of some of those decisions on the language and its programmers.",
+        "Indicate through examples how different design choices for programming language features alter the semantics of syntactically identical code (e.g., giving a code snippet that behaves differently under static and dynamic scoping rules and explaining why).",
+        "Justify or criticize a particular design decision for a programming language feature in the context of a design goal for the language as a whole. (For example, (1) Criticize dynamic scope (2) Justify the exposure of continuations in a language intended to combine Prolog-style databases of logical information with user-designed customized search routines that replace Prolog's built in left-to-right depth-first-search.)",
+        "Read, write, and modify syntax specifications, abstract syntax specifications/datatypes, parsers, interpreters, and (as appropriate) type checkers and pre-processors for various Racket-like languages illustrating key programming language concepts.",
+        "Read, write, and modify arbitrary, Racket and Racket-like programs (20 lines at most) as test cases and illustrative examples for the various languages we develop (and for the corresponding functionality in Racket itself)."
+      ]
     },
     {
       "id": 312,
@@ -249,7 +313,14 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 26
+      "fx": 26,
+      "clos": ["Explain the algorithmic steps and mathematics used in rendering and animating 3D models.",
+        "Interpret and explain affine transformations using diagrams, linear algebra, and code within a graphics API.",
+        "Write code that implements the graphics pipeline, with an emphasis on vertex shaders and fragment shaders.",
+        "Read, write, and modify code for graphics applications using a common graphics API.",
+        "Explain the behaviour of common local and global illumination models, and the assumptions they make about physics and perception.",
+        "Describe and appreciate the creative potential of modern computer graphics and current capabilities and trends in computer graphics."
+      ]
     },
     {
       "id": 317,
@@ -267,7 +338,13 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 8
+      "fx": 8,
+      "clos": ["Understand and apply the different stages of application life cycle using waterfall methodology (including Agile).",
+        "Develop key artifacts (ie: documentation) at key stages of the development lifecycle.",
+        "Apply some new innovative techniques such as Agile and requirements-based testing into your projects.",
+        "Focus and value the importance of non-engineering components of IT project delivery.",
+        "Developed improved collaborative skills with stakeholders, peers and customers."
+      ]
     },
     {
       "id": 322,
@@ -285,7 +362,16 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 3
+      "fx": 3,
+      "clos": ["Identify problems that may be addressed with machine learning.",
+        "Select the appropriate machine learning tool for a problem.",
+        "Transform data of various types into usable features.",
+        "Apply standard tools implementing supervised and unsupervised learning techniques.",
+        "Describe core differences between training, validation, and testing regimes.",
+        "Effectively communicate the results of a machine learning pipeline.",
+        "Be realistic about the limitations of individual approaches and machine learning as a whole.",
+        "Create reproducible workflows and pipelines."
+      ]
     },
     {
       "id": 340,
@@ -294,7 +380,16 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 25
+      "fx": 25,
+      "clos": ["Identify problems that may be addressed with data mining and machine learning techniques.",
+        "Select the appropriate machine learning tool for a problem.",
+        "Represent data as features and frame problems in the standard learning notation.",
+        "Apply tools implementing supervised and unsupervised learning techniques to data.",
+        "Implement several of the most common machine learning techniques in a high-level programming language.",
+        "Describe core differences between training, validation, and testing regimes.",
+        "Understand the different between parametric and non-parametric models, and the limits imposed by the curse of dimensionality.",
+        "Implement techniques to both expand the express power of a model and reduce its complexity."
+      ]
     },
     {
       "id": 344,
@@ -303,7 +398,23 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 10
+      "fx": 10,
+      "clos": ["List heuristics for basic good/bad interface design. Be able to identify and critique interface strengths and weaknesses in terms of this language.",
+        "Contrast the central principles of user-centered versus technology-centered design, and in a given situation, identify and explain which approach to design may be appropriate to use.",
+        "Explain why one's personal design intuition merits skepticism. For a given design context, list specific HCI practices and tools which can help to inform and educate it.",
+        "List and describe models we have of human users (mental models, cognitive resources, sensory processing), vs models that humans have of systems.",
+        "List and categorize key user capabilities; and for a given design challenge, identify the most relevant ones.",
+        "Observe, describe and analyze user activities and needs in terms of their tasks.",
+        "Construct solutions focused on accounting for human limitations; identify evaluation methods that will confirm success in this.",
+        "Demonstrate ability to first design a system at a conceptual level; i.e. the 'bones' versus 'skin' of the design.",
+        "Demonstrate ability to secondly design the external views of a system (i.e. the 'skin') considering course principles including mental models, human cognition, visual design, etc.",
+        "Describe the central HCI techniques, frameworks or processes, in the context of their purpose: e.g. in providing structure for understanding tasks, identifying interaction problems, design alternatives, and next-step process choices.",
+        "Formulate and act upon an iterative, progressively narrowing design approach, in which you seek alternatives and avoid freezing your approach too early.",
+        "List methods for and demonstrate parsimony and effectiveness in deployment of evaluation and prototyping tools. Use in a targeted and minimalist way, to focus on the question at hand; avoid wasting effort, and elicitation of unhelpful or ambiguous user feedback.",
+        "Be able to critique and evaluate the quality of yours and others' designs appropriately at multiple stages, and articulate/defend your design decisions.",
+        "List and describe several methods you have used for team coordination, work management and conflict resolution in the context of multi-week projects; reflect on what worked best; appraise which best suit your own style.",
+        "Demonstrate competency in three communication mediums singly and with your team: in written project reports, informal oral presentation, and in respectfully critiquing, articulating and defending the teams' ideas, challenges and questions to one another, peers and course staff, over the course of the term."
+      ]
     },
     {
       "id": 402,
@@ -321,7 +432,16 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 22
+      "fx": 22,
+      "clos": ["Explain the I/O cost-based model for relational database management systems (RDBMSs). Justify its applicability/use (i.e., the use of page I/Os to estimate performance).",
+        "Recommend and justify appropriate indexes for a set of tables, given some parameters about the expected query mix.",
+        "Show how to use an index (e.g., B+ tree, extendible hash structure, linear hash structure) to look up search keys and rows in a table. Demonstrate insertions and deletions of keys in the index, by performing splitting or merging of nodes. Analyze the complexity of operations against these data structures.",
+        "Explain and justify the choice of query evaluation and optimization decisions made by an RDBMS optimizer, given appropriate metadata.",
+        "Compute/estimate the cost of evaluating and optimizing a given query, given a set of indexes and appropriate metadata. Compute/estimate the cost of other database operations (e.g., external sorting).",
+        "Explain how concurrency is handled to permit greater throughput in an RDBMS. Compare and contrast the different concurrency control methods in terms of the types of schedules they produce, efficiency, and ease of use.",
+        "Define the following properties of database transactions and give practical examples of their characteristics or desirable features: ACID properties, serializability, and isolation levels.",
+        "Explain how write-ahead logging works in a DBMS. In particular, show how to use the ARIES crash recovery algorithm. Provide guidelines for setting appropriate checkpoint and image copy intervals."
+      ]
     },
     {
       "id": 406,
@@ -366,7 +486,12 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 15
+      "fx": 15,
+      "clos": ["Understand key principles in designing and implementing distributed systems.",
+        "Reason about problems that involve distributed components.",
+        "Become familiar with important techniques for solving problems that arise in distributed contexts.",
+        "Build distributed system prototypes using the Go programming language."
+      ]
     },
     {
       "id": 417,
@@ -384,7 +509,18 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 17
+      "fx": 17,
+      "clos": ["Be familiar with parallel patterns such as reduce, scan, and tiling and can apply them to common parallel programming problems.",
+        "Describe parallel algorithms for matrix operations, sorting, dynamic programming, and process coordination.",
+        "Describe shared-memory, message-passing, and SIMD architectures.",
+        "Describe a simple cache-coherence protocol.",
+        "Identify how communication latency and bandwidth are limited by physical constraints in these architectures.",
+        "Describe the difference between bandwidth and inverse latency, and how these impact parallel architectures.",
+        "Understand the concept of “speed-up”: can calculate it from simple execution models or measured execution times.",
+        "Identify key bottlenecks for parallel program performance including communication latency and bandwidth, synchronization overhead, and intrinsically sequential code.",
+        "Implement simple parallel programs in Erlang and CUDA; Describe the differences between these paradigms.",
+        "Identify when one of these paradigms is particularly well-suited (or badly suited) for a particular application."
+      ]
     },
     {
       "id": 420,
@@ -438,7 +574,15 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 26
+      "fx": 26,
+      "clos": ["Use and manipulate common representations for animation data.",
+        "Customise or implement common kinematic and dynamic animation methods.",
+        "Describe recent advances by reading recent research papers.",
+        "Compare and contrast capture technologies for animation.",
+        "View animation methods as providing various degrees of abstraction for authoring motions.",
+        "View animation as an evolving interdisciplinary subject, spanning art and various areas of science.",
+        "Describe and motivate the production pipeline for animation in games and film."
+      ]
     },
     {
       "id": 427,
@@ -447,7 +591,13 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 24
+      "fx": 24,
+      "clos": ["Develop a medium-sized commercial software product such as a video game, suitable for distribution online or electronically and similar in complexity to individual levels in smaller iPhone/iPad titles such as “Angry Birds”, “Tiny Wings”, “Cut The Rope”, etc.",
+        "Operate debuggers, profilers, and version control software packages.",
+        "Implement basic 2D rendering, basic geometric computation (curves, 2D collision), simple 2D animation, path finding, state machines, and user interface code for a video game.",
+        "Design, implement, and test a viable game interface.",
+        "Describe and debug memory management code and implement low level memory access and complex pointer arithmetic in real-world environments."
+      ]
     },
     {
       "id": 430,
@@ -456,7 +606,8 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 30
+      "fx": 30,
+      "clos": ["Students will come away from the course with: (1) greater understanding of the social and ethical implications of computer use and abuse; (2) an improved ability to think critically and defend their decisions logically; (3) a greater appreciation for alternate points of view; (4) the ability to recognize, make, and critique arguments that use workable ethical theories such as utilitarianism, social contract theory, and virtue ethics."]
     },
     {
       "id": 4301,
@@ -501,7 +652,15 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 10
+      "fx": 10,
+      "clos": ["Have knowledge of models of the user and how they apply to the design of user interfaces.",
+        "Be familiar with the variety of techniques and methods for interface design, evaluation, and analysis.",
+        "Have experience designing and running a field study and performing qualitative data analysis.",
+        "Have experience designing and running a controlled experiment and performing quantitative data analysis.",
+        "Have experience working with video in an HCI context: (1) to capture user data, and (2) to create a project video.",
+        "Have experience with some sophisticated tools for interface prototyping and analysis and user observation.",
+        "Be familiar with research issues in HCI."
+      ]
     },
     {
       "id": 445,

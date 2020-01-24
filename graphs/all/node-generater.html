@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 
+<head>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="stylesheet" href="https://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.css" type="text/css" />
+    <script src="https://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.min.js"></script>
 <style> /* Set the CSS */
 
 div.tooltip { 
@@ -24,11 +28,42 @@ div.tooltip {
   stroke-dasharray: 0,2 0.1;
 }
 
+.scrollable {
+  overflow: auto;
+}
+
+.floatTL{
+  position:absolute;
+  top:0px;
+  left:0px;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: scroll;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.tnt_zmenu_header {
+  background-color: steelblue;
+  color : white;
+}
+
 </style>
+</head>
 
-<svg id="graph" width="960" height="400"></svg>
+<body>
+<div id="container" class="floatTL" width="960" height="400"></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
 function isNeighborLink(node, link) {
@@ -69,11 +104,46 @@ function getTextColor(node, neighbors) {
 }
 
 function getXCoord(node) {
-  return width - (node.fx * 35 + 150)
+  return 1269 - (node.fx * 35 + 150)
 }
 
 function getYCoord(node) {
-  return height - (node.fy * 100 + 200)
+  return 616 - (node.fy * 100 + 150)
+}
+
+function makeObj(node) {
+  if (node.course) {
+        var obj = {};
+        obj.header = "CPSC " + node.name;
+        obj.rows = [];
+        obj.rows.push({
+            "label" : "Course Learning Outcomes",
+            "value" : ""
+        });
+
+        if (node.clos != null) {
+          var clos = node.clos // Get CLO list
+          var label = 1
+          // Keep pushing till the end of the list
+          for (var i in clos) {
+            obj.rows.push({
+              "label" : label + ". ",
+              "value" : clos[i]
+            });
+            label ++
+          }
+        } else {
+          obj.rows.push({
+            "label" : node.name + "_1",
+            "value" : "CLO 1"
+          });
+          obj.rows.push({
+            "label" : node.name + "_2",
+            "value" : "CLO 2"
+          })
+        }
+        return obj
+      }
 }
 
 // Set node colours
@@ -93,10 +163,99 @@ var highlightColour = '#fabdad'
 var width = window.innerWidth
 var height = window.innerHeight
 
-// Select the graph area
-var svg = d3.select('#graph')
+var custom_tooltip = tnt.tooltip()
+  .width(width*0.25)
+  .fill (function (obj) {
+    var tooltip_div = d3.select(this);
+    var obj_info_table = tooltip_div
+      .append("div")
+      .attr("class", "scrollable")
+      .style("width", custom_tooltip.width() + "px")
+      .style("height", height*0.4 + "px")
+      .append("table")
+      .attr("class", "tnt_zmenu")
+      .attr("border", "solid")
+      .style("width", custom_tooltip.width() + "px");
 
-svg.attr('width', width).attr('height', height)
+    // Tooltip header
+    if (obj.header) {
+      obj_info_table.append("tr")
+        .attr("class", "tnt_zmenu_header")
+        .append("th")
+        .attr("colspan", 2)
+        .text(obj.header);
+    }
+
+    // Tooltip rows
+    var table_rows = obj_info_table.selectAll(".tnt_zmenu_row")
+      .data(obj.rows)
+      .enter()
+      .append("tr")
+      .attr("class", "tnt_zmenu_row");
+
+    table_rows
+      .append("th")
+      .attr("colspan", function (d, i) {
+                if (d.value === "") {
+                    return 2;
+                }
+                return 1;
+            })
+            .attr("class", function (d) {
+                if (d.value === "") {
+                    return "tnt_zmenu_inner_header";
+                }
+                return "tnt_zmenu_cell";
+            })
+            .html(function(d,i) {
+                return obj.rows[i].label;
+            });
+
+        table_rows
+            .append("td")
+            .html(function(d,i) {
+                if (typeof obj.rows[i].value === 'function') {
+                    obj.rows[i].value.call(this, d);
+                } else {
+                    return obj.rows[i].value;
+                }
+            })
+            .each(function (d) {
+                if (d.value === "") {
+                    d3.select(this).remove();
+                }
+            })
+            .each(function (d) {
+                if (d.link === undefined) {
+                    return;
+                }
+                d3.select(this)
+                .classed("link", 1)
+                .on('click', function (d) {
+                    d.link(d.obj);
+                    t.close.call(this);
+                });
+            });
+    });
+
+// Create legend svg
+var legend = d3.select("#container")
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 1269 616")
+  // Class to make it responsive.
+  .classed("svg-content-responsive", true)
+
+// Select the container area
+var svg = d3.select('#container')
+  // Container class to make it responsive.
+  .classed("svg-container", true) 
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 1269 616")
+  // Class to make it responsive.
+  .classed("svg-content-responsive", true)
+
 
 // Build the arrow.
 svg.append("svg:defs").selectAll("marker")
@@ -112,11 +271,6 @@ svg.append("svg:defs").selectAll("marker")
   .append("svg:path")
     .attr("d", "M0,-5L10,0L0,5")
 
-
-// Define the div for the tooltip
-var div = d3.select("body").append("div") 
-    .attr("class", "tooltip")       
-    .style("opacity", 0)
 
 d3.json("all.json", function(data) {
 
@@ -136,23 +290,22 @@ d3.json("all.json", function(data) {
   var lx = 350 // 350, 70
   var ly = 480 // 480, 330
   // Handmade legend
-  svg.append("circle").attr("cx",lx).attr("cy",ly).attr("r", 6).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
-  svg.append("circle").attr("cx",lx).attr("cy",ly+20).attr("r", 6).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
-  svg.append("ellipse").attr("cx",lx).attr("cy",ly+40).attr("rx", 12.5).attr("ry", 5).style("fill", noncsNodeColour).style("stroke", courseStrokeColour)
-  svg.append('line').attr("x1", lx-10).attr("y1", ly+60).attr("x2", lx+13).attr("y2", ly+60).attr("stroke-width", 1).attr("stroke", linkColour)
-  svg.append('line').attr("x1", lx-12).attr("y1", ly+80).attr("x2", lx+13).attr("y2", ly+80).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
-  svg.append('line').attr("x1", lx-12).attr("y1", ly+100).attr("x2", lx+13).attr("y2", ly+100).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
-  svg.append("rect").attr("x", lx-20).attr("y", ly-15).attr("width", 112).attr("height", 130).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
-  svg.append("text").attr("x", lx+20).attr("y", ly).text("Core CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", lx+20).attr("y", ly+20).text("Non-core CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", lx+20).attr("y", ly+40).text("Non-CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", lx+20).attr("y", ly+60).text("Pre-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", lx+20).attr("y", ly+80).text("Co-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
-  svg.append("text").attr("x", lx+20).attr("y", ly+100).text("Recommended").style("font-size", "10px").attr("alignment-baseline","middle")
+  legend.append("circle").attr("cx",lx).attr("cy",ly).attr("r", 6).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
+  legend.append("circle").attr("cx",lx).attr("cy",ly+20).attr("r", 6).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
+  legend.append("ellipse").attr("cx",lx).attr("cy",ly+40).attr("rx", 12.5).attr("ry", 5).style("fill", noncsNodeColour).style("stroke", courseStrokeColour)
+  legend.append('line').attr("x1", lx-10).attr("y1", ly+60).attr("x2", lx+13).attr("y2", ly+60).attr("stroke-width", 1).attr("stroke", linkColour)
+  legend.append('line').attr("x1", lx-12).attr("y1", ly+80).attr("x2", lx+13).attr("y2", ly+80).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
+  legend.append('line').attr("x1", lx-12).attr("y1", ly+100).attr("x2", lx+13).attr("y2", ly+100).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
+  legend.append("rect").attr("x", lx-20).attr("y", ly-15).attr("width", 112).attr("height", 130).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
+  legend.append("text").attr("x", lx+20).attr("y", ly).text("Core CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+20).text("Non-core CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+40).text("Non-CPSC").style("font-size", "10px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+60).text("Pre-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+80).text("Co-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+100).text("Recommended").style("font-size", "10px").attr("alignment-baseline","middle")
 
 
-  var linkElements = svg.append("g")
-    .selectAll("line.link")
+  var linkElements = svg.selectAll("line.link")
     .data(data.links)
     .enter().append("line")
       // .attr("class", "link")
@@ -162,9 +315,7 @@ d3.json("all.json", function(data) {
       .attr("marker-end", "url(#end)")
 
 
-  var nodeElements = svg.append("g")
-    // .attr("class", "nodes")
-    .selectAll("circle")
+  var nodeElements = svg.selectAll("circle")
     .data(data.nodes)
     .enter()
 
@@ -175,25 +326,9 @@ d3.json("all.json", function(data) {
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", node => node.course ? courseStrokeColour : logicStrokeColour)
-      // .on('click', selectNode)
-      // Mouseover for labels
-      .on("mouseover", function(node) {
-        // Only show the tab for course nodes
-        if (node.prereq != null) {
-          div.transition()
-            .duration(200)    
-            .style("opacity", .9)    
-          div.html(node.prereq)  
-            .style("left", (d3.event.pageX) + "px")   
-            .style("top", (d3.event.pageY - 28) + "px")
-        }  
-      })          
-      .on("mouseout", function(node) {   
-        if (node.course === 1) {
-          div.transition()    
-            .duration(500)    
-            .style("opacity", 0)
-        }
+      .on("click", function (node) {
+        var obj = makeObj(node)
+        custom_tooltip.call(this, obj)
       })
 
 
@@ -216,9 +351,7 @@ d3.json("all.json", function(data) {
       .style("stroke", "transparent")
 
 
-  var textElements = svg.append("g")
-    // .attr("class", "texts")
-    .selectAll("text")
+  var textElements = svg.selectAll("text")
     .data(data.nodes)
     .enter()
 
@@ -229,6 +362,10 @@ d3.json("all.json", function(data) {
       .attr("font-size", 10)
       .attr("dx", -8) 
       .attr("dy", 3)
+      .on("click", function (node) {
+        var obj = makeObj(node)
+        custom_tooltip.call(this, obj)
+      })
 
   textElements.append("text").filter(function(d){ return d.shape === "ellipse" })
       .html(function (node) {
@@ -268,3 +405,4 @@ d3.json("all.json", function(data) {
 
 })
 </script>
+</body>
