@@ -25,8 +25,8 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 0.4,
-      "fx": 15,
+      "fy": 0.5,
+      "fx": 10,
       "shape": "circle",
       "clos": ["Model computational systems (e.g., programs and circuits) and apply valid reasoning to these models, i.e. prove relevant properties or reason through functionality of computational systems using predicate logic, propositional logic and state machines.",
         "Clearly and precisely communicate computational models to computer scientists.",
@@ -43,7 +43,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 1.1,
+      "fy": 1,
       "fx": 10,
       "shape": "circle",
       "clos": ["Specify a new program, given a small problem description, by identifying relevant data abstractions, and specifying the associated behaviour of those abstractions.",
@@ -63,7 +63,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2.1,
+      "fy": 2,
       "fx": 15,
       "shape": "circle",
       "clos": ["Using a hardware based model of execution, reason about the limitations, vulnerabilities and idiosyncrasies of the behaviour of a particular program, specifically concerning performance, bugs and security vulnerabilities.",
@@ -102,7 +102,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2.35,
+      "fy": 3,
       "fx": 9,
       "shape": "circle",
       "clos": ["Evaluate software engineering processes used to build modern industrial-calibre systems by justifying their benefits and tradeoffs.",
@@ -121,7 +121,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 3,
+      "fy": 3.5,
       "fx": 19,
       "shape": "circle",
       "clos": ["Identify the algorithm technique (such as divide and conquer, prune and search, greedy strategies, or dynamic programming) used in a given algorithm.",
@@ -139,7 +139,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 3.3,
+      "fy": 3.5,
       "fx": 16,
       "shape": "circle",
       "clos": ["Explain the benefits of, and challenges associated with, instruction-level parallelism and its implementation.",
@@ -206,60 +206,6 @@
       ]
     },
     {
-      "id": 203,
-      "name": "203",
-      "title": "Programming, Problem Solving, and Algorithms",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": 1,
-      "fx": 3,
-      "shape": "circle",
-      "clos": ["Apply computation as tool for solving complex quantitative, data-centric, or analytical problems.",
-        "Show Python fluency.",
-        "Ability to formulate and answer questions in student’s own domain.",
-        "Solve multi-stage problems using data design, abstraction, and decomposition.",
-        "Be familiar with algorithm efficiency and data structures.",
-        "Use computation to express ideas—bridge the gap between ideas and implementation."
-      ]
-    },
-    {
-      "id": 259,
-      "name": "259",
-      "title": "Data Structures and Algorithms for Electrical Engineers",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": -0.5,
-      "fx": 15,
-      "shape": "circle",
-      "clos": ["Explain, with examples, the purpose of these data structures: arrays, linked lists (including stacks and queues), hash tables, trees, graphs, and heaps.",
-        "Use the above data structures in programs, using recursion and dynamic memory allocation and deallocation (as appropriate) in their implementations.",
-        "Determine the Big-O runtime complexity of basic algorithms and manipulations on data structures, including insert, update, and delete operations in hash tables, heaps, and tree and graph data structures.",
-        "Determine and justify which data structures and algorithms are most appropriate to use in solving non-trivial problems.",
-        "Differentiate among different searching and sorting algorithms, and explain their pros and cons.",
-        "Read and write programs (of length up to 15 pages) that use data structures and dynamic memory allocation to solve non-trivial problems."
-      ]
-    },
-    {
-      "id": 261,
-      "name": "261",
-      "title": "Basics of Computer Systems",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": 2,
-      "fx": 19,
-      "prereq": "CPEN 211 and CPEN 221",
-      "shape": "circle",
-      "clos": ["Describe the types of memory used by modern computers and explain how the hardware and the operating system cooperate to manage memory.",
-        "Utilize their knowledge of the CPU and memory systems to optimize C/C++ code and make it run faster.",
-        "Explain the importance of instruction-level parallelism, the problems that arise as a result of its use, and how these problems can be resolved.",
-        "Utilize synchronization primitives to control interaction in various situations including among processes and threads.",
-        "Explain the issues relevant to file system design, and how some existing file systems handle them."
-      ]
-    },
-    {
       "id": 302,
       "name": "302",
       "title": "Numerical Computation for Algebraic Problems",
@@ -288,7 +234,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.1,
+      "fy": 3.5,
       "fx": 22,
       "shape": "circle",
       "clos": ["Create a non-trivial E/R diagram (data model) about an enterprise (e.g., retail establishment, airport, school, library) that correctly describes the entities, attributes, and relationships among the entities—for some of that enterprise’s major business functions.",
@@ -310,7 +256,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.35,
+      "fy": 3,
       "fx": 12,
       "shape": "circle",
       "clos": ["Assess the semantics of a (new or existing) language as a collection of language design decisions and describe the likely impact of some of those decisions on the language and its programmers.",
@@ -327,7 +273,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.35,
+      "fy": 3,
       "fx": 11,
       "shape": "circle"
     },
@@ -338,7 +284,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.3,
+      "fy": 3,
       "fx": 26,
       "shape": "circle",
       "clos": ["Explain the algorithmic steps and mathematics used in rendering and animating 3D models.",
@@ -356,8 +302,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.3,
-      "fx": 13.5,
+      "fy": 3.5,
+      "fx": 14,
       "shape": "circle"
     },
     {
@@ -367,7 +313,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.5,
+      "fy": 3.5,
       "fx": 8,
       "shape": "circle",
       "clos": ["Understand and apply the different stages of application life cycle using waterfall methodology (including Agile).",
@@ -384,8 +330,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.3,
-      "fx": 25,
+      "fy": 3,
+      "fx": 27,
       "shape": "circle"
     },
     {
@@ -415,8 +361,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.3,
-      "fx": 28,
+      "fy": 3,
+      "fx": 25,
       "shape": "circle",
       "clos": ["Identify problems that may be addressed with data mining and machine learning techniques.",
         "Select the appropriate machine learning tool for a problem.",
@@ -435,7 +381,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.35,
+      "fy": 3,
       "fx": 10,
       "shape": "circle",
       "clos": ["List heuristics for basic good/bad interface design. Be able to identify and critique interface strengths and weaknesses in terms of this language.",
@@ -554,7 +500,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 13.5,
+      "fx": 14,
       "shape": "circle"
     },
     {
@@ -586,8 +532,8 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3.45,
-      "fx": 18.6,
+      "fy": 4.5,
+      "fx": 20,
       "shape": "circle"
     },
     {
@@ -609,7 +555,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 25,
+      "fx": 27,
       "shape": "circle"
     },
     {
@@ -620,7 +566,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 20,
+      "fx": 18,
       "shape": "circle"
     },
     {
@@ -631,7 +577,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 24,
+      "fx": 25,
       "shape": "circle"
     },
     {
@@ -661,7 +607,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 28,
+      "fx": 24,
       "shape": "circle",
       "clos": ["Develop a medium-sized commercial software product such as a video game, suitable for distribution online or electronically and similar in complexity to individual levels in smaller iPhone/iPad titles such as “Angry Birds”, “Tiny Wings”, “Cut The Rope”, etc.",
         "Operate debuggers, profilers, and version control software packages.",
@@ -678,10 +624,49 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 29,
-      "prereq": "3rd year standing with any 3-credit CPSC course",
+      "fx": 30,
       "shape": "circle",
       "clos": ["Students will come away from the course with: (1) greater understanding of the social and ethical implications of computer use and abuse; (2) an improved ability to think critically and defend their decisions logically; (3) a greater appreciation for alternate points of view; (4) the ability to recognize, make, and critique arguments that use workable ethical theories such as utilitarianism, social contract theory, and virtue ethics."]
+    },
+    {
+      "id": 4301,
+      "name": "3rd year",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 30,
+      "shape": "rect"
+    },
+    {
+      "id": 4302,
+      "name": "standing and",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.85,
+      "fx": 30.5,
+      "shape": "rect"
+    },
+    {
+      "id": 4303,
+      "name": "and 3-credit",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.7,
+      "fx": 30.5,
+      "shape": "rect"
+    },
+    {
+      "id": 4304,
+      "name": "CPSC course",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.55,
+      "fx": 30.5,
+      "shape": "rect"
     },
     {
       "id": 444,
@@ -730,7 +715,7 @@
       "cs": 1,
       "course": 0,
       "fy": 0.5,
-      "fx": 2,
+      "fx": 1.5,
       "shape": "circle"
     },
     {
@@ -740,7 +725,7 @@
       "cs": 1,
       "course": 0,
       "fy": 0.5,
-      "fx": 7,
+      "fx": 5,
       "shape": "circle"
     },
     {
@@ -751,16 +736,6 @@
       "course": 0,
       "fy": 2.5,
       "fx": 3,
-      "shape": "circle"
-    },
-    {
-      "id": 5,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2,
-      "fx": 5,
       "shape": "circle"
     },
     {
@@ -780,7 +755,7 @@
       "cs": 1,
       "course": 0,
       "fy": 1.5,
-      "fx": 17,
+      "fx": 15,
       "shape": "circle"
     },
     {
@@ -789,7 +764,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 4,
+      "fy": 3.5,
       "fx": 10,
       "shape": "circle"
     },
@@ -799,7 +774,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 2.5,
+      "fy": 2.7,
       "fx": 15,
       "shape": "circle"
     },
@@ -814,22 +789,12 @@
       "shape": "circle"
     },
     {
-      "id": 11,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.6,
-      "fx": 17,
-      "shape": "circle"
-    },
-    {
       "id": 12,
       "name": "AND",
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 4.15,
+      "fy": 4,
       "fx": 15,
       "shape": "circle"
     },
@@ -839,7 +804,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.15,
+      "fy": 3.5,
       "fx": 12,
       "shape": "circle"
     },
@@ -854,589 +819,14 @@
       "shape": "circle"
     },
     {
-      "id": 15,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.6,
-      "fx": 19,
-      "shape": "circle"
-    },
-    {
-      "id": 16,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 1.2,
-      "fx": 12,
-      "shape": "circle"
-    },
-    {
       "id": 17,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0.7,
-      "fx": 16,
-      "shape": "circle"
-    },
-    {
-      "id": 18,
       "name": "AND",
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 1.4,
-      "fx": 19,
-      "shape": "circle"
-    },
-    {
-      "id": 19,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 1.95,
-      "fx": 10,
-      "shape": "circle"
-    },
-    {
-      "id": 20,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.8,
-      "fx": 26,
-      "shape": "circle"
-    },
-    {
-      "id": 21,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.6,
-      "fx": 27.5,
-      "shape": "circle"
-    },
-    {
-      "id": 22,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4,
-      "fx": 20,
-      "shape": "circle"
-    },
-    {
-      "id": 23,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0.7,
-      "fx": 5,
-      "shape": "circle"
-    },
-    {
-      "id": 24,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4,
-      "fx": 9,
-      "shape": "circle"
-    },
-    {
-      "id": 25,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.8,
-      "fx": 8,
-      "shape": "circle"
-    },
-    {
-      "id": 26,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4,
-      "fx": 16,
-      "shape": "circle"
-    },
-    {
-      "id": 27,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4.15,
-      "fx": 13.5,
-      "shape": "circle"
-    },
-    {
-      "id": 28,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 1.4,
-      "fx": 6,
-      "shape": "circle"
-    },
-    {
-      "id": 29,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.8,
-      "fx": 22.9,
-      "shape": "circle"
-    },
-    {
-      "id": 30,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.6,
-      "fx": 20.1,
-      "shape": "circle"
-    },
-    {
-      "id": 31,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.5,
-      "fx": 1.5,
-      "shape": "circle"
-    },
-    {
-      "id": 32,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2,
-      "fx": 1.5,
-      "shape": "circle"
-    },
-    {
-      "id": 33,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0.5,
-      "fx": 25,
-      "shape": "circle"
-    },
-    {
-      "id": 34,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0.5,
-      "fx": 27,
-      "shape": "circle"
-    },
-    {
-      "id": 35,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.8,
-      "fx": 21.45,
-      "shape": "circle"
-    },
-    {
-      "id": 36,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.6,
-      "fx": 14.5,
-      "shape": "circle"
-    },
-    {
-      "id": 37,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.8,
-      "fx": 24.6,
-      "shape": "circle"
-    },
-    {
-      "id": 38,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4.15,
-      "fx": 19,
-      "shape": "circle"
-    },
-    {
-      "id": 39,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.96,
-      "fx": 14.8,
-      "shape": "circle"
-    },
-    {
-      "id": 40,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 1.7,
-      "fx": 15,
-      "shape": "circle"
-    },
-    {
-      "id": 41,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 2.5,
-      "fx": 13.3,
-      "shape": "circle"
-    },
-    {
-      "id": 42,
-      "name": "AND",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 4,
+      "fy": 4.05,
       "fx": 17,
       "shape": "circle"
-    },
-    {
-      "id": 160,
-      "name": "APSC160",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": -1,
-      "fx": 15,
-      "shape": "ellipse",
-      "clos": ["Read and write code that uses basic programming constructs.",
-        "Apply decomposition to develop solutions to problems and write code that reflects that decomposition.",
-        "Apply techniques appropriate for the development of small programs.",
-        "Apply appropriate testing and debugging techniques."
-      ]
-    },
-    {
-      "id": 307,
-      "name": "MATH307",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 3,
-      "fx": -0.5,
-      "shape": "ellipse"
-    },
-    {
-      "id": 1210,
-      "name": "MATH210",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": -0.2,
-      "fx": -0.5,
-      "shape": "ellipse"
-    },
-    {
-      "id": 1220,
-      "name": "MATH220",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0.4,
-      "fx": 17,
-      "shape": "ellipse"
-    },
-    {
-      "id": 337,
-      "name": "COMM337",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": -0.5,
-      "fx": -0.5,
-      "shape": "ellipse"
-    },
-    {
-      "id": 2210,
-      "name": "PHYS210",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0.1,
-      "fx": -0.5,
-      "shape": "ellipse"
-    },
-    {
-      "id": 211,
-      "name": "EOSC211",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0.4,
-      "fx": -0.5,
-      "shape": "ellipse"
-    },
-    {
-      "id": 2221,
-      "name": "CPEN221",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0.5,
-      "fx": 12,
-      "shape": "ellipse"
-    },
-    {
-      "id": 1211,
-      "name": "CPEN211",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0.4,
-      "fx": 19,
-      "shape": "ellipse"
-    },
-    {
-      "id": 321,
-      "name": "CPEN321",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 2.8,
-      "fx": 6,
-      "shape": "ellipse"
-    },
-    {
-      "id": 200,
-      "name": "One of STAT| 200, STAT 241",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 3.8,
-      "fx": 11,
-      "shape": "rect"
-    },
-    {
-      "id": 331,
-      "name": "CPEN331",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 2.8,
-      "fx": 7.5,
-      "shape": "ellipse"
-    },
-    {
-      "id": 241,
-      "name": "One of STAT 241,| STAT 251, ECON 325,| ECON 327, MATH 302,| STAT 302, MATH 318",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 2.3,
-      "fx": 29.5,
-      "shape": "rect"
-    },
-    {
-      "id": 1331,
-      "name": "ELEC331",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 3.3,
-      "fx": 14.8,
-      "shape": "ellipse"
-    },
-    {
-      "id": 1411,
-      "name": "CPEN411",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 3.1,
-      "fx": 17,
-      "shape": "ellipse"
-    },
-    {
-      "id": 1200,
-      "name": "MATH200",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 27,
-      "shape": "ellipse"
-    },
-    {
-      "id": 4221,
-      "name": "MATH221",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 24,
-      "shape": "ellipse"
-    },
-    {
-      "id": 251,
-      "name": "STAT251",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 36,
-      "shape": "ellipse"
-    },
-    {
-      "id": 152,
-      "name": "MATH152",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 38,
-      "shape": "ellipse"
-    },
-    {
-      "id": 217,
-      "name": "MATH217",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 44,
-      "shape": "ellipse"
-    },
-    {
-      "id": 253,
-      "name": "MATH253",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 42,
-      "shape": "ellipse"
-    },
-    {
-      "id": 263,
-      "name": "MATH263",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 40,
-      "shape": "ellipse"
-    },
-    {
-      "id": 3210,
-      "name": "ELEC210",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0.5,
-      "fx": 10,
-      "shape": "ellipse"
-    },
-    {
-      "id": 5221,
-      "name": "ELEC221",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 2.8,
-      "fx": 17,
-      "shape": "ellipse"
-    },
-    {
-      "id": 1291,
-      "name": "One of COMM 291,| BIOL 300, MATH |or STAT at 200| level or above",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 1.5,
-      "fx": 21.5,
-      "shape": "rect"
-    },
-    {
-      "id": 1101,
-      "name": "One of MATH 101,| MATH 103, MATH 105,| MATH 121",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 2,
-      "fx": -0.5,
-      "shape": "rect"
-    },
-    {
-      "id": 1152,
-      "name": "One of MATH 152,| MATH 223",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": -0.2,
-      "fx": 25.5,
-      "shape": "rect"
-    },
-    {
-      "id": 1217,
-      "name": "One of MATH 217,| MATH 226,| MATH 253",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": -0.2,
-      "fx": 28.5,
-      "shape": "rect"
-    },
-    {
-      "id": 1300,
-      "name": "Three credits| of CPSC and at| least third-year| standing",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 4,
-      "fx": 29,
-      "shape": "rect"
-    },
-    {
-      "id": 1111,
-      "name": "Six credits| of BIOL| beyond| BIOL 111",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 4.02,
-      "fx": 18,
-      "shape": "rect"
     }
   ],
   "links": [
@@ -1460,16 +850,12 @@
       "type": "coreq"
     },
     {
-      "source": 203,
+      "source": 302,
       "target": 2
     },
     {
-      "source": 302,
-      "target": 31
-    },
-    {
       "source": 303,
-      "target": 31
+      "target": 2
     },
     {
       "source": 2,
@@ -1478,22 +864,6 @@
     {
       "source": 2,
       "target": 110
-    },
-    {
-      "source": 2,
-      "target": 337
-    },
-    {
-      "source": 2,
-      "target": 211
-    },
-    {
-      "source": 2,
-      "target": 1210
-    },
-    {
-      "source": 2,
-      "target": 2210
     },
     {
       "source": 210,
@@ -1517,15 +887,7 @@
     },
     {
       "source": 4,
-      "target": 23
-    },
-    {
-      "source": 23,
       "target": 3
-    },
-    {
-      "source": 23,
-      "target": 1210
     },
     {
       "source": 3,
@@ -1541,35 +903,15 @@
     },
     {
       "source": 4,
-      "target": 5
-    },
-    {
-      "source": 5,
-      "target": 203
-    },
-    {
-      "source": 5,
       "target": 210
-    },
-    {
-      "source": 5,
-      "target": 2221
     },
     {
       "source": 312,
-      "target": 19
-    },
-    {
-      "source": 19,
       "target": 210
     },
     {
-      "source": 19,
-      "target": 2221
-    },
-    {
       "source": 344,
-      "target": 19
+      "target": 210
     },
     {
       "source": 310,
@@ -1592,28 +934,8 @@
       "target": 310
     },
     {
-      "source": 8,
-      "target": 200
-    },
-    {
       "source": 410,
-      "target": 24
-    },
-    {
-      "source": 24,
       "target": 310
-    },
-    {
-      "source": 24,
-      "target": 25
-    },
-    {
-      "source": 25,
-      "target": 331
-    },
-    {
-      "source": 25,
-      "target": 321
     },
     {
       "source": 319,
@@ -1621,43 +943,15 @@
     },
     {
       "source": 213,
-      "target": 40
+      "target": 7
     },
     {
-      "source": 40,
-      "target": 210
-    },
-    {
-      "source": 40,
+      "source": 7,
       "target": 121
     },
     {
       "source": 7,
-      "target": 17
-    },
-    {
-      "source": 17,
-      "target": 121
-    },
-    {
-      "source": 17,
-      "target": 1220
-    },
-    {
-      "source": 7,
-      "target": 16
-    },
-    {
-      "source": 16,
       "target": 210
-    },
-    {
-      "source": 16,
-      "target": 3210
-    },
-    {
-      "source": 16,
-      "target": 2221
     },
     {
       "source": 221,
@@ -1693,23 +987,11 @@
     },
     {
       "source": 425,
-      "target": 29
-    },
-    {
-      "source": 29,
       "target": 221
     },
     {
       "source": 314,
-      "target": 20
-    },
-    {
-      "source": 20,
       "target": 221
-    },
-    {
-      "source": 20,
-      "target": 34
     },
     {
       "source": 304,
@@ -1717,10 +999,6 @@
     },
     {
       "source": 340,
-      "target": 21
-    },
-    {
-      "source": 21,
       "target": 221
     },
     {
@@ -1740,11 +1018,15 @@
       "target": 304
     },
     {
+      "source": 14,
+      "target": 213
+    },
+    {
       "source": 426,
       "target": 314
     },
     {
-      "source": 35,
+      "source": 10,
       "target": 221
     },
     {
@@ -1757,68 +1039,12 @@
       "target": 10
     },
     {
-      "source": 10,
-      "target": 35
-    },
-    {
-      "source": 35,
-      "target": 261
-    },
-    {
       "source": 427,
-      "target": 20
+      "target": 221
     },
     {
       "source": 424,
-      "target": 22
-    },
-    {
-      "source": 22,
       "target": 320
-    },
-    {
-      "source": 22,
-      "target": 37
-    },
-    {
-      "source": 29,
-      "target": 1200
-    },
-    {
-      "source": 29,
-      "target": 4221
-    },
-    {
-      "source": 34,
-      "target": 1200
-    },
-    {
-      "source": 20,
-      "target": 33
-    },
-    {
-      "source": 33,
-      "target": 4221
-    },
-    {
-      "source": 33,
-      "target": 1152
-    },
-    {
-      "source": 21,
-      "target": 34
-    },
-    {
-      "source": 34,
-      "target": 1217
-    },
-    {
-      "source": 21,
-      "target": 33
-    },
-    {
-      "source": 21,
-      "target": 241
     },
     {
       "source": 420,
@@ -1826,79 +1052,35 @@
     },
     {
       "source": 445,
-      "target": 38
-    },
-    {
-      "source": 38,
       "target": 320
     },
     {
-      "source": 38,
-      "target": 1111
-    },
-    {
-      "source": 42,
+      "source": 17,
       "target": 320
     },
     {
-      "source": 11,
+      "source": 17,
       "target": 313
-    },
-    {
-      "source": 11,
-      "target": 261
-    },
-    {
-      "source": 11,
-      "target": 1411
     },
     {
       "source": 418,
-      "target": 42
-    },
-    {
-      "source": 42,
-      "target": 11
+      "target": 17
     },
     {
       "source": 415,
-      "target": 26
-    },
-    {
-      "source": 26,
       "target": 313
     },
     {
-      "source": 26,
-      "target": 331
+      "source": 12,
+      "target": 313
     },
     {
       "source": 12,
-      "target": 26
-    },
-    {
-      "source": 12,
-      "target": 36
-    },
-    {
-      "source": 36,
       "target": 317
     },
     {
       "source": 417,
-      "target": 27
-    },
-    {
-      "source": 27,
-      "target": 313
-    },
-    {
-      "source": 27,
-      "target": 317
-    },
-    {
-      "source": 27,
-      "target": 200
+      "target": 12
     },
     {
       "source": 416,
@@ -1906,139 +1088,11 @@
     },
     {
       "source": 320,
-      "target": 30
-    },
-    {
-      "source": 30,
       "target": 221
     },
     {
-      "source": 30,
-      "target": 1291
-    },
-    {
-      "source": 14,
-      "target": 15
-    },
-    {
-      "source": 15,
-      "target": 213
-    },
-    {
-      "source": 15,
-      "target": 261
-    },
-    {
-      "source": 6,
-      "target": 307
-    },
-    {
-      "source": 259,
-      "target": 160
-    },
-    {
-      "source": 261,
-      "target": 18
-    },
-    {
-      "source": 18,
-      "target": 2221
-    },
-    {
-      "source": 18,
-      "target": 1211
-    },
-    {
-      "source": 321,
-      "target": 28
-    },
-    {
-      "source": 28,
-      "target": 210
-    },
-    {
-      "source": 28,
-      "target": 2221
-    },
-    {
-      "source": 31,
-      "target": 33
-    },
-    {
-      "source": 31,
-      "target": 32
-    },
-    {
-      "source": 32,
-      "target": 103
-    },
-    {
-      "source": 32,
-      "target": 110
-    },
-    {
-      "source": 32,
-      "target": 211
-    },
-    {
-      "source": 32,
-      "target": 2210
-    },
-    {
-      "source": 31,
-      "target": 1101
-    },
-    {
-      "source": 36,
-      "target": 1331
-    },
-    {
-      "source": 37,
-      "target": 33
-    },
-    {
-      "source": 37,
-      "target": 34
-    },
-    {
       "source": 430,
-      "target": 1300
-    },
-    {
-      "source": 2221,
-      "target": 160
-    },
-    {
-      "source": 1211,
-      "target": 160
-    },
-    {
-      "source": 1331,
-      "target": 39
-    },
-    {
-      "source": 39,
-      "target": 331
-    },
-    {
-      "source": 39,
-      "target": 5221
-    },
-    {
-      "source": 39,
-      "target": 261
-    },
-    {
-      "source": 41,
-      "target": 261
-    },
-    {
-      "source": 41,
-      "target": 2221
-    },
-    {
-      "source": 331,
-      "target": 41
+      "target": 4301
     }
   ]
 }

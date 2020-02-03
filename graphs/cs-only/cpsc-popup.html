@@ -86,7 +86,7 @@ function getLinkType(link) {
 function makeObj(node) {
   if (node.course) {
         var obj = {};
-        obj.header = "CPSC " + node.name;
+        obj.header = "CPSC " + node.name + ": " + node.title;
         obj.rows = [];
         obj.rows.push({
             "label" : "Course Learning Outcomes",
