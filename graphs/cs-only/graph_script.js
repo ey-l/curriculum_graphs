@@ -1,5 +1,3 @@
-import { getXCoord, getYCoord, add_legend_cs_only } from './cs_only.js';
-
 // Set node colours
 var noncoreNodeColour = 'lightsteelblue';
 var coreNodeColour = 'yellow';
@@ -41,6 +39,14 @@ function getLinkColor(link) {
 
 function getTextColor(node, neighbors) {
   return Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1 ? textColour : textColour;
+}
+
+export function getX(node) {
+  return node.fx;
+}
+
+export function getY(node) {
+  return node.fy;
 }
 
 export function makeLinkArrow(svg) {
@@ -193,8 +199,8 @@ export function addNodeElements(svg, data, custom_tooltip) {
 
   nodeElements.append("circle")
     .filter(function(d){ return d.shape === "circle" })
-      .attr('cx', function (node) { return getXCoord(node) })
-      .attr('cy', function (node) { return getYCoord(node) })
+      .attr('cx', function (node) { return getX(node) })
+      .attr('cy', function (node) { return getY(node) })
       .attr("r", getNodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", getStrokeColor)
@@ -207,8 +213,8 @@ export function addNodeElements(svg, data, custom_tooltip) {
 
   nodeElements.append("ellipse")
       .filter(function(d){ return d.shape === "ellipse" })
-      .attr('cx', function (node) { return getXCoord(node) })
-      .attr('cy', function (node) { return getYCoord(node) })
+      .attr('cx', function (node) { return getX(node) })
+      .attr('cy', function (node) { return getY(node) })
       .attr("rx", 25)
       .attr("ry", 10)
       .attr("fill", getNodeColor)
@@ -216,8 +222,8 @@ export function addNodeElements(svg, data, custom_tooltip) {
 
   nodeElements.append("circle")
       .filter(function(d){ return d.shape === "rect" })
-      .attr('cx', function (node) { return getXCoord(node) })
-      .attr('cy', function (node) { return getYCoord(node) })
+      .attr('cx', function (node) { return getX(node) })
+      .attr('cy', function (node) { return getY(node) })
       .attr("r", 12)
       .attr("fill", "white")
       .style("stroke", "transparent")
@@ -232,8 +238,8 @@ export function addTextElements(svg, data, custom_tooltip) {
 
   textElements.append("text").filter(function(d){ return d.shape === "circle" })
       .text(function (node) { return node.name })
-      .attr('x', function (node) { return getXCoord(node) })
-      .attr('y', function (node) { return getYCoord(node) })
+      .attr('x', function (node) { return getX(node) })
+      .attr('y', function (node) { return getY(node) })
       .attr("font-size", 10)
       .attr("dx", -8) 
       .attr("dy", 3)
@@ -248,8 +254,8 @@ export function addTextElements(svg, data, custom_tooltip) {
       .html(function (node) {
         return node.name
       })
-      .attr('x', function (node) { return getXCoord(node) })
-      .attr('y', function (node) { return getYCoord(node) })
+      .attr('x', function (node) { return getX(node) })
+      .attr('y', function (node) { return getY(node) })
       .attr("font-size", 10)
       .attr("dx", -20) 
       .attr("dy", 3)
@@ -257,15 +263,15 @@ export function addTextElements(svg, data, custom_tooltip) {
   textElements.append("text").filter(function(d){ return d.shape === "rect" })
       .html(function (node) {
         var arr = node.name.split('|')
-        var xCoord = getXCoord(node) - 30
-        var yCoord = getYCoord(node) + 30
+        var xCoord = getX(node) - 30
+        var yCoord = getY(node) + 30
         if (arr.length > 1) {
           return "<tspan x = " + xCoord.toString() + " dy='1em'>" + arr.join("</tspan>" + "<tspan x = " + xCoord.toString() + " dy='1em'>") + "</tspan>"
         }
         return arr.join('')
       })
-      .attr('x', function (node) { return getXCoord(node) })
-      .attr('y', function (node) { return getYCoord(node) })
+      .attr('x', function (node) { return getX(node) })
+      .attr('y', function (node) { return getY(node) })
       .attr("font-size", 10)
       .attr("dx", 2) 
       .attr("dy", 0)
