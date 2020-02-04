@@ -495,7 +495,7 @@
     {
       "id": 417,
       "name": "417",
-      "title": "",
+      "title": "Computer Networking",
       "core": 0,
       "cs": 1,
       "course": 1,
@@ -506,7 +506,7 @@
     {
       "id": 418,
       "name": "418",
-      "title": "",
+      "title": "Parallel Computation",
       "core": 0,
       "cs": 1,
       "course": 1,
@@ -583,7 +583,7 @@
     {
       "id": 426,
       "name": "426",
-      "title": "",
+      "title": "Computer Animation",
       "core": 0,
       "cs": 1,
       "course": 1,
