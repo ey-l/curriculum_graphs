@@ -1,4 +1,4 @@
-export function add_legend_cs_only(legend) {
+export function addLegend(legend) {
   // Handmade legend
     var legend_width = 130;
     var legend_height = 155;

@@ -13,8 +13,8 @@
 
 <script type="module">
 
-  import { add_legend_cs_only } from './legend_cs_only.js';
-  import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './graph_script.js';
+  import { addLegend } from './legend_cs_only.js';
+  import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './script.js';
 
 // Set width and height
 var width = window.innerWidth;
@@ -26,7 +26,7 @@ var custom_tooltip = customTooltip(width, height);
 var legend = d3.select("#container")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 1269 616")
+  .attr("viewBox", "0 0 1269 616") // Adjust how big/small the overall graph is
   .classed("svg-content-responsive", true); // Class to make it responsive
 
 // Select the container area
@@ -35,23 +35,25 @@ var svg = d3.select('#container')
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("viewBox", "0 0 1269 616")
-  .classed("svg-content-responsive", true); // Class to make it responsive
+  .classed("svg-content-responsive", true);
 
 
-// Build the arrow.
+// Make the arrow head for links
 svg = makeLinkArrow(svg);
 
 
-d3.json("cpsc_major.json", function(data) {
+d3.json("../data/cpsc_major.json", function(data) {
 
   var nodes = data.nodes;
 
+  // Compute coordinates for each node
+  // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
     d.fx = 1269 - (d.fx * 28 + 230);
     d.fy = 616 - (d.fy * 80 + 200);
   });
 
-  legend = add_legend_cs_only(legend);
+  legend = addLegend(legend);
 
   var linkElements = addLinkElements(svg, data);
   var nodeElements = addNodeElements(svg, data, custom_tooltip);

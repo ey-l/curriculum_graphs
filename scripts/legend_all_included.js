@@ -1,4 +1,4 @@
-export function add_legend_all_included(legend) {
+export function addLegend(legend) {
 	var lx = 350 // 350, 70
   	var ly = 480 // 480, 330
   	

@@ -206,6 +206,75 @@
       ]
     },
     {
+      "id": 160,
+      "name": "APSC160",
+      "title": "",
+      "core": 0,
+      "cs": 0,
+      "course": 0,
+      "fy": -0.5,
+      "fx": 12,
+      "shape": "rect",
+      "clos": ["Read and write code that uses basic programming constructs.",
+        "Apply decomposition to develop solutions to problems and write code that reflects that decomposition.",
+        "Apply techniques appropriate for the development of small programs.",
+        "Apply appropriate testing and debugging techniques."
+      ]
+    },
+    {
+      "id": 203,
+      "name": "203",
+      "title": "Programming, Problem Solving, and Algorithms",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 1,
+      "fx": 3,
+      "shape": "circle",
+      "clos": ["Apply computation as tool for solving complex quantitative, data-centric, or analytical problems.",
+        "Show Python fluency.",
+        "Ability to formulate and answer questions in student’s own domain.",
+        "Solve multi-stage problems using data design, abstraction, and decomposition.",
+        "Be familiar with algorithm efficiency and data structures.",
+        "Use computation to express ideas—bridge the gap between ideas and implementation."
+      ]
+    },
+    {
+      "id": 259,
+      "name": "259",
+      "title": "Data Structures and Algorithms for Electrical Engineers",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 0,
+      "fx": 12,
+      "shape": "circle",
+      "clos": ["Explain, with examples, the purpose of these data structures: arrays, linked lists (including stacks and queues), hash tables, trees, graphs, and heaps.",
+        "Use the above data structures in programs, using recursion and dynamic memory allocation and deallocation (as appropriate) in their implementations.",
+        "Determine the Big-O runtime complexity of basic algorithms and manipulations on data structures, including insert, update, and delete operations in hash tables, heaps, and tree and graph data structures.",
+        "Determine and justify which data structures and algorithms are most appropriate to use in solving non-trivial problems.",
+        "Differentiate among different searching and sorting algorithms, and explain their pros and cons.",
+        "Read and write programs (of length up to 15 pages) that use data structures and dynamic memory allocation to solve non-trivial problems."
+      ]
+    },
+    {
+      "id": 261,
+      "name": "261",
+      "title": "Basics of Computer Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 2,
+      "fx": 19,
+      "shape": "circle",
+      "clos": ["Describe the types of memory used by modern computers and explain how the hardware and the operating system cooperate to manage memory.",
+        "Utilize their knowledge of the CPU and memory systems to optimize C/C++ code and make it run faster.",
+        "Explain the importance of instruction-level parallelism, the problems that arise as a result of its use, and how these problems can be resolved.",
+        "Utilize synchronization primitives to control interaction in various situations including among processes and threads.",
+        "Explain the issues relevant to file system design, and how some existing file systems handle them."
+      ]
+    },
+    {
       "id": 302,
       "name": "302",
       "title": "Numerical Computation for Algebraic Problems",
@@ -404,7 +473,7 @@
     {
       "id": 402,
       "name": "402",
-      "title": "",
+      "title": "Numerical Linear Algebra",
       "core": 0,
       "cs": 1,
       "course": 1,
@@ -739,6 +808,16 @@
       "shape": "circle"
     },
     {
+      "id": 5,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2,
+      "fx": 5,
+      "shape": "circle"
+    },
+    {
       "id": 6,
       "name": "OR",
       "core": 0,
@@ -789,6 +868,16 @@
       "shape": "circle"
     },
     {
+      "id": 11,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.6,
+      "fx": 17.2,
+      "shape": "circle"
+    },
+    {
       "id": 12,
       "name": "AND",
       "core": 0,
@@ -816,6 +905,26 @@
       "course": 0,
       "fy": 4,
       "fx": 22,
+      "shape": "circle"
+    },
+    {
+      "id": 15,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3,
+      "fx": 19,
+      "shape": "circle"
+    },
+    {
+      "id": 16,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3,
+      "fx": 21,
       "shape": "circle"
     },
     {
@@ -848,6 +957,10 @@
       "source": 1,
       "target": 107,
       "type": "coreq"
+    },
+    {
+      "source": 203,
+      "target": 2
     },
     {
       "source": 302,
@@ -903,6 +1016,14 @@
     },
     {
       "source": 4,
+      "target": 5
+    },
+    {
+      "source": 5,
+      "target": 203
+    },
+    {
+      "source": 5,
       "target": 210
     },
     {
@@ -1019,7 +1140,15 @@
     },
     {
       "source": 14,
+      "target": 15
+    },
+    {
+      "source": 15,
       "target": 213
+    },
+    {
+      "source": 15,
+      "target": 261
     },
     {
       "source": 426,
@@ -1027,7 +1156,15 @@
     },
     {
       "source": 10,
+      "target": 16
+    },
+    {
+      "source": 16,
       "target": 221
+    },
+    {
+      "source": 16,
+      "target": 261
     },
     {
       "source": 10,
@@ -1059,12 +1196,20 @@
       "target": 320
     },
     {
-      "source": 17,
+      "source": 11,
       "target": 313
+    },
+    {
+      "source": 11,
+      "target": 261
     },
     {
       "source": 418,
       "target": 17
+    },
+    {
+      "source": 17,
+      "target": 11
     },
     {
       "source": 415,
@@ -1089,6 +1234,10 @@
     {
       "source": 320,
       "target": 221
+    },
+    {
+      "source": 259,
+      "target": 160
     },
     {
       "source": 430,
