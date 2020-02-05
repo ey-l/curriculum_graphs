@@ -13,7 +13,7 @@
 
 <script type="module">
 
-  import { addLegend } from './legend_cs_only.js';
+  import { add_legend_cs } from './legends.js';
   import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './script.js';
 
 // Set width and height
@@ -42,7 +42,7 @@ var svg = d3.select('#container')
 svg = makeLinkArrow(svg);
 
 
-d3.json("../data/cpsc_major.json", function(data) {
+d3.json("../data/cs_only.json", function(data) {
 
   var nodes = data.nodes;
 
@@ -53,7 +53,7 @@ d3.json("../data/cpsc_major.json", function(data) {
     d.fy = 616 - (d.fy * 80 + 200);
   });
 
-  legend = addLegend(legend);
+  legend = add_legend_cs(legend);
 
   var linkElements = addLinkElements(svg, data);
   var nodeElements = addNodeElements(svg, data, custom_tooltip);

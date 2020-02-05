@@ -11,15 +11,15 @@ var linkColour = 'black';
 var textColour = 'black';
 var highlightColour = '#fabdad';
 
+// Set node size
+var nodeSize = 12;
+var fontSize = 10;
+
 function getNodeColor(node, neighbors) {
   if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
     return node.course === 0 ? logicNodeColour : highlightColour;
   }
   return node.course === 0 ? logicNodeColour : node.cs === 0? noncoreNodeColour : node.core === 0 ? noncoreNodeColour : coreNodeColour;
-}
-
-function getNodeSize(node, neighbors) {
-  return node.course ? 12 : 12;
 }
 
 function getStrokeColor(node, neighbors) {
@@ -195,21 +195,21 @@ export function addLinkElements(svg, data) {
 export function addNodeElements(svg, data, custom_tooltip) {
   var nodeElements = svg.selectAll("circle")
     .data(data.nodes)
-    .enter()
+    .enter();
 
   nodeElements.append("circle")
     .filter(function(d){ return d.shape === "circle" })
       .attr('cx', function (node) { return getX(node) })
       .attr('cy', function (node) { return getY(node) })
-      .attr("r", getNodeSize)
+      .attr("r", nodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", getStrokeColor)
       .on("click", function (node) {
         if (node.course) {
-          var obj = makeObj(node)
-          custom_tooltip.call(this, obj)
+          var obj = makeObj(node);
+          custom_tooltip.call(this, obj);
         }
-      })
+      });
 
   nodeElements.append("ellipse")
       .filter(function(d){ return d.shape === "ellipse" })
@@ -218,15 +218,15 @@ export function addNodeElements(svg, data, custom_tooltip) {
       .attr("rx", 25)
       .attr("ry", 10)
       .attr("fill", getNodeColor)
-      .style("stroke", getStrokeColor)
+      .style("stroke", getStrokeColor);
 
   nodeElements.append("circle")
       .filter(function(d){ return d.shape === "rect" })
       .attr('cx', function (node) { return getX(node) })
       .attr('cy', function (node) { return getY(node) })
-      .attr("r", 12)
+      .attr("r", nodeSize)
       .attr("fill", "white")
-      .style("stroke", "transparent")
+      .style("stroke", "transparent");
 
   return nodeElements.exit;
 }
@@ -234,13 +234,23 @@ export function addNodeElements(svg, data, custom_tooltip) {
 export function addTextElements(svg, data, custom_tooltip) {
   var textElements = svg.selectAll("text")
     .data(data.nodes)
-    .enter()
+    .enter();
 
   textElements.append("text").filter(function(d){ return d.shape === "circle" })
-      .text(function (node) { return node.name })
+      //.text(function (node) { return node.name })
+      // For cases where the course id is too long to fit in one line
+      .html(function (node) {
+        var arr = node.name.split('|')
+        var xCoord = getX(node) - 1;
+        var xCoord_onwards = xCoord - 6; // Handle indentation on the second line onwards
+        if (arr.length > 1) {
+          return "<tspan x = " + xCoord.toString() + " dy='0.1em'>" + arr.join("</tspan>" + "<tspan x = " + xCoord_onwards.toString() + " dy='0.8em'>") + "</tspan>"
+        }
+        return arr.join('');
+      })
       .attr('x', function (node) { return getX(node) })
       .attr('y', function (node) { return getY(node) })
-      .attr("font-size", 10)
+      .attr("font-size", fontSize)
       .attr("dx", -8) 
       .attr("dy", 3)
       .on("click", function (node) {
@@ -248,7 +258,7 @@ export function addTextElements(svg, data, custom_tooltip) {
           var obj = makeObj(node)
           custom_tooltip.call(this, obj)
         }
-      })
+      });
 
   textElements.append("text").filter(function(d){ return d.shape === "ellipse" })
       .html(function (node) {
@@ -256,25 +266,25 @@ export function addTextElements(svg, data, custom_tooltip) {
       })
       .attr('x', function (node) { return getX(node) })
       .attr('y', function (node) { return getY(node) })
-      .attr("font-size", 10)
+      .attr("font-size", fontSize)
       .attr("dx", -20) 
-      .attr("dy", 3)
+      .attr("dy", 3);
 
   textElements.append("text").filter(function(d){ return d.shape === "rect" })
       .html(function (node) {
         var arr = node.name.split('|')
-        var xCoord = getX(node) - 30
-        var yCoord = getY(node) + 30
+        var xCoord = getX(node) - 30;
+        var yCoord = getY(node) + 30;
         if (arr.length > 1) {
           return "<tspan x = " + xCoord.toString() + " dy='1em'>" + arr.join("</tspan>" + "<tspan x = " + xCoord.toString() + " dy='1em'>") + "</tspan>"
         }
-        return arr.join('')
+        return arr.join('');
       })
       .attr('x', function (node) { return getX(node) })
       .attr('y', function (node) { return getY(node) })
-      .attr("font-size", 10)
+      .attr("font-size", fontSize)
       .attr("dx", 2) 
-      .attr("dy", 0)
+      .attr("dy", 0);
 
   return textElements;
 }

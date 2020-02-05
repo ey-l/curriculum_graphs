@@ -2,13 +2,13 @@
   "nodes": [
     {
       "id": 110,
-      "name": "110",
+      "name": "110/|107",
       "title": "Computation, Programs, and Programming",
       "core": 1,
       "cs": 1,
       "course": 1,
       "fy": -0.5,
-      "fx": 3,
+      "fx": 1.5,
       "shape": "circle",
       "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
         "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
@@ -25,7 +25,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 0.5,
+      "fy": 0,
       "fx": 10,
       "shape": "circle",
       "clos": ["Model computational systems (e.g., programs and circuits) and apply valid reasoning to these models, i.e. prove relevant properties or reason through functionality of computational systems using predicate logic, propositional logic and state machines.",
@@ -43,7 +43,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 1,
+      "fy": 0.5,
       "fx": 10,
       "shape": "circle",
       "clos": ["Specify a new program, given a small problem description, by identifying relevant data abstractions, and specifying the associated behaviour of those abstractions.",
@@ -63,7 +63,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2,
+      "fy": 1.7,
       "fx": 15,
       "shape": "circle",
       "clos": ["Using a hardware based model of execution, reason about the limitations, vulnerabilities and idiosyncrasies of the behaviour of a particular program, specifically concerning performance, bugs and security vulnerabilities.",
@@ -82,7 +82,7 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2,
+      "fy": 1.7,
       "fx": 22,
       "shape": "circle",
       "clos": ["Define and articulate the functionality of classic data structures such as Stacks, Queues, Dictionaries, Priority Queues, etc. by their Abstract Data Type (ADT).",
@@ -103,7 +103,7 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 9,
+      "fx": 11,
       "shape": "circle",
       "clos": ["Evaluate software engineering processes used to build modern industrial-calibre systems by justifying their benefits and tradeoffs.",
         "Elicit, deconstruct, and refine functional requirements and quality attributes such that they are described succinctly, completely, and precisely.",
@@ -148,130 +148,6 @@
         "Explain the issues that must be considered while designing file systems and some common solutions for these issues. Given a file system specification, correctly analyze examples of typical file system operations to identify how to retrieve necessary information or update the file system state. Explain the role that caching, buffering, and partial failure play in the implementation and use of files systems, including differentiating between the role that mechanism and policy play in the operating system and in applications that access file data.",
         "Explain how a modern operating system can share a computer’s processing and memory resources among multiple untrusted and competing processes. Correctly analyze examples of virtual memory accesses in individual processes to (1) compute the steps required to retrieve the information and/or update the memory state, and to (2) identify when hardware can perform an operation autonomously and when the operating system has to be invoked.",
         "Optimize C code in order to make it run faster by refining its locality and use of processor and memory resources. Optimize at least one version of Assembly code to make it run faster by reducing the number of hazards in typical pipelined CPUs."
-      ]
-    },
-    {
-      "id": 100,
-      "name": "100",
-      "title": "Computational Thinking",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": -1,
-      "fx": 0.5,
-      "shape": "circle",
-      "clos": ["Use abstraction and decomposition to clarify and simplify the critical pieces of a problem.",
-        "Choose appropriate models and representations to aid in solving the problem.",
-        "Recognize potential shortcomings in a model or solution.",
-        "Explain at a high level how the computer works.",
-        "Explain specific algorithms that computers use to create applications of computational thinking (e.g., data mining).",
-        "Provide and explain examples of how computers impact their lives and what this means for them, both in terms of how the computer can add to their lives and in things that they have to be careful of, such as privacy and security."
-      ]
-    },
-    {
-      "id": 103,
-      "name": "103",
-      "title": "Introduction to Systematic Program Design",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": -1,
-      "fx": 1.5,
-      "shape": "circle",
-      "clos": ["Write small programs that solve a problem in an academic discipline of choice and are readable, well-organized, well-documented, and well-tested.",
-        "Write small programs for a reasonably complex task, where the ability to use the \"one task - one function\" rule can be demonstrated.",
-        "Design the data representation for a reasonably complex problem.",
-        "Describe the information encoded in given data.",
-        "Identify correspondences between a data definition and a program that operates on that data and be able to identify how potential changes to a data definition would affect a program.", 
-        "Complete an appropriately-sized course project using the systematic approach from the course.", 
-        "Effectively communicate the design of your course project using appropriate technical language via an academic poster and poster presentation."
-      ]
-    },
-    {
-      "id": 107,
-      "name": "107",
-      "title": "Systematic Program Design",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": -0.5,
-      "fx": 10,
-      "shape": "circle",
-      "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
-        "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
-        "Understand the relation between information and data. This is demonstrated by being able to design the data representation for a reasonably complex problem, and to describe the information encoded in the given data.",
-        "Understand that programs have structure beyond that of the language constructs. Understand that this structure comes from data and other design patterns, and is critical to writing and reading complex programs. This is demonstrated by being able to identify correspondences between a data definition and a program that operates on that data, and by being able to identify other design patterns in a program.",
-        "Understand that one can replace repetitive code with an abstraction in a systematic way. Understand that this is at the heart of designing libraries. This is demonstrated by being able to produce examples of code before and after abstraction: before, where one can see the repeated code, and after, where one can see the abstraction and verify that it provides the solution to the original problem, as well as several other similar problems. Students should also be able to design a program that uses existing libraries or existing code to solve a new problem.",
-        "Understand that programs can be described using notations other than code, and that these models can facilitate program design. This is demonstrated by being able to identify correspondences between non-code models of a program and the program itself and by being able to use non-code models in program design."
-      ]
-    },
-    {
-      "id": 160,
-      "name": "APSC160",
-      "title": "",
-      "core": 0,
-      "cs": 0,
-      "course": 0,
-      "fy": -0.5,
-      "fx": 12,
-      "shape": "rect",
-      "clos": ["Read and write code that uses basic programming constructs.",
-        "Apply decomposition to develop solutions to problems and write code that reflects that decomposition.",
-        "Apply techniques appropriate for the development of small programs.",
-        "Apply appropriate testing and debugging techniques."
-      ]
-    },
-    {
-      "id": 203,
-      "name": "203",
-      "title": "Programming, Problem Solving, and Algorithms",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": 1,
-      "fx": 3,
-      "shape": "circle",
-      "clos": ["Apply computation as tool for solving complex quantitative, data-centric, or analytical problems.",
-        "Show Python fluency.",
-        "Ability to formulate and answer questions in student’s own domain.",
-        "Solve multi-stage problems using data design, abstraction, and decomposition.",
-        "Be familiar with algorithm efficiency and data structures.",
-        "Use computation to express ideas—bridge the gap between ideas and implementation."
-      ]
-    },
-    {
-      "id": 259,
-      "name": "259",
-      "title": "Data Structures and Algorithms for Electrical Engineers",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": 0,
-      "fx": 12,
-      "shape": "circle",
-      "clos": ["Explain, with examples, the purpose of these data structures: arrays, linked lists (including stacks and queues), hash tables, trees, graphs, and heaps.",
-        "Use the above data structures in programs, using recursion and dynamic memory allocation and deallocation (as appropriate) in their implementations.",
-        "Determine the Big-O runtime complexity of basic algorithms and manipulations on data structures, including insert, update, and delete operations in hash tables, heaps, and tree and graph data structures.",
-        "Determine and justify which data structures and algorithms are most appropriate to use in solving non-trivial problems.",
-        "Differentiate among different searching and sorting algorithms, and explain their pros and cons.",
-        "Read and write programs (of length up to 15 pages) that use data structures and dynamic memory allocation to solve non-trivial problems."
-      ]
-    },
-    {
-      "id": 261,
-      "name": "261",
-      "title": "Basics of Computer Systems",
-      "core": 0,
-      "cs": 1,
-      "course": 1,
-      "fy": 2,
-      "fx": 19,
-      "shape": "circle",
-      "clos": ["Describe the types of memory used by modern computers and explain how the hardware and the operating system cooperate to manage memory.",
-        "Utilize their knowledge of the CPU and memory systems to optimize C/C++ code and make it run faster.",
-        "Explain the importance of instruction-level parallelism, the problems that arise as a result of its use, and how these problems can be resolved.",
-        "Utilize synchronization primitives to control interaction in various situations including among processes and threads.",
-        "Explain the issues relevant to file system design, and how some existing file systems handle them."
       ]
     },
     {
@@ -325,7 +201,7 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 3,
+      "fy": 3.5,
       "fx": 12,
       "shape": "circle",
       "clos": ["Assess the semantics of a (new or existing) language as a collection of language design decisions and describe the likely impact of some of those decisions on the language and its programmers.",
@@ -343,7 +219,7 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 11,
+      "fx": 10,
       "shape": "circle"
     },
     {
@@ -383,7 +259,7 @@
       "cs": 1,
       "course": 1,
       "fy": 3.5,
-      "fx": 8,
+      "fx": 10.2,
       "shape": "circle",
       "clos": ["Understand and apply the different stages of application life cycle using waterfall methodology (including Agile).",
         "Develop key artifacts (ie: documentation) at key stages of the development lifecycle.",
@@ -451,7 +327,7 @@
       "cs": 1,
       "course": 1,
       "fy": 3,
-      "fx": 10,
+      "fx": 9,
       "shape": "circle",
       "clos": ["List heuristics for basic good/bad interface design. Be able to identify and critique interface strengths and weaknesses in terms of this language.",
         "Contrast the central principles of user-centered versus technology-centered design, and in a given situation, identify and explain which approach to design may be appropriate to use.",
@@ -520,7 +396,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 9,
+      "fx": 11,
       "shape": "circle"
     },
     {
@@ -699,42 +575,12 @@
     },
     {
       "id": 4301,
-      "name": "3rd year",
+      "name": "3rd year|standing and|any 3-credit|CPSC courses",
       "core": 0,
       "cs": 1,
       "course": 0,
       "fy": 4,
       "fx": 30,
-      "shape": "rect"
-    },
-    {
-      "id": 4302,
-      "name": "standing and",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.85,
-      "fx": 30.5,
-      "shape": "rect"
-    },
-    {
-      "id": 4303,
-      "name": "and 3-credit",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.7,
-      "fx": 30.5,
-      "shape": "rect"
-    },
-    {
-      "id": 4304,
-      "name": "CPSC course",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.55,
-      "fx": 30.5,
       "shape": "rect"
     },
     {
@@ -745,7 +591,7 @@
       "cs": 1,
       "course": 1,
       "fy": 4.5,
-      "fx": 10,
+      "fx": 9,
       "shape": "circle",
       "clos": ["Have knowledge of models of the user and how they apply to the design of user interfaces.",
         "Be familiar with the variety of techniques and methods for interface design, evaluation, and analysis.",
@@ -768,53 +614,13 @@
       "shape": "circle"
     },
     {
-      "id": 1,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0,
-      "fx": 10,
-      "shape": "circle"
-    },
-    {
-      "id": 2,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0.5,
-      "fx": 1.5,
-      "shape": "circle"
-    },
-    {
-      "id": 3,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 0.5,
-      "fx": 5,
-      "shape": "circle"
-    },
-    {
       "id": 4,
       "name": "OR",
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 2.5,
-      "fx": 3,
-      "shape": "circle"
-    },
-    {
-      "id": 5,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
       "fy": 2,
-      "fx": 5,
+      "fx": 3,
       "shape": "circle"
     },
     {
@@ -833,7 +639,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 1.5,
+      "fy": 1,
       "fx": 15,
       "shape": "circle"
     },
@@ -844,7 +650,7 @@
       "cs": 1,
       "course": 0,
       "fy": 3.5,
-      "fx": 10,
+      "fx": 9,
       "shape": "circle"
     },
     {
@@ -853,7 +659,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 2.7,
+      "fy": 2.3,
       "fx": 15,
       "shape": "circle"
     },
@@ -865,16 +671,6 @@
       "course": 0,
       "fy": 4,
       "fx": 21,
-      "shape": "circle"
-    },
-    {
-      "id": 11,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3.6,
-      "fx": 17.2,
       "shape": "circle"
     },
     {
@@ -893,7 +689,7 @@
       "core": 0,
       "cs": 1,
       "course": 0,
-      "fy": 3.5,
+      "fy": 4,
       "fx": 12,
       "shape": "circle"
     },
@@ -905,26 +701,6 @@
       "course": 0,
       "fy": 4,
       "fx": 22,
-      "shape": "circle"
-    },
-    {
-      "id": 15,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3,
-      "fx": 19,
-      "shape": "circle"
-    },
-    {
-      "id": 16,
-      "name": "OR",
-      "core": 0,
-      "cs": 1,
-      "course": 0,
-      "fy": 3,
-      "fx": 21,
       "shape": "circle"
     },
     {
@@ -940,47 +716,21 @@
   ],
   "links": [
     {
-      "source": 107,
-      "target": 103
-    },
-    {
       "source": 121,
-      "target": 1,
-      "type": "coreq"
-    },
-    {
-      "source": 1,
       "target": 110,
       "type": "coreq"
     },
     {
-      "source": 1,
-      "target": 107,
-      "type": "coreq"
-    },
-    {
-      "source": 203,
-      "target": 2
-    },
-    {
       "source": 302,
-      "target": 2
+      "target": 110
     },
     {
       "source": 303,
-      "target": 2
-    },
-    {
-      "source": 2,
-      "target": 103
-    },
-    {
-      "source": 2,
       "target": 110
     },
     {
       "source": 210,
-      "target": 3
+      "target": 110
     },
     {
       "source": 406,
@@ -1000,15 +750,7 @@
     },
     {
       "source": 4,
-      "target": 3
-    },
-    {
-      "source": 3,
       "target": 110
-    },
-    {
-      "source": 3,
-      "target": 107
     },
     {
       "source": 330,
@@ -1016,14 +758,6 @@
     },
     {
       "source": 4,
-      "target": 5
-    },
-    {
-      "source": 5,
-      "target": 203
-    },
-    {
-      "source": 5,
       "target": 210
     },
     {
@@ -1036,7 +770,7 @@
     },
     {
       "source": 310,
-      "target": 210
+      "target": 9
     },
     {
       "source": 311,
@@ -1140,15 +874,7 @@
     },
     {
       "source": 14,
-      "target": 15
-    },
-    {
-      "source": 15,
       "target": 213
-    },
-    {
-      "source": 15,
-      "target": 261
     },
     {
       "source": 426,
@@ -1156,15 +882,7 @@
     },
     {
       "source": 10,
-      "target": 16
-    },
-    {
-      "source": 16,
       "target": 221
-    },
-    {
-      "source": 16,
-      "target": 261
     },
     {
       "source": 10,
@@ -1196,20 +914,12 @@
       "target": 320
     },
     {
-      "source": 11,
+      "source": 17,
       "target": 313
-    },
-    {
-      "source": 11,
-      "target": 261
     },
     {
       "source": 418,
       "target": 17
-    },
-    {
-      "source": 17,
-      "target": 11
     },
     {
       "source": 415,
@@ -1234,10 +944,6 @@
     {
       "source": 320,
       "target": 221
-    },
-    {
-      "source": 259,
-      "target": 160
     },
     {
       "source": 430,

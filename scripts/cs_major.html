@@ -13,7 +13,7 @@
 
 <script type="module">
 
-  import { add_legend_all } from './legends.js';
+  import { add_legend_cs } from './legends.js';
   import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './script.js';
 
 // Set width and height
@@ -42,18 +42,18 @@ var svg = d3.select('#container')
 svg = makeLinkArrow(svg);
 
 
-d3.json("../data/all_included.json", function(data) {
+d3.json("../data/cs_major.json", function(data) {
 
   var nodes = data.nodes;
 
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
-    d.fx = 1269 - (d.fx * 35 + 150);
-    d.fy = 616 - (d.fy * 100 + 150);
+    d.fx = 1269 - (d.fx * 28 + 230);
+    d.fy = 616 - (d.fy * 80 + 200);
   });
 
-  legend = add_legend_all(legend);
+  legend = add_legend_cs(legend);
 
   var linkElements = addLinkElements(svg, data);
   var nodeElements = addNodeElements(svg, data, custom_tooltip);
