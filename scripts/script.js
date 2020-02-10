@@ -1,12 +1,18 @@
 // Set node colours
-var noncoreNodeColour = 'lightsteelblue';
+var noncoreNodeColour = '#97D4E9';
 var coreNodeColour = 'yellow';
 var logicNodeColour = 'white';
-var noncsNodeColour = "lightgray";
+ var noncsNodeColour = "lightgray";
+//var noncsNodeColour = "#002145"
 
 // Set stroke colours
 var logicStrokeColour = 'transparent';
 var courseStrokeColour = 'gray';
+var seStrokeColour = '#fa55a7';
+var theoryStrokeColour = '#35c72e';
+var systemsStrokeColour = '#932ee6';
+var appliedStrokeColour = '#b00000';
+var ethicsStrokeColour = 'orange';
 var linkColour = 'black';
 var textColour = 'black';
 var highlightColour = '#fabdad';
@@ -19,11 +25,29 @@ function getNodeColor(node, neighbors) {
   if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
     return node.course === 0 ? logicNodeColour : highlightColour;
   }
-  return node.course === 0 ? logicNodeColour : node.cs === 0? noncoreNodeColour : node.core === 0 ? noncoreNodeColour : coreNodeColour;
+  return node.course === 0 ? logicNodeColour : node.cs === 0? noncsNodeColour : node.core === 0 ? noncoreNodeColour : coreNodeColour;
+}
+
+function getCourseStrokeColour(node) {
+  if (node.topic) {
+    switch(node.topic) {
+      case "Software engineering":
+        return seStrokeColour;
+      case "Theory":
+        return theoryStrokeColour;
+      case "Systems":
+        return systemsStrokeColour;
+      case "Applied":
+        return appliedStrokeColour;
+      case "Ethics":
+        return ethicsStrokeColour;
+    }
+  }
+  return courseStrokeColour;
 }
 
 function getStrokeColor(node, neighbors) {
-  return node.course ? courseStrokeColour : logicStrokeColour;
+  return node.course ? getCourseStrokeColour(node) : logicStrokeColour;
 }
 
 function getLinkType(link) {
@@ -204,6 +228,7 @@ export function addNodeElements(svg, data, custom_tooltip) {
       .attr("r", nodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", getStrokeColor)
+      .style("stroke-width", 3)
       .on("click", function (node) {
         if (node.course) {
           var obj = makeObj(node);
@@ -225,8 +250,8 @@ export function addNodeElements(svg, data, custom_tooltip) {
       .attr('cx', function (node) { return getX(node) })
       .attr('cy', function (node) { return getY(node) })
       .attr("r", nodeSize)
-      .attr("fill", "white")
-      .style("stroke", "transparent");
+      .attr("fill", logicNodeColour)
+      .style("stroke", logicStrokeColour);
 
   return nodeElements.exit;
 }
