@@ -10,6 +10,7 @@
       "fy": -0.5,
       "fx": 3,
       "shape": "circle",
+      "topic": "Software engineering",
       "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
         "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
         "Understand the relation between information and data. This is demonstrated by being able to design the data representation for a reasonably complex problem, and to describe the information encoded in the given data.",
@@ -28,6 +29,7 @@
       "fy": 0.4,
       "fx": 15,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Model computational systems (e.g., programs and circuits) and apply valid reasoning to these models, i.e. prove relevant properties or reason through functionality of computational systems using predicate logic, propositional logic and state machines.",
         "Clearly and precisely communicate computational models to computer scientists.",
         "Identify alternate methods to solve or simplify a variety of problems by translating between (1) English language, (2)  simple formal representations (i.e., propositional and shallowly nested predicate logic statements) and (3) closely related equivalent formal representations, and then use the different representations to solve the problem.",
@@ -46,6 +48,7 @@
       "fy": 1.1,
       "fx": 10,
       "shape": "circle",
+      "topic": "Software engineering",
       "clos": ["Specify a new program, given a small problem description, by identifying relevant data abstractions, and specifying the associated behaviour of those abstractions.",
         "Validate the program’s behaviour against its specification prior to implementation using test driven design, through writing unit tests that achieve basic code coverage.",
         "Implement the program in Java, choosing the internal structure of its abstractions, and carry out implementation choices.",
@@ -66,6 +69,7 @@
       "fy": 2.1,
       "fx": 15,
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Using a hardware based model of execution, reason about the limitations, vulnerabilities and idiosyncrasies of the behaviour of a particular program, specifically concerning performance, bugs and security vulnerabilities.",
         "Using a hardware based model of data, reason about how programs access data using different types of variables, including the implicit and explicit use of memory references.",
         "Translate a statement from a high-level programming language into assembly language; from a large block of assembly language, identify groups of instructions that correspond to high level language features and then write an equivalent high level programming language expression.",
@@ -85,6 +89,7 @@
       "fy": 2,
       "fx": 22,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Define and articulate the functionality of classic data structures such as Stacks, Queues, Dictionaries, Priority Queues, etc. by their Abstract Data Type (ADT).",
         "Design algorithms and structures to implement novel ADTs based on properties of the data and intended use of the data.",
         "Implement classic and novel data structures in modern C++, including arrays, linked lists, balanced binary search trees, hash tables, etc.",
@@ -102,9 +107,10 @@
       "core": 1,
       "cs": 1,
       "course": 1,
-      "fy": 2.35,
+      "fy": 3.2,
       "fx": 9,
       "shape": "circle",
+      "topic": "Software engineering",
       "clos": ["Evaluate software engineering processes used to build modern industrial-calibre systems by justifying their benefits and tradeoffs.",
         "Elicit, deconstruct, and refine functional requirements and quality attributes such that they are described succinctly, completely, and precisely.",
         "Devise and justify high- and low-level designs to support a given set of requirements and in support of future evolutionary needs.",
@@ -124,6 +130,7 @@
       "fy": 3,
       "fx": 19,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Identify the algorithm technique (such as divide and conquer, prune and search, greedy strategies, or dynamic programming) used in a given algorithm.",
         "Select, adapt, and evaluate promising algorithmic techniques and/or data structures for a given problem by analyzing the problem’s properties.",
         "Design and prove the correctness of a solution to a problem using a specified algorithm technique, given sufficient information about the form of that problem’s solution.",
@@ -142,6 +149,7 @@
       "fy": 3.3,
       "fx": 16,
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Explain the benefits of, and challenges associated with, instruction-level parallelism and its implementation.",
         "Describe at least one high-level architecture for a pipelined CPU. Correctly analyze examples of the timing of instructions passing through this architecture to identify dependencies and hazards.",
         "Explain why different types of memory need to be used in modern computers, and how the constraints on physical size, capacity and speed affect the performance of computer code. Correctly analyze examples of memory access patterns and locality to compute the steps required to retrieve the information and/or to update the memory state, while maintaining optimal performance for future accesses.",
@@ -160,6 +168,7 @@
       "fy": -1,
       "fx": 0.5,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Use abstraction and decomposition to clarify and simplify the critical pieces of a problem.",
         "Choose appropriate models and representations to aid in solving the problem.",
         "Recognize potential shortcomings in a model or solution.",
@@ -178,6 +187,7 @@
       "fy": -1,
       "fx": 1.5,
       "shape": "circle",
+      "topic": "Software engineering",
       "clos": ["Write small programs that solve a problem in an academic discipline of choice and are readable, well-organized, well-documented, and well-tested.",
         "Write small programs for a reasonably complex task, where the ability to use the \"one task - one function\" rule can be demonstrated.",
         "Design the data representation for a reasonably complex problem.",
@@ -197,6 +207,7 @@
       "fy": -0.5,
       "fx": 10,
       "shape": "circle",
+      "topic": "Software engineering",
       "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
         "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
         "Understand the relation between information and data. This is demonstrated by being able to design the data representation for a reasonably complex problem, and to describe the information encoded in the given data.",
@@ -215,6 +226,7 @@
       "fy": 1,
       "fx": 3,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Apply computation as tool for solving complex quantitative, data-centric, or analytical problems.",
         "Show Python fluency.",
         "Ability to formulate and answer questions in student’s own domain.",
@@ -233,6 +245,7 @@
       "fy": -0.5,
       "fx": 15,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Explain, with examples, the purpose of these data structures: arrays, linked lists (including stacks and queues), hash tables, trees, graphs, and heaps.",
         "Use the above data structures in programs, using recursion and dynamic memory allocation and deallocation (as appropriate) in their implementations.",
         "Determine the Big-O runtime complexity of basic algorithms and manipulations on data structures, including insert, update, and delete operations in hash tables, heaps, and tree and graph data structures.",
@@ -252,6 +265,7 @@
       "fx": 19,
       "prereq": "CPEN 211 and CPEN 221",
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Describe the types of memory used by modern computers and explain how the hardware and the operating system cooperate to manage memory.",
         "Utilize their knowledge of the CPU and memory systems to optimize C/C++ code and make it run faster.",
         "Explain the importance of instruction-level parallelism, the problems that arise as a result of its use, and how these problems can be resolved.",
@@ -268,7 +282,8 @@
       "course": 1,
       "fy": 3,
       "fx": 2,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 303,
@@ -279,7 +294,8 @@
       "course": 1,
       "fy": 3,
       "fx": 1,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 304,
@@ -291,6 +307,7 @@
       "fy": 3.1,
       "fx": 22,
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Create a non-trivial E/R diagram (data model) about an enterprise (e.g., retail establishment, airport, school, library) that correctly describes the entities, attributes, and relationships among the entities—for some of that enterprise’s major business functions.",
         "Create a logical data model from an E/R diagram to design a set of DB tables.",
         "Normalize a set of attributes to eliminate anomalies or redundancies from a set of tables.",
@@ -313,6 +330,7 @@
       "fy": 2.35,
       "fx": 12,
       "shape": "circle",
+      "topic": "Theory",
       "clos": ["Assess the semantics of a (new or existing) language as a collection of language design decisions and describe the likely impact of some of those decisions on the language and its programmers.",
         "Indicate through examples how different design choices for programming language features alter the semantics of syntactically identical code (e.g., giving a code snippet that behaves differently under static and dynamic scoping rules and explaining why).",
         "Justify or criticize a particular design decision for a programming language feature in the context of a design goal for the language as a whole. (For example, (1) Criticize dynamic scope (2) Justify the exposure of continuations in a language intended to combine Prolog-style databases of logical information with user-designed customized search routines that replace Prolog's built in left-to-right depth-first-search.)",
@@ -329,7 +347,8 @@
       "course": 1,
       "fy": 2.35,
       "fx": 11,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 314,
@@ -341,6 +360,7 @@
       "fy": 3.3,
       "fx": 26,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["Explain the algorithmic steps and mathematics used in rendering and animating 3D models.",
         "Interpret and explain affine transformations using diagrams, linear algebra, and code within a graphics API.",
         "Write code that implements the graphics pipeline, with an emphasis on vertex shaders and fragment shaders.",
@@ -358,7 +378,8 @@
       "course": 1,
       "fy": 3.3,
       "fx": 13.5,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Systems"
     },
     {
       "id": 319,
@@ -367,9 +388,10 @@
       "core": 0,
       "cs": 1,
       "course": 1,
-      "fy": 2.5,
+      "fy": 3.5,
       "fx": 8,
       "shape": "circle",
+      "topic": "Software engineering",
       "clos": ["Understand and apply the different stages of application life cycle using waterfall methodology (including Agile).",
         "Develop key artifacts (ie: documentation) at key stages of the development lifecycle.",
         "Apply some new innovative techniques such as Agile and requirements-based testing into your projects.",
@@ -386,7 +408,8 @@
       "course": 1,
       "fy": 3.3,
       "fx": 25,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Applied"
     },
     {
       "id": 330,
@@ -398,6 +421,7 @@
       "fy": 3,
       "fx": 3,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["Identify problems that may be addressed with machine learning.",
         "Select the appropriate machine learning tool for a problem.",
         "Transform data of various types into usable features.",
@@ -418,6 +442,7 @@
       "fy": 3.3,
       "fx": 28,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["Identify problems that may be addressed with data mining and machine learning techniques.",
         "Select the appropriate machine learning tool for a problem.",
         "Represent data as features and frame problems in the standard learning notation.",
@@ -438,6 +463,7 @@
       "fy": 2.35,
       "fx": 10,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["List heuristics for basic good/bad interface design. Be able to identify and critique interface strengths and weaknesses in terms of this language.",
         "Contrast the central principles of user-centered versus technology-centered design, and in a given situation, identify and explain which approach to design may be appropriate to use.",
         "Explain why one's personal design intuition merits skepticism. For a given design context, list specific HCI practices and tools which can help to inform and educate it.",
@@ -464,7 +490,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 2,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 404,
@@ -476,6 +503,7 @@
       "fy": 4.5,
       "fx": 22,
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Explain the I/O cost-based model for relational database management systems (RDBMSs). Justify its applicability/use (i.e., the use of page I/Os to estimate performance).",
         "Recommend and justify appropriate indexes for a set of tables, given some parameters about the expected query mix.",
         "Show how to use an index (e.g., B+ tree, extendible hash structure, linear hash structure) to look up search keys and rows in a table. Demonstrate insertions and deletions of keys in the index, by performing splitting or merging of nodes. Analyze the complexity of operations against these data structures.",
@@ -495,7 +523,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 1,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 410,
@@ -506,7 +535,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 9,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Software engineering"
     },
     {
       "id": 411,
@@ -517,7 +547,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 12,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 415,
@@ -528,7 +559,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 16,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Systems"
     },
     {
       "id": 416,
@@ -540,6 +572,7 @@
       "fy": 4.5,
       "fx": 15,
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Understand key principles in designing and implementing distributed systems.",
         "Reason about problems that involve distributed components.",
         "Become familiar with important techniques for solving problems that arise in distributed contexts.",
@@ -555,7 +588,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 13.5,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Systems"
     },
     {
       "id": 418,
@@ -567,6 +601,7 @@
       "fy": 4.5,
       "fx": 17,
       "shape": "circle",
+      "topic": "Systems",
       "clos": ["Be familiar with parallel patterns such as reduce, scan, and tiling and can apply them to common parallel programming problems.",
         "Describe parallel algorithms for matrix operations, sorting, dynamic programming, and process coordination.",
         "Describe shared-memory, message-passing, and SIMD architectures.",
@@ -588,7 +623,8 @@
       "course": 1,
       "fy": 3.45,
       "fx": 18.6,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 421,
@@ -599,7 +635,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 21,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Theory"
     },
     {
       "id": 422,
@@ -610,7 +647,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 25,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Applied"
     },
     {
       "id": 424,
@@ -621,7 +659,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 20,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Applied"
     },
     {
       "id": 425,
@@ -632,7 +671,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 24,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Applied"
     },
     {
       "id": 426,
@@ -644,6 +684,7 @@
       "fy": 4.5,
       "fx": 26,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["Use and manipulate common representations for animation data.",
         "Customise or implement common kinematic and dynamic animation methods.",
         "Describe recent advances by reading recent research papers.",
@@ -663,6 +704,7 @@
       "fy": 4.5,
       "fx": 28,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["Develop a medium-sized commercial software product such as a video game, suitable for distribution online or electronically and similar in complexity to individual levels in smaller iPhone/iPad titles such as “Angry Birds”, “Tiny Wings”, “Cut The Rope”, etc.",
         "Operate debuggers, profilers, and version control software packages.",
         "Implement basic 2D rendering, basic geometric computation (curves, 2D collision), simple 2D animation, path finding, state machines, and user interface code for a video game.",
@@ -681,6 +723,7 @@
       "fx": 29,
       "prereq": "3rd year standing with any 3-credit CPSC course",
       "shape": "circle",
+      "topic": "Ethics",
       "clos": ["Students will come away from the course with: (1) greater understanding of the social and ethical implications of computer use and abuse; (2) an improved ability to think critically and defend their decisions logically; (3) a greater appreciation for alternate points of view; (4) the ability to recognize, make, and critique arguments that use workable ethical theories such as utilitarianism, social contract theory, and virtue ethics."]
     },
     {
@@ -693,6 +736,7 @@
       "fy": 4.5,
       "fx": 10,
       "shape": "circle",
+      "topic": "Applied",
       "clos": ["Have knowledge of models of the user and how they apply to the design of user interfaces.",
         "Be familiar with the variety of techniques and methods for interface design, evaluation, and analysis.",
         "Have experience designing and running a field study and performing qualitative data analysis.",
@@ -711,7 +755,8 @@
       "course": 1,
       "fy": 4.5,
       "fx": 19,
-      "shape": "circle"
+      "shape": "circle",
+      "topic": "Applied"
     },
     {
       "id": 1,
@@ -960,7 +1005,7 @@
       "cs": 1,
       "course": 0,
       "fy": 3.8,
-      "fx": 8,
+      "fx": 7,
       "shape": "circle"
     },
     {
@@ -1573,7 +1618,7 @@
     },
     {
       "source": 310,
-      "target": 210
+      "target": 9
     },
     {
       "source": 311,

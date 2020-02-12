@@ -8,11 +8,11 @@ var logicNodeColour = 'white';
 // Set stroke colours
 var logicStrokeColour = 'transparent';
 var courseStrokeColour = 'gray';
-var seStrokeColour = '#fa55a7';
-var theoryStrokeColour = '#35c72e';
+var seStrokeColour = '#CC79A7';
+var theoryStrokeColour = '#0055B7';
 var systemsStrokeColour = '#932ee6';
 var appliedStrokeColour = '#b00000';
-var ethicsStrokeColour = 'orange';
+var ethicsStrokeColour = '#E69F00';
 var linkColour = 'black';
 var textColour = 'black';
 var highlightColour = '#fabdad';

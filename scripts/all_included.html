@@ -49,7 +49,7 @@ d3.json("../data/all_included.json", function(data) {
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
-    d.fx = 1269 - (d.fx * 35 + 150);
+    d.fx = 1269 - (d.fx * 35 + 120);
     d.fy = 616 - (d.fy * 100 + 150);
   });
 
