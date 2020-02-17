@@ -19,6 +19,7 @@
 // Set width and height
 var width = window.innerWidth;
 var height = window.innerHeight;
+var viewBox_value = "0 0 " + width + " " + height;
 
 var custom_tooltip = customTooltip(width, height);
 
@@ -26,7 +27,7 @@ var custom_tooltip = customTooltip(width, height);
 var legend = d3.select("#container")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 1269 616") // Adjust how big/small the overall graph is
+  .attr("viewBox", viewBox_value) // Adjust how big/small the overall graph is
   .classed("svg-content-responsive", true); // Class to make it responsive
 
 // Select the container area
@@ -34,7 +35,7 @@ var svg = d3.select('#container')
   .classed("svg-container", true) // Container class to make it responsive
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 1269 616")
+  .attr("viewBox", viewBox_value)
   .classed("svg-content-responsive", true);
 
 
