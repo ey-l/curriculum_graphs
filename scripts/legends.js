@@ -6,11 +6,11 @@ var noncsNodeColour = "lightgray"
 // Set stroke colours
 var logicStrokeColour = 'transparent';
 var courseStrokeColour = 'gray'
-var seStrokeColour = '#CC79A7';
+var seStrokeColour = '#E69F00'; // '#CC79A7';
 var theoryStrokeColour = '#0055B7';
 var systemsStrokeColour = '#932ee6';
 var appliedStrokeColour = '#b00000';
-var ethicsStrokeColour = '#E69F00';
+var ethicsStrokeColour = courseStrokeColour; // '#E69F00';
 
 // Set link colours
 var linkColour = 'black'
