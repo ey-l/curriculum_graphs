@@ -9,7 +9,8 @@
 </head>
 
 <body>
-<div id="container" class="floatTL" width="960" height="400"></div>
+  <h3>Undergraduate CPSC Prerequisite Visualization: CS Major</h3>
+  <div id="container" class="floatTL" width="960" height="400"></div>
 
 <script type="module">
 
@@ -50,8 +51,8 @@ d3.json("../data/cs_major.json", function(data) {
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
-    d.fx = 1269 - (d.fx * 28 + 230);
-    d.fy = 616 - (d.fy * 80 + 200);
+    d.fx = 1269 - (d.fx * 28 + 370);
+    d.fy = 616 - (d.fy * 80 + 230);
   });
 
   legend = add_legend_cs(legend);

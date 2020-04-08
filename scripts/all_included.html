@@ -19,6 +19,8 @@
 // Set width and height
 var width = window.innerWidth;
 var height = window.innerHeight;
+var fx_scalar = width*0.027
+var fy_scalar = height*0.15
 var viewBox_value = "0 0 " + width + " " + height;
 
 var custom_tooltip = customTooltip(width, height);
@@ -50,8 +52,8 @@ d3.json("../data/all_included.json", function(data) {
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
-    d.fx = width - (d.fx * 35 + 120);
-    d.fy = height - (d.fy * 100 + 200);
+    d.fx = width - (d.fx * fx_scalar + 120);
+    d.fy = height - (d.fy * fy_scalar + 200);
   });
 
   legend = add_legend_all(legend);

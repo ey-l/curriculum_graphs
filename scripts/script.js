@@ -20,6 +20,7 @@ var highlightColour = '#fabdad';
 // Set node size
 var nodeSize = 12;
 var fontSize = 10;
+var strokeWidth = 1; // 3;
 
 function getNodeColor(node, neighbors) {
   if (Array.isArray(neighbors) && neighbors.indexOf(node.id) > -1) {
@@ -47,7 +48,8 @@ function getCourseStrokeColour(node) {
 }
 
 function getStrokeColor(node, neighbors) {
-  return node.course ? getCourseStrokeColour(node) : logicStrokeColour;
+  // return node.course ? getCourseStrokeColour(node) : logicStrokeColour;
+  return node.course ? courseStrokeColour : logicStrokeColour;
 }
 
 function getLinkType(link) {
@@ -127,7 +129,7 @@ export function makeObj(node) {
 
 export function customTooltip(width, height) {
   var custom_tooltip = tnt.tooltip()
-  .width(width*0.25)
+  .width(width*0.3)
   .fill (function (obj) {
     var tooltip_div = d3.select(this);
     var obj_info_table = tooltip_div
@@ -228,7 +230,7 @@ export function addNodeElements(svg, data, custom_tooltip) {
       .attr("r", nodeSize)
       .attr("fill", getNodeColor)
       .style("stroke", getStrokeColor)
-      .style("stroke-width", 3)
+      .style("stroke-width", strokeWidth)
       .on("click", function (node) {
         if (node.course) {
           var obj = makeObj(node);

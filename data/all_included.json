@@ -1354,56 +1354,6 @@
       "shape": "ellipse"
     },
     {
-      "id": 251,
-      "name": "STAT251",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 36,
-      "shape": "ellipse"
-    },
-    {
-      "id": 152,
-      "name": "MATH152",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 38,
-      "shape": "ellipse"
-    },
-    {
-      "id": 217,
-      "name": "MATH217",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 44,
-      "shape": "ellipse"
-    },
-    {
-      "id": 253,
-      "name": "MATH253",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 42,
-      "shape": "ellipse"
-    },
-    {
-      "id": 263,
-      "name": "MATH263",
-      "core": 0,
-      "cs": 0,
-      "course": 1,
-      "fy": 0,
-      "fx": 40,
-      "shape": "ellipse"
-    },
-    {
       "id": 3210,
       "name": "ELEC210",
       "core": 0,
