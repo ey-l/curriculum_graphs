@@ -99,7 +99,33 @@ export function add_legend_cs(legend) {
   legend.append("text").attr("x", lx+20).attr("y", ly+60).text("Pre-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx+20).attr("y", ly+90).text("Co-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx+20).attr("y", ly+120).text("Recommended").style("font-size", "12px").attr("alignment-baseline","middle")
-  legend.append("text").attr("x", lx-25).attr("y", ly+160).text("Note: The graph only contains courses and their pre/co-requisites offered by the undergraduate CS department.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+160).text("Note: This graph only represents courses that are offered by the Computer Science department.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+5).attr("y", ly+175).text("Course pre-requisites from outside the CS department are not included here.").style("font-size", "12px").attr("alignment-baseline","middle")
+  
+  return legend;
+}
 
+export function add_legend_cs_major(legend) {
+  // Handmade legend
+  var lx = 50 // 350, 70
+  var ly = 330 // 480, 330
+  var legend_width = 130;
+  var legend_height = 155;
+
+  legend.append("circle").attr("cx",lx).attr("cy",ly).attr("r", 12).style("fill", coreNodeColour).style("stroke", courseStrokeColour)
+  legend.append("circle").attr("cx",lx).attr("cy",ly+30).attr("r", 12).style("fill", noncoreNodeColour).style("stroke", courseStrokeColour)
+  legend.append('line').attr("x1", lx-10).attr("y1", ly+60).attr("x2", lx+13).attr("y2", ly+60).attr("stroke-width", 1).attr("stroke", linkColour)
+  legend.append('line').attr("x1", lx-12).attr("y1", ly+90).attr("x2", lx+13).attr("y2", ly+90).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 0.1')
+  legend.append('line').attr("x1", lx-12).attr("y1", ly+120).attr("x2", lx+13).attr("y2", ly+120).attr("stroke-width", 1).attr("stroke", linkColour).attr("stroke-dasharray", '0,2 3')
+  legend.append("rect").attr("x", lx-25).attr("y", ly-20).attr("width", legend_width).attr("height", legend_height).attr("stroke-width", 0.5).style("fill", 'transparent').style("stroke", linkColour)
+  legend.append("text").attr("x", lx+20).attr("y", ly).text("Core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+30).text("Non-core CPSC").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+60).text("Pre-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+90).text("Co-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+20).attr("y", ly+120).text("Recommended").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+160).text("Note: This graph only represents courses that are offered by the Computer Science department.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+5).attr("y", ly+175).text("Additionally, only the courses commonly taken by students in CS specializations are included.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx+5).attr("y", ly+190).text("Course pre-requisites from outside the CS department are not included here.").style("font-size", "12px").attr("alignment-baseline","middle")
+  
   return legend;
 }

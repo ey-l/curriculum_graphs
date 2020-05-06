@@ -9,17 +9,18 @@
 </head>
 
 <body>
-  <h3>Undergraduate CPSC Prerequisite Visualization: CS Major</h3>
-  <div id="container" class="floatTL" width="960" height="400"></div>
+<div id="container" class="floatTL" width="960" height="400"></div>
 
 <script type="module">
 
-  import { add_legend_cs } from './legends.js';
+  import { add_legend_all } from './legends.js';
   import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './script.js';
 
 // Set width and height
 var width = window.innerWidth;
 var height = window.innerHeight;
+var fx_scalar = width*0.027
+var fy_scalar = height*0.15
 var viewBox_value = "0 0 " + width + " " + height;
 
 var custom_tooltip = customTooltip(width, height);
@@ -44,18 +45,18 @@ var svg = d3.select('#container')
 svg = makeLinkArrow(svg);
 
 
-d3.json("../data/cs_major.json", function(data) {
+d3.json("../data/all_included.json", function(data) {
 
   var nodes = data.nodes;
 
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
-    d.fx = 1269 - (d.fx * 28 + 370);
-    d.fy = 616 - (d.fy * 80 + 230);
+    d.fx = width - (d.fx * fx_scalar + 120);
+    d.fy = height - (d.fy * fy_scalar + 200);
   });
 
-  legend = add_legend_cs(legend);
+  legend = add_legend_all(legend);
 
   var linkElements = addLinkElements(svg, data);
   var nodeElements = addNodeElements(svg, data, custom_tooltip);

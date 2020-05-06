@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <link rel="stylesheet" href="https://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.css" type="text/css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://tntvis.github.io/tnt.tooltip/build/tnt.tooltip.min.js"></script>
+</head>
+
+<body>
+  <h3>Undergraduate CPSC Pre-requisite Visualization: CS Courses</h3>
+  <div id="container" class="floatTL" width="960" height="400"></div>
+
+<script type="module">
+
+  import { add_legend_cs } from './legends.js';
+  import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './script.js';
+
+// Set width and height
+var width = window.innerWidth;
+var height = window.innerHeight;
+var viewBox_value = "0 0 " + width + " " + height;
+
+var custom_tooltip = customTooltip(width, height);
+
+// Create legend svg
+var legend = d3.select("#container")
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", viewBox_value) // Adjust how big/small the overall graph is
+  .classed("svg-content-responsive", true); // Class to make it responsive
+
+// Select the container area
+var svg = d3.select('#container')
+  .classed("svg-container", true) // Container class to make it responsive
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", viewBox_value)
+  .classed("svg-content-responsive", true);
+
+
+// Make the arrow head for links
+svg = makeLinkArrow(svg);
+
+
+d3.json("../data/cs_only.json", function(data) {
+
+  var nodes = data.nodes;
+
+  // Compute coordinates for each node
+  // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
+  nodes.forEach(function(d){
+    d.fx = 1269 - (d.fx * 28 + 370);
+    d.fy = 616 - (d.fy * 80 + 230);
+  });
+
+  legend = add_legend_cs(legend);
+
+  var linkElements = addLinkElements(svg, data);
+  var nodeElements = addNodeElements(svg, data, custom_tooltip);
+  var textElements = addTextElements(svg, data, custom_tooltip);
+
+  // Simulation setup with all forces
+  var linkForce = d3
+    .forceLink()
+    .id(function (link) { return link.id });
+
+  var simulation = d3
+    .forceSimulation()
+    .force('link', linkForce)
+    .force('charge', d3.forceManyBody().strength(-120))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force("x", d3.forceX())
+    .force("y", d3.forceY());
+
+  simulation.nodes(data.nodes).on('tick', () => {
+    linkElements
+      .attr('x1', function (link) { return getX(link.source) })
+      .attr('y1', function (link) { return getY(link.source) })
+      .attr('x2', function (link) { return getX(link.target) })
+      .attr('y2', function (link) { return getY(link.target) })
+  });
+
+  simulation.force("link").links(data.links);
+
+});
+</script>
+</body>

@@ -1,0 +1,50 @@
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 80px;          
+    height: 60px;         
+    padding: 2px;       
+    font: 12px sans-serif;    
+    background: lightgray; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+}
+
+.link.recommend {
+  stroke-dasharray: 0,2 3;
+}
+
+.link.coreq {
+  stroke-dasharray: 0,2 0.1;
+}
+
+.scrollable {
+  overflow: auto;
+}
+
+.floatTL{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%; /* aspect ratio; height */
+  vertical-align: top;
+  overflow: scroll;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.tnt_zmenu_header {
+  background-color: #002145;
+  color : white;
+}

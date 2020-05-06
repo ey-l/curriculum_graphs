@@ -1,0 +1,974 @@
+{
+  "nodes": [
+    {
+      "id": 110,
+      "name": "110/|107",
+      "title": "Computation, Programs, and Programming",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": -1,
+      "fx": 3.5,
+      "shape": "circle",
+      "topic": "Software engineering",
+      "clos": ["Understand a systematic design process. This is demonstrated by being able to write programs for a reasonably complex task, where multiple parts of the design method are required.", 
+        "Understand that programs are written both to run on computers and for people to read. This is demonstrated by being able to write code that is readable, well organized, documented, and tested.",
+        "Understand the relation between information and data. This is demonstrated by being able to design the data representation for a reasonably complex problem, and to describe the information encoded in the given data.",
+        "Understand that programs have structure beyond that of the language constructs. Understand that this structure comes from data and other design patterns, and is critical to writing and reading complex programs. This is demonstrated by being able to identify correspondences between a data definition and a program that operates on that data, and by being able to identify other design patterns in a program.",
+        "Understand that one can replace repetitive code with an abstraction in a systematic way. Understand that this is at the heart of designing libraries. This is demonstrated by being able to produce examples of code before and after abstraction: before, where one can see the repeated code, and after, where one can see the abstraction and verify that it provides the solution to the original problem, as well as several other similar problems. Students should also be able to design a program that uses existing libraries or existing code to solve a new problem.",
+        "Understand that programs can be described using notations other than code, and that these models can facilitate program design. This is demonstrated by being able to identify correspondences between non-code models of a program and the program itself and by being able to use non-code models in program design."
+      ]
+    },
+    {
+      "id": 121,
+      "name": "121",
+      "title": "Models of Computation",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 0,
+      "fx": 10,
+      "shape": "circle",
+      "topic": "Theory",
+      "clos": ["Model computational systems (e.g., programs and circuits) and apply valid reasoning to these models, i.e. prove relevant properties or reason through functionality of computational systems using predicate logic, propositional logic and state machines.",
+        "Clearly and precisely communicate computational models to computer scientists.",
+        "Identify alternate methods to solve or simplify a variety of problems by translating between (1) English language, (2)  simple formal representations (i.e., propositional and shallowly nested predicate logic statements) and (3) closely related equivalent formal representations, and then use the different representations to solve the problem.",
+        "Write proofs for simple theorems by translating the theorem into first-order logic, decomposing the statement, and applying an appropriate proof-technique such as direct proofs, indirect proofs by contrapositive, indirect proofs by contradiction, proofs by weak and strong mathematical induction. Justify why each step of the proof is correct.",
+        "Prove features of simple algorithms (e.g.,selection sort, recursive binary search, or quicksort) correct or bound in their running time. Justify why each step of the proof is correct.",
+        "Create regular expressions and DFAs to solve problems that are important in programming."
+      ]
+    },
+    {
+      "id": 210,
+      "name": "210",
+      "title": "Software Construction",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 0.5,
+      "fx": 10,
+      "shape": "circle",
+      "topic": "Software engineering",
+      "clos": ["Specify a new program, given a small problem description, by identifying relevant data abstractions, and specifying the associated behaviour of those abstractions.",
+        "Validate the program’s behaviour against its specification prior to implementation using test driven design, through writing unit tests that achieve basic code coverage.",
+        "Implement the program in Java, choosing the internal structure of its abstractions, and carry out implementation choices.",
+        "Design software using basic Object oriented design principles (coupling, cohesion, single responsibility, substitution), robustness, and design patterns where applicable.",
+        "Analyse the structure and behaviour of an existing small to medium sized codebase by making static and dynamic models and identifying design idioms, including design patterns, present in the code.",
+        "Evolve a small to medium sized codebase by changing or augmenting behaviour of the code through alteration, subtyping or composition.",
+        "Recover from common structural issues through identifying those issues, and selecting and applying  the appropriate refactorings.",
+        "Communicate (orally through code demonstration) implementation choices, and the rationale for those choices."
+      ]
+    },
+    {
+      "id": 213,
+      "name": "213",
+      "title": "Introduction to Computer Systems",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 1.7,
+      "fx": 15,
+      "shape": "circle",
+      "topic": "Systems",
+      "clos": ["Using a hardware based model of execution, reason about the limitations, vulnerabilities and idiosyncrasies of the behaviour of a particular program, specifically concerning performance, bugs and security vulnerabilities.",
+        "Using a hardware based model of data, reason about how programs access data using different types of variables, including the implicit and explicit use of memory references.",
+        "Translate a statement from a high-level programming language into assembly language; from a large block of assembly language, identify groups of instructions that correspond to high level language features and then write an equivalent high level programming language expression.",
+        "Identify and correct memory management bugs, particularly in languages with explicit deallocation, and use best practices to write code that is less likely to incur such issues.",
+        "Compare and contrast how Java and C are translated into a language the CPU understands; identify common features that are implemented in significantly different ways in either language (for instance, memory management, and the duality of subtype polymorphism in Java and function pointers in C). In doing so, explain the tradeoffs associated with each.",
+        "Reason about the execution of concurrent programs, incl. real time interrupts, and use both asynchronous programming and threads to write concurrent and/or parallel programs. Explain the tradeoffs associated with each.",
+        "Solve problems using monitors, condition variables and semaphores."
+      ]
+    },
+    {
+      "id": 221,
+      "name": "221",
+      "title": "Basic Algorithms and Data Structures",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 1.7,
+      "fx": 22,
+      "shape": "circle",
+      "topic": "Theory",
+      "clos": ["Define and articulate the functionality of classic data structures such as Stacks, Queues, Dictionaries, Priority Queues, etc. by their Abstract Data Type (ADT).",
+        "Design algorithms and structures to implement novel ADTs based on properties of the data and intended use of the data.",
+        "Implement classic and novel data structures in modern C++, including arrays, linked lists, balanced binary search trees, hash tables, etc.",
+        "Analyze the efficiency (time and space) of algorithms and data structures using asymptotic notation (Big-O, Big-Omega, Big-Theta).",
+        "Prove algorithm correctness using iterative and recursive methods.",
+        "Evaluate asymptotic time and space tradeoffs between implementation options.",
+        "Identify the structures and algorithms necessary for solving complex problems.",
+        "Synthesize and apply algorithmic and analytical design choices to form complete software solutions of classic problems."
+      ]
+    },
+    {
+      "id": 310,
+      "name": "310",
+      "title": "Introduction to Software Engineering",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 11,
+      "shape": "circle",
+      "topic": "Software engineering",
+      "clos": ["Evaluate software engineering processes used to build modern industrial-calibre systems by justifying their benefits and tradeoffs.",
+        "Elicit, deconstruct, and refine functional requirements and quality attributes such that they are described succinctly, completely, and precisely.",
+        "Devise and justify high- and low-level designs to support a given set of requirements and in support of future evolutionary needs.",
+        "Iteratively derive implementations of a design of reasonable complexity incorporating emergent design implications, and applying code-level restructuring for the sake of facilitating changes.",
+        "Carry out the implementation of a design incorporating ethical and security implications of code-level choices and software process and methodological approaches.",
+        "Independently acquire and apply modern and unfamiliar technology and language stacks.",
+        "Validate systems using both black-box and white-box approaches to reason about, and improve the quality of a software system."
+      ]
+    },
+    {
+      "id": 320,
+      "name": "320",
+      "title": "Intermediate Algorithm Design and Analysis",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 3.5,
+      "fx": 19,
+      "shape": "circle",
+      "topic": "Theory",
+      "clos": ["Identify the algorithm technique (such as divide and conquer, prune and search, greedy strategies, or dynamic programming) used in a given algorithm.",
+        "Select, adapt, and evaluate promising algorithmic techniques and/or data structures for a given problem by analyzing the problem’s properties.",
+        "Design and prove the correctness of a solution to a problem using a specified algorithm technique, given sufficient information about the form of that problem’s solution.",
+        "Select, evaluate and apply promising mathematical techniques (such as asymptotic notations, recurrence relations, and decision trees) to prove reasonably tight upper and lower bounds on the running time of algorithms.",
+        "Decide how and when to reduce a known problem to another problem of interest, either to obtain an efficient  solution to the latter, or to prove that  such a  solution is  unlikely to exist  in the  context of NP-hardness.",
+        "Explore and apply promising mathematical techniques for modelling (such as predicate logic, graphs, or asymptotic notations) and analysis (such as asymptotic runtime analysis, recurrence relations, or decision trees) to specify and prove important properties of algorithmic problems and their solutions."
+      ]
+    },
+    {
+      "id": 313,
+      "name": "313",
+      "title": "Computer Hardware and Operating Systems",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "fy": 3.5,
+      "fx": 16,
+      "shape": "circle",
+      "topic": "Systems",
+      "clos": ["Explain the benefits of, and challenges associated with, instruction-level parallelism and its implementation.",
+        "Describe at least one high-level architecture for a pipelined CPU. Correctly analyze examples of the timing of instructions passing through this architecture to identify dependencies and hazards.",
+        "Explain why different types of memory need to be used in modern computers, and how the constraints on physical size, capacity and speed affect the performance of computer code. Correctly analyze examples of memory access patterns and locality to compute the steps required to retrieve the information and/or to update the memory state, while maintaining optimal performance for future accesses.",
+        "Explain the issues that must be considered while designing file systems and some common solutions for these issues. Given a file system specification, correctly analyze examples of typical file system operations to identify how to retrieve necessary information or update the file system state. Explain the role that caching, buffering, and partial failure play in the implementation and use of files systems, including differentiating between the role that mechanism and policy play in the operating system and in applications that access file data.",
+        "Explain how a modern operating system can share a computer’s processing and memory resources among multiple untrusted and competing processes. Correctly analyze examples of virtual memory accesses in individual processes to (1) compute the steps required to retrieve the information and/or update the memory state, and to (2) identify when hardware can perform an operation autonomously and when the operating system has to be invoked.",
+        "Optimize C code in order to make it run faster by refining its locality and use of processor and memory resources. Optimize at least one version of Assembly code to make it run faster by reducing the number of hazards in typical pipelined CPUs."
+      ]
+    },
+    {
+      "id": 302,
+      "name": "302",
+      "title": "Numerical Computation for Algebraic Problems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 4,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 303,
+      "name": "303",
+      "title": "Numerical Approximation and Discretization",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 3,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 304,
+      "name": "304",
+      "title": "Introduction to Relational Databases",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3.5,
+      "fx": 22,
+      "shape": "circle",
+      "topic": "Systems",
+      "clos": ["Create a non-trivial E/R diagram (data model) about an enterprise (e.g., retail establishment, airport, school, library) that correctly describes the entities, attributes, and relationships among the entities—for some of that enterprise’s major business functions.",
+        "Create a logical data model from an E/R diagram to design a set of DB tables.",
+        "Normalize a set of attributes to eliminate anomalies or redundancies from a set of tables.",
+        "Implement a logical data model using a DBMS.",
+        "Write queries using formal query languages such as relational algebra and Datalog.",
+        "Write SQL statements to query (i.e., SELECT... FROM) a set of relational tables, using multiple WHERE-clause conditions; and use aggregate functions, including the GROUP BY and HAVING clauses.",
+        "Write SQL statements to INSERT, UPDATE, and DELETE rows in a set of relational tables.",
+        "Explain the purpose of a data warehouse and the operations that can be performed on it.",
+        "Design basic star schemas and snowflake schemas.",
+        "Compare and contrast data warehouses/OLAP (online analytical processing) with traditional DBMSs/OLTP (online transaction processing)."
+      ]
+    },
+    {
+      "id": 311,
+      "name": "311",
+      "title": "Definition of Programming Languages",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3.5,
+      "fx": 12,
+      "shape": "circle",
+      "topic": "Theory",
+      "clos": ["Assess the semantics of a (new or existing) language as a collection of language design decisions and describe the likely impact of some of those decisions on the language and its programmers.",
+        "Indicate through examples how different design choices for programming language features alter the semantics of syntactically identical code (e.g., giving a code snippet that behaves differently under static and dynamic scoping rules and explaining why).",
+        "Justify or criticize a particular design decision for a programming language feature in the context of a design goal for the language as a whole. (For example, (1) Criticize dynamic scope (2) Justify the exposure of continuations in a language intended to combine Prolog-style databases of logical information with user-designed customized search routines that replace Prolog's built in left-to-right depth-first-search.)",
+        "Read, write, and modify syntax specifications, abstract syntax specifications/datatypes, parsers, interpreters, and (as appropriate) type checkers and pre-processors for various Racket-like languages illustrating key programming language concepts.",
+        "Read, write, and modify arbitrary, Racket and Racket-like programs (20 lines at most) as test cases and illustrative examples for the various languages we develop (and for the corresponding functionality in Racket itself)."
+      ]
+    },
+    {
+      "id": 312,
+      "name": "312",
+      "title": "Functional and Logic Programming",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 10,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 314,
+      "name": "314",
+      "title": "Computer Graphics",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 26,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["Explain the algorithmic steps and mathematics used in rendering and animating 3D models.",
+        "Interpret and explain affine transformations using diagrams, linear algebra, and code within a graphics API.",
+        "Write code that implements the graphics pipeline, with an emphasis on vertex shaders and fragment shaders.",
+        "Read, write, and modify code for graphics applications using a common graphics API.",
+        "Explain the behaviour of common local and global illumination models, and the assumptions they make about physics and perception.",
+        "Describe and appreciate the creative potential of modern computer graphics and current capabilities and trends in computer graphics."
+      ]
+    },
+    {
+      "id": 317,
+      "name": "317",
+      "title": "Internet Computing",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3.5,
+      "fx": 14,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    {
+      "id": 319,
+      "name": "319",
+      "title": "Software Engineering Project",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3.5,
+      "fx": 10.2,
+      "shape": "circle",
+      "topic": "Software engineering",
+      "clos": ["Understand and apply the different stages of application life cycle using waterfall methodology (including Agile).",
+        "Develop key artifacts (ie: documentation) at key stages of the development lifecycle.",
+        "Apply some new innovative techniques such as Agile and requirements-based testing into your projects.",
+        "Focus and value the importance of non-engineering components of IT project delivery.",
+        "Developed improved collaborative skills with stakeholders, peers and customers."
+      ]
+    },
+    {
+      "id": 322,
+      "name": "322",
+      "title": "Introduction to Artificial Intelligence",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 27,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    {
+      "id": 330,
+      "name": "330",
+      "title": "Applied Machine Learning",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 8,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["Identify problems that may be addressed with machine learning.",
+        "Select the appropriate machine learning tool for a problem.",
+        "Transform data of various types into usable features.",
+        "Apply standard tools implementing supervised and unsupervised learning techniques.",
+        "Describe core differences between training, validation, and testing regimes.",
+        "Effectively communicate the results of a machine learning pipeline.",
+        "Be realistic about the limitations of individual approaches and machine learning as a whole.",
+        "Create reproducible workflows and pipelines."
+      ]
+    },
+    {
+      "id": 340,
+      "name": "340",
+      "title": "Machine Learning and Data Mining",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 25,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["Identify problems that may be addressed with data mining and machine learning techniques.",
+        "Select the appropriate machine learning tool for a problem.",
+        "Represent data as features and frame problems in the standard learning notation.",
+        "Apply tools implementing supervised and unsupervised learning techniques to data.",
+        "Implement several of the most common machine learning techniques in a high-level programming language.",
+        "Describe core differences between training, validation, and testing regimes.",
+        "Understand the different between parametric and non-parametric models, and the limits imposed by the curse of dimensionality.",
+        "Implement techniques to both expand the express power of a model and reduce its complexity."
+      ]
+    },
+    {
+      "id": 344,
+      "name": "344",
+      "title": "Introduction to Human Computer Interaction Methods",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 3,
+      "fx": 9,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["List heuristics for basic good/bad interface design. Be able to identify and critique interface strengths and weaknesses in terms of this language.",
+        "Contrast the central principles of user-centered versus technology-centered design, and in a given situation, identify and explain which approach to design may be appropriate to use.",
+        "Explain why one's personal design intuition merits skepticism. For a given design context, list specific HCI practices and tools which can help to inform and educate it.",
+        "List and describe models we have of human users (mental models, cognitive resources, sensory processing), vs models that humans have of systems.",
+        "List and categorize key user capabilities; and for a given design challenge, identify the most relevant ones.",
+        "Observe, describe and analyze user activities and needs in terms of their tasks.",
+        "Construct solutions focused on accounting for human limitations; identify evaluation methods that will confirm success in this.",
+        "Demonstrate ability to first design a system at a conceptual level; i.e. the 'bones' versus 'skin' of the design.",
+        "Demonstrate ability to secondly design the external views of a system (i.e. the 'skin') considering course principles including mental models, human cognition, visual design, etc.",
+        "Describe the central HCI techniques, frameworks or processes, in the context of their purpose: e.g. in providing structure for understanding tasks, identifying interaction problems, design alternatives, and next-step process choices.",
+        "Formulate and act upon an iterative, progressively narrowing design approach, in which you seek alternatives and avoid freezing your approach too early.",
+        "List methods for and demonstrate parsimony and effectiveness in deployment of evaluation and prototyping tools. Use in a targeted and minimalist way, to focus on the question at hand; avoid wasting effort, and elicitation of unhelpful or ambiguous user feedback.",
+        "Be able to critique and evaluate the quality of yours and others' designs appropriately at multiple stages, and articulate/defend your design decisions.",
+        "List and describe several methods you have used for team coordination, work management and conflict resolution in the context of multi-week projects; reflect on what worked best; appraise which best suit your own style.",
+        "Demonstrate competency in three communication mediums singly and with your team: in written project reports, informal oral presentation, and in respectfully critiquing, articulating and defending the teams' ideas, challenges and questions to one another, peers and course staff, over the course of the term."
+      ]
+    },
+    {
+      "id": 402,
+      "name": "402",
+      "title": "Numerical Linear Algebra",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 4,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 404,
+      "name": "404",
+      "title": "Advanced Relational Databases",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 22,
+      "shape": "circle",
+      "topic": "Systems",
+      "clos": ["Explain the I/O cost-based model for relational database management systems (RDBMSs). Justify its applicability/use (i.e., the use of page I/Os to estimate performance).",
+        "Recommend and justify appropriate indexes for a set of tables, given some parameters about the expected query mix.",
+        "Show how to use an index (e.g., B+ tree, extendible hash structure, linear hash structure) to look up search keys and rows in a table. Demonstrate insertions and deletions of keys in the index, by performing splitting or merging of nodes. Analyze the complexity of operations against these data structures.",
+        "Explain and justify the choice of query evaluation and optimization decisions made by an RDBMS optimizer, given appropriate metadata.",
+        "Compute/estimate the cost of evaluating and optimizing a given query, given a set of indexes and appropriate metadata. Compute/estimate the cost of other database operations (e.g., external sorting).",
+        "Explain how concurrency is handled to permit greater throughput in an RDBMS. Compare and contrast the different concurrency control methods in terms of the types of schedules they produce, efficiency, and ease of use.",
+        "Define the following properties of database transactions and give practical examples of their characteristics or desirable features: ACID properties, serializability, and isolation levels.",
+        "Explain how write-ahead logging works in a DBMS. In particular, show how to use the ARIES crash recovery algorithm. Provide guidelines for setting appropriate checkpoint and image copy intervals."
+      ]
+    },
+    {
+      "id": 406,
+      "name": "406",
+      "title": "Computational Optimization",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 3,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 410,
+      "name": "410",
+      "title": "Advanced Software Engineering",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 11,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+    {
+      "id": 411,
+      "name": "411",
+      "title": "Introduction to Compiler Construction",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 12,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 415,
+      "name": "415",
+      "title": "Advanced Operating Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 16,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    {
+      "id": 416,
+      "name": "416",
+      "title": "Distributed Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 15,
+      "shape": "circle",
+      "topic": "Systems",
+      "clos": ["Understand key principles in designing and implementing distributed systems.",
+        "Reason about problems that involve distributed components.",
+        "Become familiar with important techniques for solving problems that arise in distributed contexts.",
+        "Build distributed system prototypes using the Go programming language."
+      ]
+    },
+    {
+      "id": 417,
+      "name": "417",
+      "title": "Computer Networking",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 14,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    {
+      "id": 418,
+      "name": "418",
+      "title": "Parallel Computation",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 17,
+      "shape": "circle",
+      "topic": "Systems",
+      "clos": ["Be familiar with parallel patterns such as reduce, scan, and tiling and can apply them to common parallel programming problems.",
+        "Describe parallel algorithms for matrix operations, sorting, dynamic programming, and process coordination.",
+        "Describe shared-memory, message-passing, and SIMD architectures.",
+        "Describe a simple cache-coherence protocol.",
+        "Identify how communication latency and bandwidth are limited by physical constraints in these architectures.",
+        "Describe the difference between bandwidth and inverse latency, and how these impact parallel architectures.",
+        "Understand the concept of “speed-up”: can calculate it from simple execution models or measured execution times.",
+        "Identify key bottlenecks for parallel program performance including communication latency and bandwidth, synchronization overhead, and intrinsically sequential code.",
+        "Implement simple parallel programs in Erlang and CUDA; Describe the differences between these paradigms.",
+        "Identify when one of these paradigms is particularly well-suited (or badly suited) for a particular application."
+      ]
+    },
+    {
+      "id": 420,
+      "name": "420",
+      "title": "Advanced Algorithms Design and Analysis",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 20,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 421,
+      "name": "421",
+      "title": "Introduction to Theory of Computing",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 21,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    {
+      "id": 422,
+      "name": "422",
+      "title": "Intelligent Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 27,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    {
+      "id": 424,
+      "name": "424",
+      "title": "Geometric Modelling",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 18,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    {
+      "id": 425,
+      "name": "425",
+      "title": "Computer Vision",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 25,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    {
+      "id": 426,
+      "name": "426",
+      "title": "Computer Animation",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 26,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["Use and manipulate common representations for animation data.",
+        "Customise or implement common kinematic and dynamic animation methods.",
+        "Describe recent advances by reading recent research papers.",
+        "Compare and contrast capture technologies for animation.",
+        "View animation methods as providing various degrees of abstraction for authoring motions.",
+        "View animation as an evolving interdisciplinary subject, spanning art and various areas of science.",
+        "Describe and motivate the production pipeline for animation in games and film."
+      ]
+    },
+    {
+      "id": 427,
+      "name": "427",
+      "title": "Video Game Programming",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 24,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["Develop a medium-sized commercial software product such as a video game, suitable for distribution online or electronically and similar in complexity to individual levels in smaller iPhone/iPad titles such as “Angry Birds”, “Tiny Wings”, “Cut The Rope”, etc.",
+        "Operate debuggers, profilers, and version control software packages.",
+        "Implement basic 2D rendering, basic geometric computation (curves, 2D collision), simple 2D animation, path finding, state machines, and user interface code for a video game.",
+        "Design, implement, and test a viable game interface.",
+        "Describe and debug memory management code and implement low level memory access and complex pointer arithmetic in real-world environments."
+      ]
+    },
+    {
+      "id": 430,
+      "name": "430",
+      "title": "Computers and Society",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 30,
+      "shape": "circle",
+      "topic": "Ethics",
+      "clos": ["Students will come away from the course with: (1) greater understanding of the social and ethical implications of computer use and abuse; (2) an improved ability to think critically and defend their decisions logically; (3) a greater appreciation for alternate points of view; (4) the ability to recognize, make, and critique arguments that use workable ethical theories such as utilitarianism, social contract theory, and virtue ethics."]
+    },
+    {
+      "id": 4301,
+      "name": "3rd year|standing and|any 3-credit|CPSC courses",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 30,
+      "shape": "rect"
+    },
+    {
+      "id": 444,
+      "name": "444",
+      "title": "Advanced Methods for Human Computer Interaction",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 9,
+      "shape": "circle",
+      "topic": "Applied",
+      "clos": ["Have knowledge of models of the user and how they apply to the design of user interfaces.",
+        "Be familiar with the variety of techniques and methods for interface design, evaluation, and analysis.",
+        "Have experience designing and running a field study and performing qualitative data analysis.",
+        "Have experience designing and running a controlled experiment and performing quantitative data analysis.",
+        "Have experience working with video in an HCI context: (1) to capture user data, and (2) to create a project video.",
+        "Have experience with some sophisticated tools for interface prototyping and analysis and user observation.",
+        "Be familiar with research issues in HCI."
+      ]
+    },
+    {
+      "id": 445,
+      "name": "445",
+      "title": "Algorithms in Bioinformatics",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "fy": 4.5,
+      "fx": 19,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    {
+      "id": 6,
+      "name": "OR",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.5,
+      "fx": 3.5,
+      "shape": "circle"
+    },
+    {
+      "id": 7,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 1,
+      "fx": 15,
+      "shape": "circle"
+    },
+    {
+      "id": 8,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 3.5,
+      "fx": 9,
+      "shape": "circle"
+    },
+    {
+      "id": 9,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 2.3,
+      "fx": 15,
+      "shape": "circle"
+    },
+    {
+      "id": 10,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 21,
+      "shape": "circle"
+    },
+    {
+      "id": 12,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 15,
+      "shape": "circle"
+    },
+    {
+      "id": 13,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 12,
+      "shape": "circle"
+    },
+    {
+      "id": 14,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4,
+      "fx": 22,
+      "shape": "circle"
+    },
+    {
+      "id": 17,
+      "name": "AND",
+      "core": 0,
+      "cs": 1,
+      "course": 0,
+      "fy": 4.05,
+      "fx": 17,
+      "shape": "circle"
+    }
+  ],
+  "links": [
+    {
+      "source": 121,
+      "target": 110,
+      "type": "coreq"
+    },
+    {
+      "source": 302,
+      "target": 110
+    },
+    {
+      "source": 303,
+      "target": 110
+    },
+    {
+      "source": 210,
+      "target": 110
+    },
+    {
+      "source": 406,
+      "target": 6
+    },
+    {
+      "source": 402,
+      "target": 6
+    },
+    {
+      "source": 6,
+      "target": 302
+    },
+    {
+      "source": 6,
+      "target": 303
+    },
+    {
+      "source": 330,
+      "target": 210
+    },
+    {
+      "source": 312,
+      "target": 210
+    },
+    {
+      "source": 344,
+      "target": 210
+    },
+    {
+      "source": 310,
+      "target": 9
+    },
+    {
+      "source": 311,
+      "target": 210
+    },
+    {
+      "source": 444,
+      "target": 8
+    },
+    {
+      "source": 8,
+      "target": 344
+    },
+    {
+      "source": 8,
+      "target": 310
+    },
+    {
+      "source": 410,
+      "target": 310
+    },
+    {
+      "source": 319,
+      "target": 310
+    },
+    {
+      "source": 213,
+      "target": 7
+    },
+    {
+      "source": 7,
+      "target": 121
+    },
+    {
+      "source": 7,
+      "target": 210
+    },
+    {
+      "source": 221,
+      "target": 7
+    },
+    {
+      "source": 411,
+      "target": 13
+    },
+    {
+      "source": 13,
+      "target": 311
+    },
+    {
+      "source": 13,
+      "target": 9
+    },
+    {
+      "source": 9,
+      "target": 221
+    },
+    {
+      "source": 9,
+      "target": 213
+    },
+    {
+      "source": 313,
+      "target": 9
+    },
+    {
+      "source": 317,
+      "target": 9
+    },
+    {
+      "source": 425,
+      "target": 221
+    },
+    {
+      "source": 314,
+      "target": 221
+    },
+    {
+      "source": 304,
+      "target": 221
+    },
+    {
+      "source": 340,
+      "target": 221
+    },
+    {
+      "source": 322,
+      "target": 221
+    },
+    {
+      "source": 422,
+      "target": 322
+    },
+    {
+      "source": 404,
+      "target": 14
+    },
+    {
+      "source": 14,
+      "target": 304
+    },
+    {
+      "source": 14,
+      "target": 213
+    },
+    {
+      "source": 426,
+      "target": 314
+    },
+    {
+      "source": 10,
+      "target": 221
+    },
+    {
+      "source": 10,
+      "target": 320,
+      "type": "recommend"
+    },
+    {
+      "source": 421,
+      "target": 10
+    },
+    {
+      "source": 427,
+      "target": 221
+    },
+    {
+      "source": 424,
+      "target": 320
+    },
+    {
+      "source": 420,
+      "target": 320
+    },
+    {
+      "source": 445,
+      "target": 320
+    },
+    {
+      "source": 17,
+      "target": 320
+    },
+    {
+      "source": 17,
+      "target": 313
+    },
+    {
+      "source": 418,
+      "target": 17
+    },
+    {
+      "source": 415,
+      "target": 313
+    },
+    {
+      "source": 12,
+      "target": 313
+    },
+    {
+      "source": 12,
+      "target": 317
+    },
+    {
+      "source": 417,
+      "target": 12
+    },
+    {
+      "source": 416,
+      "target": 12
+    },
+    {
+      "source": 320,
+      "target": 221
+    },
+    {
+      "source": 430,
+      "target": 4301
+    }
+  ]
+}
