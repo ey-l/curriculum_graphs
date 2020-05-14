@@ -12,15 +12,16 @@ div.tooltip {
 }
 
 .link.recommend {
-  stroke-dasharray: 0,2 3;
+  stroke-dasharray: 0,4 3;
 }
 
 .link.coreq {
-  stroke-dasharray: 0,2 0.1;
+  stroke-dasharray: 0,2 1;
 }
 
 .scrollable {
-  overflow: auto;
+  overflow-y: scroll;
+  padding-right: 3%;
 }
 
 .floatTL{
