@@ -99,8 +99,10 @@ export function add_legend_cs(legend) {
   legend.append("text").attr("x", lx+20).attr("y", ly+60).text("Pre-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx+20).attr("y", ly+90).text("Co-requisite").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx+20).attr("y", ly+120).text("Recommended").style("font-size", "12px").attr("alignment-baseline","middle")
-  legend.append("text").attr("x", lx-25).attr("y", ly+160).text("Note: This graph only represents courses that are offered by the Computer Science department.").style("font-size", "12px").attr("alignment-baseline","middle")
-  legend.append("text").attr("x", lx+5).attr("y", ly+175).text("Course pre-requisites from outside the CS department are not included here.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+160).text("Click on the nodes for course learning outcomes.").style("font-size", "14px").style("font-weight", "bold").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+175).text("This graph only represents courses that are offered by the Computer Science department.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+190).text("Additionally, only the courses commonly taken by students in CS specializations are included.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+205).text("Course pre-requisites from outside the CS department are not included here.").style("font-size", "12px").attr("alignment-baseline","middle")
   
   return legend;
 }
