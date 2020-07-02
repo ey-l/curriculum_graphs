@@ -50,3 +50,7 @@ div.tooltip {
   background-color: #002145;
   color : white;
 }
+
+.tnt_tooltip_closer:hover {
+  background-color : gray;
+}

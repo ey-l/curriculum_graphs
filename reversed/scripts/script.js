@@ -126,13 +126,8 @@ export function makeObj(node) {
     }
   } else {
     obj.rows.push({
-    "label" : node.name + "_1",
-    "value" : "CLO 1"
-    });
-
-    obj.rows.push({
-      "label" : node.name + "_2",
-      "value" : "CLO 2"
+    "label" : node.name,
+    "value" : "TBD"
     });
   }
   return obj;
