@@ -45,8 +45,13 @@ svg = makeLinkArrow(svg);
 
 
 d3.json("../data/cs_major.json", function(data) {
+  d3.json("../data/clos.json", function(clos) {
 
-  var nodes = data.nodes;
+  var nodes = data.nodes
+    nodes.forEach(function(d){
+      d.clos = clos[d.id];
+    });
+    data.nodes = nodes
 
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
@@ -83,6 +88,8 @@ d3.json("../data/cs_major.json", function(data) {
   });
 
   simulation.force("link").links(data.links);
+  
+  });
 
 });
 </script>
