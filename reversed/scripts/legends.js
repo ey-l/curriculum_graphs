@@ -45,7 +45,10 @@ export function add_legend_all(legend) {
   legend.append("text").attr("x", lx+20).attr("y", ly+160).text("Pre-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx+20).attr("y", ly+180).text("Co-requisite").style("font-size", "10px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx+20).attr("y", ly+200).text("Recommended").style("font-size", "10px").attr("alignment-baseline","middle")
-
+  legend.append("text").attr("x", lx-20).attr("y", ly+240).text("Click on the nodes for course learning outcomes.").style("font-size", "14px").style("font-weight", "bold").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-20).attr("y", ly+255).text("This graph represents courses that are offered by the Computer Science department.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-20).attr("y", ly+270).text("Course pre-requisites from outside the CS department are also included here.").style("font-size", "12px").attr("alignment-baseline","middle")
+  
 	return legend;
 }
 
@@ -101,8 +104,7 @@ export function add_legend_cs(legend) {
   legend.append("text").attr("x", lx+20).attr("y", ly+120).text("Recommended").style("font-size", "12px").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx-25).attr("y", ly+160).text("Click on the nodes for course learning outcomes.").style("font-size", "14px").style("font-weight", "bold").attr("alignment-baseline","middle")
   legend.append("text").attr("x", lx-25).attr("y", ly+175).text("This graph only represents courses that are offered by the Computer Science department.").style("font-size", "12px").attr("alignment-baseline","middle")
-  legend.append("text").attr("x", lx-25).attr("y", ly+190).text("Additionally, only the courses commonly taken by students in CS specializations are included.").style("font-size", "12px").attr("alignment-baseline","middle")
-  legend.append("text").attr("x", lx-25).attr("y", ly+205).text("Course pre-requisites from outside the CS department are not included here.").style("font-size", "12px").attr("alignment-baseline","middle")
+  legend.append("text").attr("x", lx-25).attr("y", ly+190).text("Course pre-requisites from outside the CS department are not included here.").style("font-size", "12px").attr("alignment-baseline","middle")
   
   return legend;
 }

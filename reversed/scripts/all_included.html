@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!--<h3>Undergraduate CPSC Pre-Requisite Visualization</h3>-->
 <div id="container" class="floatTL" width="960" height="400"></div>
 
 <script type="module">
@@ -17,13 +18,13 @@
   import { getX, getY, makeObj, customTooltip, makeLinkArrow, addLinkElements, addNodeElements, addTextElements } from './script.js';
 
 // Set width and height
-var width = window.innerWidth;
-var height = window.innerHeight;
-var fx_scalar = width*0.027
-var fy_scalar = height*0.15
-var viewBox_value = "0 0 " + width + " " + height;
+var width = 1269;
+var height = 616;
+var fx_scalar = width*0.026
+var fy_scalar = height*0.16
+var viewBox_value = "0 0 " + window.innerWidth + " " + window.innerHeight;
 
-var custom_tooltip = customTooltip(width, height);
+var custom_tooltip = customTooltip(window.innerWidth, window.innerHeight);
 
 // Create legend svg
 var legend = d3.select("#container")
@@ -52,8 +53,8 @@ d3.json("../data/all_included.json", function(data) {
   // Compute coordinates for each node
   // This is graph specific. Since they have different number of nodes/links, we want to relax/tighten the density
   nodes.forEach(function(d){
-    d.fx = width - (d.fx * fx_scalar + 120);
-    d.fy = height - (d.fy * fy_scalar + 200);
+    d.fx = width - (d.fx * fx_scalar + 160);
+    d.fy = height - (d.fy * fy_scalar + 160);
   });
 
   legend = add_legend_all(legend);
@@ -71,7 +72,7 @@ d3.json("../data/all_included.json", function(data) {
     .forceSimulation()
     .force('link', linkForce)
     .force('charge', d3.forceManyBody().strength(-120))
-    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('center', d3.forceCenter(window.innerWidth / 2, window.innerHeight / 2))
     .force("x", d3.forceX())
     .force("y", d3.forceY());
 

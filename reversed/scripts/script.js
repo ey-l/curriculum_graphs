@@ -2,7 +2,9 @@
 var noncoreNodeColour = '#97D4E9';
 var coreNodeColour = 'yellow';
 var logicNodeColour = 'white';
- var noncsNodeColour = "lightgray";
+var noncsNodeColour = "lightgray";
+var noncoreNodeHoverColour = '#40B4E5' 
+var coreNodeHoverColour = '#ffd21c'
 //var noncsNodeColour = "#002145"
 
 // Set stroke colours
@@ -28,6 +30,10 @@ function getNodeColor(node, neighbors) {
     return node.course === 0 ? logicNodeColour : highlightColour;
   }
   return node.course === 0 ? logicNodeColour : node.cs === 0? noncsNodeColour : node.core === 0 ? noncoreNodeColour : coreNodeColour;
+}
+
+function getNodeHoverColor(node) {
+  return node.course === 0 ? logicNodeColour : node.cs === 0? noncsNodeColour : node.core === 0 ? noncoreNodeHoverColour : coreNodeHoverColour;
 }
 
 function getCourseStrokeColour(node) {
@@ -242,6 +248,12 @@ export function addNodeElements(svg, data, custom_tooltip) {
           var obj = makeObj(node);
           custom_tooltip.call(this, obj);
         }
+      })
+      .on("mouseover", function(node) {
+        d3.select(this).attr('fill', getNodeHoverColor);
+      })                  
+      .on("mouseout", function(node) {
+        d3.select(this).attr('fill', getNodeColor);
       });
 
   nodeElements.append("ellipse")

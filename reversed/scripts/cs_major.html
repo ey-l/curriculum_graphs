@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <h3>Undergraduate CPSC Pre-requisite Visualization: CS Major</h3>
+  <!--<h3>Undergraduate CPSC Pre-Requisite Visualization: CS Major</h3>-->
   <div id="container" class="floatTL" width="960" height="400"></div>
 
 <script type="module">
@@ -76,10 +76,10 @@ d3.json("../data/cs_major.json", function(data) {
 
   simulation.nodes(data.nodes).on('tick', () => {
     linkElements
-      .attr('x1', function (link) { return getX(link.source) })
-      .attr('y1', function (link) { return getY(link.source) })
-      .attr('x2', function (link) { return getX(link.target) })
-      .attr('y2', function (link) { return getY(link.target) })
+      .attr('x1', function (link) { return getX(link.target) })
+      .attr('y1', function (link) { return getY(link.target) })
+      .attr('x2', function (link) { return getX(link.source) })
+      .attr('y2', function (link) { return getY(link.source) })
   });
 
   simulation.force("link").links(data.links);
