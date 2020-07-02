@@ -53,4 +53,5 @@ div.tooltip {
 
 .tnt_tooltip_closer:hover {
   background-color : gray;
+  cursor: pointer;
 }

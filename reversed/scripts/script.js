@@ -245,10 +245,10 @@ export function addNodeElements(svg, data, custom_tooltip) {
         }
       })
       .on("mouseover", function(node) {
-        d3.select(this).attr('fill', getNodeHoverColor);
+        d3.select(this).attr('fill', getNodeHoverColor).style("cursor", "pointer");
       })                  
       .on("mouseout", function(node) {
-        d3.select(this).attr('fill', getNodeColor);
+        d3.select(this).attr('fill', getNodeColor).style("cursor", "default");
       });
 
   nodeElements.append("ellipse")
@@ -297,6 +297,14 @@ export function addTextElements(svg, data, custom_tooltip) {
         if (node.course) {
           var obj = makeObj(node)
           custom_tooltip.call(this, obj)
+        }
+      })
+      .on({
+        "mouseover": function(d) {
+        d3.select(this).style("cursor", "pointer"); 
+        },
+        "mouseout": function(d) {
+          d3.select(this).style("cursor", "default"); 
         }
       });
 
