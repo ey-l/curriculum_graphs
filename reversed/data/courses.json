@@ -1,0 +1,499 @@
+{
+  "110": 
+  {
+      "id": 110,
+      "name": "110",
+      "title": "Computation, Programs, and Programming",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+  },
+  "121": 
+  {
+      "id": 121,
+      "name": "121",
+      "title": "Models of Computation",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+  },
+  "210":
+  {
+      "id": 210,
+      "name": "210",
+      "title": "Software Construction",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+  "213":  
+    {
+      "id": 213,
+      "name": "213",
+      "title": "Introduction to Computer Systems",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+  "221":
+    {
+      "id": 221,
+      "name": "221",
+      "title": "Basic Algorithms and Data Structures",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+  "310":
+    {
+      "id": 310,
+      "name": "310",
+      "title": "Introduction to Software Engineering",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+  "320":
+    {
+      "id": 320,
+      "name": "320",
+      "title": "Intermediate Algorithm Design and Analysis",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+  "313":
+    {
+      "id": 313,
+      "name": "313",
+      "title": "Computer Hardware and Operating Systems",
+      "core": 1,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+  "100":
+    {
+      "id": 100,
+      "name": "100",
+      "title": "Computational Thinking",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+  "103":
+    {
+      "id": 103,
+      "name": "103",
+      "title": "Introduction to Systematic Program Design",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+    "107":
+    {
+      "id": 107,
+      "name": "107",
+      "title": "Systematic Program Design",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+    "203":
+    {
+      "id": 203,
+      "name": "203",
+      "title": "Programming, Problem Solving, and Algorithms",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "259":
+    {
+      "id": 259,
+      "name": "259",
+      "title": "Data Structures and Algorithms for Electrical Engineers",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "261":
+    {
+      "id": 261,
+      "name": "261",
+      "title": "Basics of Computer Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "prereq": "CPEN 211 and CPEN 221",
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "302":
+    {
+      "id": 302,
+      "name": "302",
+      "title": "Numerical Computation for Algebraic Problems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "303":
+    {
+      "id": 303,
+      "name": "303",
+      "title": "Numerical Approximation and Discretization",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "304":
+    {
+      "id": 304,
+      "name": "304",
+      "title": "Introduction to Relational Databases",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "311":
+    {
+      "id": 311,
+      "name": "311",
+      "title": "Definition of Programming Languages",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "312":
+    {
+      "id": 312,
+      "name": "312",
+      "title": "Functional and Logic Programming",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "314":
+    {
+      "id": 314,
+      "name": "314",
+      "title": "Computer Graphics",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "317":
+    {
+      "id": 317,
+      "name": "317",
+      "title": "Internet Computing",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "319":
+    {
+      "id": 319,
+      "name": "319",
+      "title": "Software Engineering Project",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+    "322":
+    {
+      "id": 322,
+      "name": "322",
+      "title": "Introduction to Artificial Intelligence",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "330":
+    {
+      "id": 330,
+      "name": "330",
+      "title": "Applied Machine Learning",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "340":
+    {
+      "id": 340,
+      "name": "340",
+      "title": "Machine Learning and Data Mining",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "344":
+    {
+      "id": 344,
+      "name": "344",
+      "title": "Introduction to Human Computer Interaction Methods",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "402":
+    {
+      "id": 402,
+      "name": "402",
+      "title": "Numerical Linear Algebra",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "404":
+    {
+      "id": 404,
+      "name": "404",
+      "title": "Advanced Relational Databases",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "406":
+    {
+      "id": 406,
+      "name": "406",
+      "title": "Computational Optimization",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "410":
+    {
+      "id": 410,
+      "name": "410",
+      "title": "Advanced Software Engineering",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Software engineering"
+    },
+    "411":
+    {
+      "id": 411,
+      "name": "411",
+      "title": "Introduction to Compiler Construction",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "415":
+    {
+      "id": 415,
+      "name": "415",
+      "title": "Advanced Operating Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "416":
+    {
+      "id": 416,
+      "name": "416",
+      "title": "Distributed Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "417":
+    {
+      "id": 417,
+      "name": "417",
+      "title": "Computer Networking",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "418":
+    {
+      "id": 418,
+      "name": "418",
+      "title": "Parallel Computation",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Systems"
+    },
+    "420":
+    {
+      "id": 420,
+      "name": "420",
+      "title": "Advanced Algorithms Design and Analysis",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "421":
+    {
+      "id": 421,
+      "name": "421",
+      "title": "Introduction to Theory of Computing",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Theory"
+    },
+    "422":
+    {
+      "id": 422,
+      "name": "422",
+      "title": "Intelligent Systems",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "424":
+    {
+      "id": 424,
+      "name": "424",
+      "title": "Geometric Modelling",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "425":
+    {
+      "id": 425,
+      "name": "425",
+      "title": "Computer Vision",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "426":
+    {
+      "id": 426,
+      "name": "426",
+      "title": "Computer Animation",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "427":
+    {
+      "id": 427,
+      "name": "427",
+      "title": "Video Game Programming",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "430":
+    {
+      "id": 430,
+      "name": "430",
+      "title": "Computers and Society",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "prereq": "3rd year standing with any 3-credit CPSC course",
+      "shape": "circle",
+      "topic": "Ethics"
+    },
+    "444":
+    {
+      "id": 444,
+      "name": "444",
+      "title": "Advanced Methods for Human Computer Interaction",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    },
+    "445":
+    {
+      "id": 445,
+      "name": "445",
+      "title": "Algorithms in Bioinformatics",
+      "core": 0,
+      "cs": 1,
+      "course": 1,
+      "shape": "circle",
+      "topic": "Applied"
+    }
+}

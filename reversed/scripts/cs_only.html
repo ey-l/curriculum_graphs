@@ -47,9 +47,13 @@ svg = makeLinkArrow(svg);
 d3.json("../data/cs_only.json", function(data) {
   d3.json("../data/clos.json", function(clos) {
   // data['nodes'] = data['nodes'].concat(major.nodes).concat(noncore.nodes);
+    d3.json("../data/courses.json", function(courses) {
+
     var nodes = data.nodes
     nodes.forEach(function(d){
       d.clos = clos[d.id];
+      var course = courses[d.id]
+      for (var attrname in course) { d[attrname] = course[attrname]; }
     });
     data.nodes = nodes
 
@@ -88,8 +92,9 @@ d3.json("../data/cs_only.json", function(data) {
     });
 
     simulation.force("link").links(data.links);
-    
 
+  });
+    
   });
 
 });
